@@ -75,11 +75,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Absensiku
+                    PT. Garuda Mitra 
                 </div>
 
                 <div class="links">
-                    <a href="https://fb.me/rizal.ofdraw">Rizal Khilman @Facebook</a>
+                    <a>Sistem Absensi Karyawan</a>
                 </div>
             </div>
         </div>
