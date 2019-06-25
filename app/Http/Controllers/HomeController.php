@@ -55,39 +55,5 @@ class HomeController extends Controller
                         ->paginate(20);
         return view('home', compact('data_absen', 'info'));
     }
-    public function absen(Request $request){
-        $this->timeZone('Asia/Jakarta');
-        $user_id = Auth::user()->id;
-        $date = date("Y-m-d"); // 2017-02-01
-        $time = date("H:i:s"); // 12:31:20
-        $note = $request->note;
-
-        $absen = new Absen;
-       
-        // absen masuk
-        if (isset($request->btnIn)) {
-             // cek double data
-            $cek_double = $absen->where(['date' => $date, 'user_id' => $user_id])
-                                ->count();
-            if ($cek_double > 0) {
-                return redirect()->back();
-            }
-            $absen->create([
-                'user_id' => $user_id,
-                'date' => $date,
-                'time_in' => $time,
-                'note' => $note]);
-            return redirect()->back();
-
-        }
-        // absen keluar
-        elseif (isset($request->btnOut)) {
-            $absen->where(['date' => $date, 'user_id' => $user_id])
-                ->update([
-                    'time_out' => $time,
-                    'note' => $note]);
-            return redirect()->back();
-        }
-        return $request->all();
-    }
+    
 }
