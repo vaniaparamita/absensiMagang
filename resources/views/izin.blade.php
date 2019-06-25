@@ -8,19 +8,21 @@
                 <div class="panel-heading">Ini Halaman Izin</div>
                 <div class="panel-body">
                     <table class="table table-responsive">
-                        <form>
                             <tr>
                                 <td></td>
                                 <td></td>
                                 <td></td>
+                                <form action="/home" method="get">
                                 <td>
-                                    <button type="submit" class="btn btn-flat btn-primary" href="{{ url('/izin')}}">Izin</button>
+                                    <button type="submit" class="btn btn-flat btn-primary">Back</button>
                                 </td>
+                                </form>
+                                <form action="/izin" method="get">   
                                 <td>
-                                    <button type="submit" class="btn btn-flat btn-primary">Cuti</button>
+                                    <button type="submit" class="btn btn-flat btn-primary">Done</button>
                                 </td>
+                                </form>
                             </tr>
-                        </form>
                     </table>
                 </div>
             </div>
