@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <!DOCTYPE html>
 
 <html>
@@ -19,7 +17,6 @@
 </head>
 
 
->>>>>>> e9158859b022041f0efe9107e758b336966f6e1a
 @extends('layouts.app')
 
 @section('content')
@@ -27,27 +24,6 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-<<<<<<< HEAD
-                <div class="panel-heading">Ini Halaman Cuti</div>
-                <div class="panel-body">
-                    <table class="table table-responsive">
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <form action="/home" method="get">
-                                <td>
-                                    <button type="submit" class="btn btn-flat btn-primary">Back</button>
-                                </td>
-                                </form>
-                                <form action="/cuti" method="get">   
-                                <td>
-                                    <button type="submit" class="btn btn-flat btn-primary">Done</button>
-                                </td>
-                                </form>
-                            </tr>
-                    </table>
-=======
                 <div class="panel-heading">Detail Cuti </div>
                 <div class="panel-body">Nama
                     <div>
@@ -87,20 +63,21 @@
                         <input id="name" type="name" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
                     </div>
                 </div>
-                <div class="panel-body">Surat Keterangan</div>
+                <div class="panel-body">Surat Keterangan
                 <form action="{{ route('file.store') }}" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 
                 <div class="form-group">
                    
                     <input type="file" class="form-control" id="file" name="file">
+
                 </div>
+                <div class="panel-body">
                 <div class="form-group">
                     <button type="submit" class="btn btn-md btn-primary">Submit</button>
                     <button type="reset" class="btn btn-md btn-danger">Cancel</button>
                 </div>
             </form>
->>>>>>> e9158859b022041f0efe9107e758b336966f6e1a
                 </div>
             </div>
         </div>

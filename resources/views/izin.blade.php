@@ -63,7 +63,7 @@
                         <input id="name" type="name" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
                     </div>
                 </div>
-                <div class="panel-body">Surat Keterangan</div>
+                <div class="panel-body">Surat Keterangan
                 <form action="{{ route('file.store') }}" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 
@@ -71,6 +71,7 @@
                    
                     <input type="file" class="form-control" id="file" name="file">
                 </div>
+                <div class="body-panel">
                 <div class="form-group">
                     <button type="submit" class="btn btn-md btn-primary">Submit</button>
                     <button type="reset" class="btn btn-md btn-danger">Cancel</button>
