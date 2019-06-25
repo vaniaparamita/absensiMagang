@@ -20,3 +20,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/izin', 'IzinController@index');
+Route::get('/cuti', 'CutiController@index');
+Route::resource('file','File');
+
