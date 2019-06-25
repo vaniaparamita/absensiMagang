@@ -14,8 +14,13 @@ class CutiController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         //
         return view ('cuti');
+=======
+        return view ('cuti');
+
+>>>>>>> e9158859b022041f0efe9107e758b336966f6e1a
     }
 
     /**
