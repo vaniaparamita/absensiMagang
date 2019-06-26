@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\ModelCuti;
+
 
 class CutiController extends Controller
 {
@@ -14,7 +15,8 @@ class CutiController extends Controller
      */
     public function index()
     {
-        return view ('cuti');
+        $data = ModelCuti::all();
+        return view('cuti', compact('data'));
 
     }
 
@@ -36,7 +38,18 @@ class CutiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $data = new ModelCuti();
+      $data->nama = $request->nama;
+      $data->tanggal_mulai = $request->tanggal_mulai;
+      $data->tanggal_selesai = $request->tanggal_selesai;
+      $data->keterangan = $request->keterangan;
+
+      
+      $file = $request->file('file');
+      $ext = $file->getClientOriginalExtension();
+      $file->move('uploads/file',$file->getClientOriginalName());
+      $data->save();
+      return redirect()->route('home.index')->with('alert-success','Berhasil Menambahkan Data!');
     }
 
     /**

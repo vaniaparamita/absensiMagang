@@ -23,3 +23,11 @@ Route::get('/izin', 'IzinController@index');
 Route::get('/cuti', 'CutiController@index');
 Route::resource('file','File');
 
+Route::resource('cuti','CutiController');
+Route::get('/izin', function () {
+    return view('izin');
+});
+Route::post('/cuti/store', 'CutiController@store');
+Route::resource('home','HomeController');
+
+
