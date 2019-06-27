@@ -290,6 +290,7 @@ class ComposerStaticInit5408f51c8dc938397c81ceefcb39aeb2
 
     public static $classMap = array (
         'CreateModelCutisTable' => __DIR__ . '/../..' . '/database/migrations/2019_06_26_040529_create_model_cutis_table.php',
+        'CreateModelIzinsTable' => __DIR__ . '/../..' . '/database/migrations/2019_06_27_015751_create_model_izins_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateTableAbsen' => __DIR__ . '/../..' . '/database/migrations/2017_02_01_143706_CreateTableAbsen.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',

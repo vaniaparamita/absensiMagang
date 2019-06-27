@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\ModelIzin;
 
 class IzinController extends Controller
 {
@@ -14,7 +14,8 @@ class IzinController extends Controller
      */
     public function index()
     {
-        return view ('izin');
+        $data = ModelIzin::all();
+        return view('izin', compact('data'));
 
     }
 
@@ -36,7 +37,18 @@ class IzinController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new ModelIzin();
+      $data->nama = $request->nama;
+      $data->tanggal_mulai = $request->tanggal_mulai;
+      $data->tanggal_selesai = $request->tanggal_selesai;
+      $data->keterangan = $request->keterangan;
+
+      
+      $file = $request->file('file');
+      $ext = $file->getClientOriginalExtension();
+      $file->move('uploads/file',$file->getClientOriginalName());
+      $data->save();
+      return redirect()->route('home.index')->with('alert-success','Berhasil Menambahkan Data!');
     }
 
     /**

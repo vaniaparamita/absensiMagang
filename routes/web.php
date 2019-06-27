@@ -24,10 +24,14 @@ Route::get('/cuti', 'CutiController@index');
 Route::resource('file','File');
 
 Route::resource('cuti','CutiController');
+Route::resource('izin','IzinController');
+
 Route::get('/izin', function () {
     return view('izin');
 });
 Route::post('/cuti/store', 'CutiController@store');
+Route::post('/izin/store', 'IzinController@store');
+
 Route::resource('home','HomeController');
 
 
