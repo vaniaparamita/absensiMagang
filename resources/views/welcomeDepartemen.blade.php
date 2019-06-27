@@ -1,0 +1,1 @@
+@extends('AdminDepartemen/admin2')
