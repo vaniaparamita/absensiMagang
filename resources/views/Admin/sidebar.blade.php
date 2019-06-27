@@ -23,7 +23,7 @@
                with font-awesome or any other icon font library -->
                <li class="nav-item">
             <a href="/admin" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
               </p>
@@ -31,7 +31,7 @@
           </li>
           <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-folder"></i>
               <p>
                 Cuti
                 <i class="right fas fa-angle-left"></i>
@@ -54,7 +54,7 @@
           </li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-folder"></i>
               <p>
                 Izin
                 <i class="right fas fa-angle-left"></i>
@@ -77,7 +77,7 @@
           </li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-users"></i>
               <p>
                 Karyawan
                 <i class="right fas fa-angle-left"></i>
@@ -103,6 +103,12 @@
                 </a>
               </li>
             </ul>
+            <li class="nav-item">
+                <a href="/" class="nav-link">
+                  <i class="far fa-user nav-icon"></i>
+                  <p>Sign Out</p>
+                </a>
+              </li>
           </li>
           
         </ul>
