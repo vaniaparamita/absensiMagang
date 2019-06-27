@@ -33,5 +33,7 @@ Route::post('/cuti/store', 'CutiController@store');
 Route::post('/izin/store', 'IzinController@store');
 
 Route::resource('home','HomeController');
+Route::get('my-notification/{type}', 'HomeController@myNotification');
+
 
 
