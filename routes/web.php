@@ -56,9 +56,9 @@ Route::get('/datakaryawan', 'DataKaryawan@index');
 Route::get('/useraccess', 'UserAccess@index');
 
 Route::get('/admin2', 'Admin2Controller@index');
-Route::get('/izindiajukan2', 'IzinDiajukan2@index');
+Route::resource('/izindiajukan2', 'IzinDiajukan2@index');
 Route::get('/izindone2', 'IzinDone2@index');
-Route::get('/cutidiajukan2', 'CutiDiajukan2@index');
+Route::resource('/cutidiajukan2', 'CutiDiajukan2@index');
 Route::get('/cutidone2', 'CutiDone2@index');
 Route::get('/datakaryawan2', 'DataKaryawan2@index');
 

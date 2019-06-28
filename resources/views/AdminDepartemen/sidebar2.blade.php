@@ -69,7 +69,7 @@
               </li>
               <li class="nav-item">
                 <a href="/izindone2" class="nav-link">
-                  <i class="far fa-user nav-icon"></i>
+                  <i class="far fa-circle nav-icon"></i>
                   <p>Izin Sudah Diproses</p>
                 </a>
               </li>
@@ -86,7 +86,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="/datakaryawan2" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-users nav-icon"></i>
                   <p>Data Karyawan</p>
                 </a>
               </li>

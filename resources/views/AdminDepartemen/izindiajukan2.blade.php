@@ -36,6 +36,21 @@
                 <th>Surat Izin</th>
               </tr>
               </thead>
+              <tbody>
+                @php $no = 1; @endphp
+                @foreach($data as $d)
+                    <tr>
+                      <td>{{ $no++ }}</td>
+                      <td>{{ $d->nama }}</td>
+                      <td>{{ $d->tanggal_mulai }}</td>
+                      <td>{{ $d->tanggal_selesai }}</td>
+                      <td>{{ $d->keterangan }}</td>
+                      <td>{{ $d->file }}</td>
+                      <td><a href="#" class=" btn btn-sm btn-primary">Disetujui</a>
+                      <a href="#" class=" btn btn-sm btn-secondary">Tidak</a></td>
+                    </tr>
+                    @endforeach
+                </tbody>
               
             </table>
           </div><!-- /.col -->

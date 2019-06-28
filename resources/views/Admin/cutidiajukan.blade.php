@@ -18,12 +18,12 @@
               <thead>
               <tr>
                 <th>No.</th>
-                <th>NIK</th>
                 <th>Nama</th>
                 <th>Tanggal Mulai</th>
                 <th>Tanggal Akhir</th>
                 <th>Keterangan</th>
                 <th>Surat Cuti</th>
+                <th>Proses</th>
               </tr>
               </thead>
               

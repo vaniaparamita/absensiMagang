@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\ModelCuti;
 
 class CutiDiajukan2 extends Controller
 {
     //
     public function index(){
-        return view('AdminDepartemen/cutidiajukan2');
+            $data = ModelCuti::all();
+            return view('AdminDepartemen/cutidiajukan2', compact('data'));
     }
 }
