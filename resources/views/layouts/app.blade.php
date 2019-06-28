@@ -13,7 +13,13 @@
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+    <style>
+    .position{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    </style>
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
