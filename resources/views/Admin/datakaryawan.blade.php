@@ -20,27 +20,39 @@
               <thead>
               <tr>
                 <th>No.</th>
-                <th>Foto</th>
                 <th>NIK</th>
                 <th>Nama</th>
-                <th>JK</th>
-                <th>Alamat</th>
+                <th>Jenis Kelamin</th>
+                <th>Tanggal Lahir</th>
+                <th>Tempat Lahir</th>
+                <th>Telepon</th>
+                <th>Jabatan</th>
                 <th>Departemen</th>
-                <th>Status</th>
                 <th>Aksi</th>
               </tr>
               </thead>
-              
+              <body>
+              @php $no = 1; @endphp
+                @foreach($data as $d)
+                <tr>
+                      <td>{{ $no++ }}</td>
+                      <td>{{ $d->nik }}</td>
+                      <td>{{ $d->nama_lengkap }}</td>
+                      <td>{{ $d->jenis_kelamin }}</td>
+                      <td>{{ $d->tanggal_lahir }}</td>
+                      <td>{{ $d->tempat_lahir }}</td>
+                      <td>{{ $d->telepon }}</td>
+                      <td>{{ $d->jabatan }}</td>
+                      <td>{{ $d->department }}</td>
+                      <td><a href="#" class=" btn btn-sm btn-primary">Edit</a>
+                      <a href="#" class=" btn btn-sm btn-secondary">Hapus</a>
+                      </td>
+                    
+                </tr>
+                @endforeach
+            </body>
             </table>
-            <div class="box-tools pull-right">
-                <ul class="pagination pagination-sm inline">
-                  <li><a href="#">&laquo;</a></li>
-                  <li><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">&raquo;</a></li>
-                </ul>
-              </div>
+            
           </div><!-- /.col -->
           <div class="col-sm-6">
             

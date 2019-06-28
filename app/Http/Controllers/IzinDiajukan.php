@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\ModelIzin;
 
 class IzinDiajukan extends Controller
 {
     //
     public function index(){
-    return view('Admin/izindiajukan');
+        $data = ModelIzin::all();
+        return view('Admin/izindiajukan', compact('data'));
         }
 }
