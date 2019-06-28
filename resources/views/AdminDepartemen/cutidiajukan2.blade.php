@@ -12,6 +12,11 @@
               <i class="ion ion-clipboard"></i>
                 <br />
               <h2 class="box-title">Daftar Pengajuan Cuti</h2>
+<<<<<<< HEAD
+=======
+
+              
+>>>>>>> master
              </div>
             </div>
             <table class="table table-bordered">
@@ -23,7 +28,7 @@
                 <th>Tanggal Selesai</th>
                 <th>Keterangan</th>
                 <th>Surat Cuti</th>
-                <th>Proses</th>
+                <th>Aksi</th>
               </tr>
               </thead>
               <tbody>
@@ -35,9 +40,13 @@
                       <td>{{ $d->tanggal_mulai }}</td>
                       <td>{{ $d->tanggal_selesai }}</td>
                       <td>{{ $d->keterangan }}</td>
-                      <td>{{ $d->file }}</td>
+                      <td>
+                      <img width="150px" src="{{ url('uploads/file'.$d->file) }}">
+                      </td>
+                      
                       <td><a href="#" class=" btn btn-sm btn-primary">Disetujui</a>
-                      <a href="#" class=" btn btn-sm btn-secondary">Tidak</a></td>
+                      <a href="#" class=" btn btn-sm btn-secondary">Tidak</a>
+                      </td>
                     </tr>
                     @endforeach
                 </tbody>

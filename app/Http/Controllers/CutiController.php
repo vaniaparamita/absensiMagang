@@ -48,6 +48,7 @@ class CutiController extends Controller
       $file = $request->file('file');
       $ext = $file->getClientOriginalExtension();
       $file->move('uploads/file',$file->getClientOriginalName());
+      $data->save(); 
       $data->save();
       return redirect()->route('home.index')->with('alert-success','Berhasil Menambahkan Data!');
     }
