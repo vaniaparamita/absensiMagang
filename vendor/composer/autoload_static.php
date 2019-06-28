@@ -18,6 +18,7 @@ class ComposerStaticInit5408f51c8dc938397c81ceefcb39aeb2
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
+        'a806c12c6e24e7e4e900847766218dba' => __DIR__ . '/..' . '/uxweb/sweet-alert/src/SweetAlert/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -32,6 +33,10 @@ class ComposerStaticInit5408f51c8dc938397c81ceefcb39aeb2
         'W' => 
         array (
             'Webmozart\\Assert\\' => 17,
+        ),
+        'U' => 
+        array (
+            'UxWeb\\SweetAlert\\' => 17,
         ),
         'S' => 
         array (
@@ -117,6 +122,10 @@ class ComposerStaticInit5408f51c8dc938397c81ceefcb39aeb2
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'UxWeb\\SweetAlert\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/uxweb/sweet-alert/src/SweetAlert',
         ),
         'Symfony\\Polyfill\\Util\\' => 
         array (

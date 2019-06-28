@@ -974,17 +974,17 @@
     },
     {
         "name": "nesbot/carbon",
-        "version": "1.38.4",
-        "version_normalized": "1.38.4.0",
+        "version": "1.39.0",
+        "version_normalized": "1.39.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/briannesbitt/Carbon.git",
-            "reference": "8dd4172bfe1784952c4d58c4db725d183b1c23ad"
+            "reference": "dd62a58af4e0775a45ea5f99d0363d81b7d9a1e0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/8dd4172bfe1784952c4d58c4db725d183b1c23ad",
-            "reference": "8dd4172bfe1784952c4d58c4db725d183b1c23ad",
+            "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/dd62a58af4e0775a45ea5f99d0363d81b7d9a1e0",
+            "reference": "dd62a58af4e0775a45ea5f99d0363d81b7d9a1e0",
             "shasum": ""
         },
         "require": {
@@ -997,7 +997,7 @@
             "friendsofphp/php-cs-fixer": "~2",
             "phpunit/phpunit": "^4.8.35 || ^5.7"
         },
-        "time": "2019-06-03T15:41:40+00:00",
+        "time": "2019-06-11T09:07:59+00:00",
         "bin": [
             "bin/upgrade-carbon"
         ],
@@ -2800,17 +2800,17 @@
     },
     {
         "name": "symfony/event-dispatcher",
-        "version": "v3.4.28",
-        "version_normalized": "3.4.28.0",
+        "version": "v3.4.29",
+        "version_normalized": "3.4.29.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/event-dispatcher.git",
-            "reference": "a088aafcefb4eef2520a290ed82e4374092a6dff"
+            "reference": "f18fdd6cc7006441865e698420cee26bac94741f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/a088aafcefb4eef2520a290ed82e4374092a6dff",
-            "reference": "a088aafcefb4eef2520a290ed82e4374092a6dff",
+            "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/f18fdd6cc7006441865e698420cee26bac94741f",
+            "reference": "f18fdd6cc7006441865e698420cee26bac94741f",
             "shasum": ""
         },
         "require": {
@@ -2830,7 +2830,7 @@
             "symfony/dependency-injection": "",
             "symfony/http-kernel": ""
         },
-        "time": "2019-04-02T08:51:52+00:00",
+        "time": "2019-06-25T07:45:31+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -3601,6 +3601,69 @@
         ],
         "description": "Symfony Yaml Component",
         "homepage": "https://symfony.com"
+    },
+    {
+        "name": "uxweb/sweet-alert",
+        "version": "2.0.1",
+        "version_normalized": "2.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/uxweb/sweet-alert.git",
+            "reference": "5b74ad1e51b913ede67c17c667dad6c162766fdc"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/uxweb/sweet-alert/zipball/5b74ad1e51b913ede67c17c667dad6c162766fdc",
+            "reference": "5b74ad1e51b913ede67c17c667dad6c162766fdc",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/session": "~5.0",
+            "illuminate/support": "~5.0",
+            "php": ">=7.0"
+        },
+        "require-dev": {
+            "mockery/mockery": "0.9.*",
+            "phpunit/phpunit": "^7.0"
+        },
+        "time": "2018-11-20T19:21:08+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "UxWeb\\SweetAlert\\SweetAlertServiceProvider"
+                ],
+                "aliases": {
+                    "Alert": "UxWeb\\SweetAlert\\SweetAlert"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "UxWeb\\SweetAlert\\": "src/SweetAlert/"
+            },
+            "files": [
+                "src/SweetAlert/functions.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Uziel Bueno",
+                "email": "ux.webs@gmail.com"
+            }
+        ],
+        "description": "A simple PHP package to show Sweet Alerts with the Laravel Framework",
+        "keywords": [
+            "alert",
+            "laravel",
+            "notifier",
+            "sweet"
+        ]
     },
     {
         "name": "vlucas/phpdotenv",

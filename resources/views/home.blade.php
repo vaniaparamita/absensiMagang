@@ -1,4 +1,13 @@
 @extends('layouts.app')
+<<<<<<< HEAD
+=======
+<head>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+  @include('sweet::alert')
+</head>
+
+>>>>>>> master
 @section('content')
 <br />
 <div class="container">
@@ -33,6 +42,8 @@
                     </div>
                 </div>
             </div>
+
+    
 
 @endsection
 
