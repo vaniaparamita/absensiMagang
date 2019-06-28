@@ -3,7 +3,7 @@
 <br />
 <div class="container">
     <div style="display:block; margin-left:auto; margin-right: auto;">
-        <img src="/avatar2.png" class="img-circle elevation-2" style="width:150px; border:2px solid; display: block;
+        <img src="/user.jpg" class="img-circle elevation-2" style="width:150px; border:2px solid; display: block;
                     margin-left: auto; margin-right: auto;">
         <br />
         <h4 style="text-align:center; text-transform: capitalize">Selamat Datang "{{ Auth::user()->name }}"</h4><br />
