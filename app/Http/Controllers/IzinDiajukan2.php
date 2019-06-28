@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\ModelIzin;
 
-
 class IzinDiajukan2 extends Controller
 {
     

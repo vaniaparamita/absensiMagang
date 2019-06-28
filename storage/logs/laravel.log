@@ -7079,12 +7079,21 @@ Stack trace:
 #40 C:\xampp\htdocs\absensiMagang\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #41 C:\xampp\htdocs\absensiMagang\server.php(21): require_once('C:\\xampp\\htdocs...')
 #42 {main}  
+<<<<<<< HEAD
+[2019-06-28 01:44:32] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'App\Http\Controllers\ModelIzin' not found in C:\xampp\htdocs\absensiMagang\app\Http\Controllers\IzinDiajukan.php:12
+Stack trace:
+#0 [internal function]: App\Http\Controllers\IzinDiajukan->index()
+#1 C:\xampp\htdocs\absensiMagang\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(55): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\absensiMagang\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('index', Array)
+#3 C:\xampp\htdocs\absensiMagang\vendor\laravel\framework\src\Illuminate\Routing\Route.php(189): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\IzinDiajukan), 'index')
+=======
 [2019-06-27 04:27:03] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'App\Http\Controllers\Alert' not found in C:\xampp\htdocs\absensiMagang\app\Http\Controllers\CutiController.php:52
 Stack trace:
 #0 [internal function]: App\Http\Controllers\CutiController->store(Object(Illuminate\Http\Request))
 #1 C:\xampp\htdocs\absensiMagang\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(55): call_user_func_array(Array, Array)
 #2 C:\xampp\htdocs\absensiMagang\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('store', Array)
 #3 C:\xampp\htdocs\absensiMagang\vendor\laravel\framework\src\Illuminate\Routing\Route.php(189): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\CutiController), 'store')
+>>>>>>> master
 #4 C:\xampp\htdocs\absensiMagang\vendor\laravel\framework\src\Illuminate\Routing\Route.php(144): Illuminate\Routing\Route->runController()
 #5 C:\xampp\htdocs\absensiMagang\vendor\laravel\framework\src\Illuminate\Routing\Router.php(653): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
 #6 C:\xampp\htdocs\absensiMagang\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))

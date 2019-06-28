@@ -51,7 +51,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="icon">
                 <i class="ion ion-bag"></i>
               </div>
-              <a href="DataTransaksi" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+              <a href="/izindiajukan2" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -66,7 +66,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
               </div>
-              <a href="DataBuku" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+              <a href="/cutidiajukan2" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -81,7 +81,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="icon">
                 <i class="ion ion-person-add"></i>
               </div>
-              <a href="DataAnggota" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+              <a href="/datakaryawan2" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
             </div>
           </div>
         </div>

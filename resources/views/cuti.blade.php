@@ -43,7 +43,7 @@
 
                                     $('.date').datepicker({  
 
-                                    format: 'mm-dd-yyyy'
+                                    format: 'dd-mm-yyyy'
 
                                     });  
 
@@ -57,7 +57,7 @@
 
                                     $('.date').datepicker({  
 
-                                    format: 'mm-dd-yyyy'
+                                    format: 'dd-mm-yyyy'
 
                                     });  
 

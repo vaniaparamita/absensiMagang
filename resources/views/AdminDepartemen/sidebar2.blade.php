@@ -23,15 +23,15 @@
                with font-awesome or any other icon font library -->
                <li class="nav-item">
             <a href="/admin2" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard Admin
               </p>
             </a>
           </li>
-          <li class="nav-item has-treeview">
+          <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-folder"></i>
               <p>
                 Cuti
                 <i class="right fas fa-angle-left"></i>
@@ -54,7 +54,7 @@
           </li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-folder"></i>
               <p>
                 Izin
                 <i class="right fas fa-angle-left"></i>
@@ -75,22 +75,18 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Karyawan Departemen X
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="/datakaryawan2" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-users nav-icon"></i>
                   <p>Data Karyawan</p>
                 </a>
               </li>
-            </ul>
+            <li class="nav-item">
+                <a href="/" class="nav-link">
+                  <i class="far fa-user nav-icon"></i>
+                  <p>Sign Out</p>
+                </a>
+              </li>
           </li>
           
         </ul>

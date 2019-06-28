@@ -12,4 +12,5 @@ class IzinDiajukan extends Controller
         $data = ModelIzin::all();
         return view('Admin/izindiajukan', compact('data'));
         }
+        
 }

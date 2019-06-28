@@ -12,8 +12,11 @@
               <i class="ion ion-clipboard"></i>
                 <br />
               <h2 class="box-title">Daftar Pengajuan Cuti</h2>
+<<<<<<< HEAD
+=======
 
               
+>>>>>>> master
              </div>
             </div>
             <table class="table table-bordered">
@@ -22,7 +25,7 @@
                 <th>No.</th>
                 <th>Nama</th>
                 <th>Tanggal Mulai</th>
-                <th>Tanggal Akhir</th>
+                <th>Tanggal Selesai</th>
                 <th>Keterangan</th>
                 <th>Surat Cuti</th>
                 <th>Aksi</th>
@@ -49,7 +52,15 @@
                 </tbody>
               
             </table>
-
+            <div class="box-tools pull-right">
+                <ul class="pagination pagination-sm inline">
+                  <li><a href="#">&laquo;</a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">&raquo;</a></li>
+                </ul>
+              </div>
           </div><!-- /.col -->
           <div class="col-sm-6">
            

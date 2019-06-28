@@ -9,7 +9,7 @@ class CutiDiajukan2 extends Controller
 {
     //
     public function index(){
-        $data = ModelCuti::all();
-         return view('AdminDepartemen/cutidiajukan2', compact('data'));
+            $data = ModelCuti::all();
+            return view('AdminDepartemen/cutidiajukan2', compact('data'));
     }
 }

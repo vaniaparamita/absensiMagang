@@ -40,7 +40,7 @@
 
                                     $('.date').datepicker({  
 
-                                    format: 'mm-dd-yyyy'
+                                    format: 'dd-mm-yyyy'
 
                                     });  
 
@@ -54,7 +54,7 @@
 
                                     $('.date').datepicker({  
 
-                                    format: 'mm-dd-yyyy'
+                                    format: 'dd-mm-yyyy'
 
                                     });  
 
@@ -67,7 +67,6 @@
                 </div>
                 <div class="panel-body">Surat Keterangan
                
-                
                 <div class="form-group">
                    
                     <input type="file" class="form-control" id="file" name="file">
