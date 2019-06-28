@@ -75,22 +75,12 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
-              <p>
-                Karyawan Departemen X
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="/datakaryawan2" class="nav-link">
-                  <i class="far fa-users nav-icon"></i>
+                  <i class="fas fa-users nav-icon"></i>
                   <p>Data Karyawan</p>
                 </a>
               </li>
-            </ul>
             <li class="nav-item">
                 <a href="/" class="nav-link">
                   <i class="far fa-user nav-icon"></i>

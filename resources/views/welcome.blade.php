@@ -13,8 +13,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: #f0f3f7;
+                color: #858585;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
@@ -50,7 +50,7 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: #858585;
                 padding: 0 25px;
                 font-size: 12px;
                 font-weight: 600;
@@ -79,7 +79,11 @@
                 </div>
 
                 <div class="links">
-                    <a>Sistem Absensi Karyawan</a>
+                    <a>HRD MANAGEMENT</a>
+                </div>
+                <br />
+                <div class=image>
+                    <img src="/jcm.png" alt="User Image" width="300px">
                 </div>
             </div>
         </div>

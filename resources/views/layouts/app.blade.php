@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -83,5 +84,10 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
 </body>
 </html>
