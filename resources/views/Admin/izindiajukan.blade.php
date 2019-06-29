@@ -41,14 +41,22 @@
                       </td>
                       
                       <td><a href="#" class=" btn btn-sm btn-primary">Disetujui</a>
-                      <a href="#" class=" btn btn-sm btn-secondary">Tidak</a>
+                      <a href="#" class=" btn btn-sm btn-danger">Tidak</a>
                       </td>
                     </tr>
                     @endforeach
                 </tbody>
               
             </table>
-            
+            <div class="box-tools pull-right">
+                <ul class="pagination pagination-sm inline">
+                  <li><a href="#">&laquo;</a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">&raquo;</a></li>
+                </ul>
+              </div>
           </div><!-- /.col -->
           <div class="col-sm-6">
            
