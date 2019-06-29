@@ -12,11 +12,8 @@
               <i class="ion ion-clipboard"></i>
                 <br />
               <h2 class="box-title">Daftar Pengajuan Cuti</h2>
-<<<<<<< HEAD
-=======
 
               
->>>>>>> master
              </div>
             </div>
             <table class="table table-bordered">
@@ -45,7 +42,7 @@
                       </td>
                       
                       <td><a href="#" class=" btn btn-sm btn-primary">Disetujui</a>
-                      <a href="#" class=" btn btn-sm btn-secondary">Tidak</a>
+                      <a href="#" class=" btn btn-sm btn-danger">Tidak</a>
                       </td>
                     </tr>
                     @endforeach

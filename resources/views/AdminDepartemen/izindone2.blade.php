@@ -12,16 +12,6 @@
               <i class="ion ion-clipboard"></i>
 
               <h2 class="box-title">Daftar Izin Karyawan</h2>
-
-              <div class="box-tools pull-right">
-                <ul class="pagination pagination-sm inline">
-                  <li><a href="#">&laquo;</a></li>
-                  <li><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">&raquo;</a></li>
-                </ul>
-              </div>
              </div>
             </div>
             <table class="table table-bordered">
@@ -39,6 +29,16 @@
               </thead>
               
             </table>
+            <div class="box-tools pull-right">
+                <ul class="pagination pagination-sm inline">
+                  <li><a href="#">&laquo;</a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">&raquo;</a></li>
+                </ul>
+              </div>
+          </div><!-- /.col -->
           </div><!-- /.col -->
           <div class="col-sm-6">
           
