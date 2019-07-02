@@ -14,7 +14,7 @@
               <h2 class="box-title">Daftar Akses Karyawan</h2>
               <form action="/tambahuser" method="get">
                   <td>
-                    <button type="submit" class="btn btn-flat btn-primary">+ Tambah Akses</button>
+                    <button type="submit" class="btn btn-flat btn-success">+ Tambah Akses</button>
                   </td>
                 </form>
              </div>

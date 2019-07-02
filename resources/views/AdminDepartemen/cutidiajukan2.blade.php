@@ -12,11 +12,6 @@
               <i class="ion ion-clipboard"></i>
                 <br />
               <h2 class="box-title">Daftar Pengajuan Cuti</h2>
-<<<<<<< HEAD
-=======
-
-              
->>>>>>> master
              </div>
             </div>
             <table class="table table-bordered">
