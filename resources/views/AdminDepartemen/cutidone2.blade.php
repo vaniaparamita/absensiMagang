@@ -37,7 +37,6 @@
                 </ul>
             </div>
           </div><!-- /.col -->
-          </div><!-- /.col -->
           <div class="col-sm-6">
            
           </div><!-- /.col -->

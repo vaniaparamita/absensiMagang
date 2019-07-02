@@ -32,19 +32,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <div class="content-wrapper">
       <!-- Content Header (Page header) -->
-      <section class="content-header">
-        <h2>
-          Dashboard Karyawan <br />
-          <small>PT. Garuda Mitra Sejati</small>
-        </h2>
-      </section>
-
       <!-- Main content -->
       <section class="content container-fluid">
-        <div class="row">
-          <div class="col-lg-3 col-xs-6">
+        <section class="content-header">
+          <h2>
+              Dashboard Karyawan <br />
+                <small>PT. Garuda Mitra Sejati</small>
+          </h2>
+        </section>
+      <div class="row">
+        <div class="col-lg-3 col-xs-6">
             <!-- small box -->
-            <div class="small-box bg-aqua">
+            <div class="small-box bg-red">
               <div class="inner">
                 <h3>10</h3>
 
@@ -74,7 +73,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- ./col -->
           <div class="col-lg-3 col-xs-6">
             <!-- small box -->
-            <div class="small-box bg-yellow">
+            <div class="small-box bg-purple">
               <div class="inner">
                 <h3>94</h3>
 
