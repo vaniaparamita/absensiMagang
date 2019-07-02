@@ -33,12 +33,12 @@
                 <div class="panel-body">Nama
                     <div>
                         <input id="nama" type="text" class="form-control" name="nama"  required autofocus
-                            value="{{ Auth::user()->name }}" style="text-transform: capitalize">
+                            value="{{ Auth::user()->name }}" style="text-transform: capitalize" >
                     </div>
                 </div>
                 <div class="panel-body">Tanggal Mulai Cuti
                 <div>
-                <input id="tanggal_mulai"  class="date form-control" name="tanggal_mulai">
+                <input id="tanggal_mulai"  class="date form-control" name="tanggal_mulai" autocomplete="off">
                         </div>
                                 <script type="text/javascript">
 
@@ -52,7 +52,7 @@
                         </div>
                         <div class="panel-body">Tanggal Selesai Cuti
                 <div>
-                <input id="tanggal_selesai"  class="date form-control" name="tanggal_selesai">
+                <input id="tanggal_selesai"  class="date form-control" name="tanggal_selesai" autocomplete="off">
                         </div>
                                 <script type="text/javascript">
 
@@ -66,7 +66,7 @@
                         </div>
                 <div class="panel-body">Keterangan
                 <div>
-                        <input id="keterangan" type="text" class="form-control" name="keterangan"  required autofocus>
+                        <input id="keterangan" type="text" class="form-control" name="keterangan" autocomplete="off" required autofocus>
                     </div>
                 </div>
                 <div class="panel-body">Surat Keterangan
