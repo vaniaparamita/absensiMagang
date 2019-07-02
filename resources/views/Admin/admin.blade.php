@@ -11,8 +11,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <title>AdminLTE 3 | Starter</title>
 
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{ asset('/lte/plugins/fontawesome-free/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('/lte/plugins/fontawesome-free/css/all.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('/lte/dist/css/adminlte.min.css') }}">
   <!-- Google Font: Source Sans Pro -->
