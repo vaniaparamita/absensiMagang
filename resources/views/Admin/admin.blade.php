@@ -50,12 +50,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="inner">
                 <h3>{{ DB::table('model_izins')->count()}}</h3>
 
-                <p>Karyawan Izin</p>
+                <p>Pengajuan Izin</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
               </div>
-              <a href="/izindone" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+              <a href="/izindiajukan" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -65,12 +65,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="inner">
                 <h3>{{ DB::table('model_cutis')->count()}}</h3>
 
-                <p>Karyawan Cuti</p>
+                <p>Pengajuan Cuti</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
               </div>
-              <a href="/cutidone" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+              <a href="/cutidiajukan" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
