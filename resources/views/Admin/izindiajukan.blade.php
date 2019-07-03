@@ -39,7 +39,7 @@
                       <td>{{ $d->tanggal_selesai }}</td>
                       <td>{{ $d->keterangan }}</td>
                       <td>
-                      <img width="150px" src="{{ asset('storage/uploads/file'.$d->file) }}">
+                      <img width="150px" src="{{ url('uploads/file'.$d->file) }}">
                       </td>
                       
                       <td><a href="#" class=" btn btn-sm btn-primary">Disetujui</a>
