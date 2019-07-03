@@ -16,6 +16,7 @@
              
             </div>
             </div>
+            <br />
             <table class="table table-bordered">
               <thead>
               <tr>
@@ -33,12 +34,12 @@
                 @foreach($data as $d)
                     <tr>
                       <td>{{ $no++ }}</td>
-                      <td>{{ $d->nama }}</td>
+                      <td style="text-transform: capitalize">{{ $d->nama }}</td>
                       <td>{{ $d->tanggal_mulai }}</td>
                       <td>{{ $d->tanggal_selesai }}</td>
                       <td>{{ $d->keterangan }}</td>
                       <td>
-                      <img width="150px" src="{{ url('uploads/file'.$d->file) }}">
+                      <img width="150px" src="{{ url('/uploads/file'.$d->file) }}">
                       </td>
                       
                       <td><a href="#" class=" btn btn-sm btn-primary">Disetujui</a>

@@ -49,7 +49,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- small box -->
             <div class="small-box bg-red">
               <div class="inner">
-                <h3>10</h3>
+                <h3>{{ DB::table('model_izins')->count()}}</h3>
 
                 <p>Karyawan Izin</p>
               </div>
@@ -64,7 +64,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- small box -->
             <div class="small-box bg-blue">
               <div class="inner">
-                <h3>3</h3>
+                <h3>{{ DB::table('model_cutis')->count()}}</h3>
 
                 <p>Karyawan Cuti</p>
               </div>

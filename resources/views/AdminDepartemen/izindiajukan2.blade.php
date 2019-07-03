@@ -33,7 +33,7 @@
                 @foreach($data as $d)
                     <tr>
                       <td>{{ $no++ }}</td>
-                      <td>{{ $d->nama }}</td>
+                      <td style="text-transform: capitalize">{{ $d->nama }}</td>
                       <td>{{ $d->tanggal_mulai }}</td>
                       <td>{{ $d->tanggal_selesai }}</td>
                       <td>{{ $d->keterangan }}</td>
