@@ -52,7 +52,7 @@
             </table>
             <br />
             <div class="box-tools pull-right">
-            <ul class="pagination">
+            <ul class="pagination" style="float:right">
               <li class="paginate_button page-item previous" id="example2_previous">
                 <a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
                 <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
