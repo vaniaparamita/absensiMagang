@@ -6,15 +6,17 @@
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-        <div class="col-sm-12">
+        <div class="col-sm-12" style="background:white">
             <div class="box box-primary">
             <div class="box-header">
               <i class="ion ion-clipboard"></i>
-
+              <br />
+               
               <h2 class="box-title">Daftar Pengajuan Izin</h2>
 
              </div>
             </div>
+            <br/>
             <table class="table table-bordered">
               <thead>
               <tr>
@@ -47,6 +49,7 @@
                     @endforeach
                 </tbody>
             </table>
+            <br />
             <div class="box-tools pull-right">
             <ul class="pagination">
               <li class="paginate_button page-item previous" id="example2_previous">
