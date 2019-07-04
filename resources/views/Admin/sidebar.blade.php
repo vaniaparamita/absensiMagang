@@ -9,10 +9,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="/avatar2.png" class="img-circle elevation-2" alt="User Image">
+          <img src="/avatar2.png" class="img-circle elevation-2" alt="User Image" style="width:36px; height:36px">
         </div>
         <div class="info">
-          <a href="#" class="d-block">HRD Admin</a>
+          <a href="#" class="d-block" style="font-size:14px">HRD Admin</a>
         </div>
       </div>
 
@@ -29,7 +29,7 @@
               </p>
             </a>
           </li>
-          <li class="nav-item has-treeview menu-open">
+          <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-folder"></i>
               <p>

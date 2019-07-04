@@ -11,8 +11,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <title>AdminLTE 3 | Starter</title>
 
+  <!-- DataTables -->
+  <link rel="stylesheet" href="{{ asset('/lte/plugins/datatables/dataTables.bootstrap4.css') }}">
+  <!-- Icons Ion -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{ asset('/lte/plugins/fontawesome-free/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('/lte/plugins/fontawesome-free/css/all.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('/lte/dist/css/adminlte.min.css') }}">
   <!-- Google Font: Source Sans Pro -->
@@ -30,28 +35,27 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <div class="content-wrapper">
       <!-- Content Header (Page header) -->
-      <section class="content-header">
-        <h2>
-          Dashboard Karyawan <br />
-          <small>PT. Garuda Mitra Sejati</small>
-        </h2>
-      </section>
-
       <!-- Main content -->
       <section class="content container-fluid">
-        <div class="row">
-          <div class="col-lg-3 col-xs-6">
+        <section class="content-header">
+          <h2>
+              Dashboard Karyawan <br />
+                <small>PT. Garuda Mitra Sejati</small>
+          </h2>
+        </section>
+      <div class="row">
+        <div class="col-lg-3 col-xs-6">
             <!-- small box -->
-            <div class="small-box bg-aqua">
+            <div class="small-box bg-red">
               <div class="inner">
-                <h3>10</h3>
+                <h3>{{ DB::table('model_izins')->count()}}</h3>
 
-                <p>Karyawan Izin</p>
+                <p>Pengajuan Izin</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
               </div>
-              <a href="/izindone" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+              <a href="/izindiajukan" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -59,20 +63,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- small box -->
             <div class="small-box bg-green">
               <div class="inner">
-                <h3>5</h3>
+                <h3>{{ DB::table('model_cutis')->count()}}</h3>
 
-                <p>Karyawan Cuti</p>
+                <p>Pengajuan Cuti</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
               </div>
-              <a href="/cutidone" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+              <a href="/cutidiajukan" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
           <div class="col-lg-3 col-xs-6">
             <!-- small box -->
-            <div class="small-box bg-yellow">
+            <div class="small-box bg-purple">
               <div class="inner">
                 <h3>94</h3>
 
@@ -139,5 +143,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{ asset('/lte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('/lte/dist/js/adminlte.min.js') }}"></script>
+<!-- DataTables -->
+<script src="{{ asset('/lte/plugins/datatables/jquery.dataTables.js') }}"></script>
+<script src="{{ asset('/lte/plugins/datatables/dataTables.bootstrap4.js') }}"></script>
 </body>
 </html>

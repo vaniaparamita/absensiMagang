@@ -6,8 +6,9 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
-        <div class="row mb-2">
+        <div class="row mb-2" style="background:white">
         <div class="col-md-8 col-md-offset-6">
+			<br />
             <h1 class="m-0 text-dark">Tambah Karyawan</h1>
             <hr>
             <form action="{{ route('tambahkaryawan.store') }}" method="post"enctype="multipart/form-data">
