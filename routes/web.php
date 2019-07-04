@@ -20,41 +20,52 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/izin', 'IzinController@index');
-Route::get('/cuti', 'CutiController@index');
-Route::resource('file','File');
 
+Route::get('/cuti', 'CutiController@index');
 Route::resource('cuti','CutiController');
+Route::post('/cuti/store', 'CutiController@store');
+
+
+//KARYAWAN
+Route::get('/tambahkaryawan', 'TambahKaryawan@index');
+Route::resource('tambahkaryawan','TambahKaryawan');
+Route::post('/tambahkaryawan/store', 'TambahKaryawan@store');
+Route::post('/datakaryawan/destroy', 'TambahKaryawan@destroy');
+
 Route::resource('izin','IzinController');
 
 Route::get('/izin', function () {
     return view('izin');
 });
-Route::post('/cuti/store', 'CutiController@store');
+
 Route::post('/izin/store', 'IzinController@store');
 
 Route::resource('home','HomeController');
 Route::get('my-notification/{type}', 'HomeController@myNotification');
 
-
 Route::get('/welcomeDepartemen', function () {
     return view('welcomeDepartemen');
-});
-
-Route::get('/editkaryawan', function () {
-    return view('Admin/editkaryawan');
 });
 
 Route::get('/tambahuser', function () {
     return view('Admin/tambahuseraccess');
 });
 
+Route::get('/editkaryawan', function () {
+    return view('Admin/editkaryawan');
+});
+Route::post('/editkaryawan/edit', 'TambahKaryawan@edit');
+Route::post('/editkaryawan/update', 'TambahKaryawan@update');
+
+
+
 Route::get('/admin', 'AdminController@index');
 Route::resource('/izindiajukan', 'IzinDiajukan@index');
 Route::get('/izindone', 'IzinDone@index');
 Route::resource('/cutidiajukan', 'CutiDiajukan@index');
 Route::get('/cutidone', 'CutiDone@index');
-Route::get('/tambahkaryawan', 'TambahKaryawan@index');
 Route::resource('/datakaryawan', 'DataKaryawan@index');
+
 Route::get('/useraccess', 'UserAccess@index');
 
 Route::get('/admin2', 'Admin2Controller@index');
@@ -65,6 +76,14 @@ Route::get('/cutidone2', 'CutiDone2@index');
 Route::get('/datakaryawan2', 'DataKaryawan2@index');
 
 Route::resource('file','File');
+
+
+
+
+
+
+
+
 
 
 

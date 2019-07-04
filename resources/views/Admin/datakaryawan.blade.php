@@ -37,15 +37,21 @@
                 <tr>
                       <td>{{ $no++ }}</td>
                       <td>{{ $d->nik }}</td>
-                      <td>{{ $d->nama_lengkap }}</td>
+                      <td>{{ $d->nama }}</td>
                       <td>{{ $d->jenis_kelamin }}</td>
                       <td>{{ $d->tanggal_lahir }}</td>
                       <td>{{ $d->tempat_lahir }}</td>
                       <td>{{ $d->telepon }}</td>
                       <td>{{ $d->jabatan }}</td>
                       <td>{{ $d->department }}</td>
-                      <td><a href="#" class=" btn btn-sm btn-primary">Edit</a>
-                      <a href="#" class=" btn btn-sm btn-secondary">Hapus</a>
+                      <td>
+      
+                      <form action="{{ route('datakaryawan.destroy', $d->id) }}" method="post">
+                              {{ csrf_field() }}
+                              {{ method_field('DELETE') }}
+                      <a href="{{ route('datakaryawan.edit', $d->id) }}" class=" btn btn-sm btn-primary">Edit</a>
+                      <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Hapus</button>
+                      </form>
                       </td>
                     
                 </tr>
