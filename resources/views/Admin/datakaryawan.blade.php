@@ -12,11 +12,17 @@
               <i class="ion ion-clipboard"></i>
               <br />
               <h2 class="box-title">Daftar Karyawan</h2>
-              <br />
              </div>
             </div>
-            <br />
-            <table class="table table-bordered">
+            <div class="dataTables_length" id="example">
+              <label>Show<select name="example1_length" aria-controls="example1" 
+                        class="custom-select custom-select-sm form-control form-control-sm">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option></select>entries</label>
+              </div>
+            <table class="table table-bordered" id="example"> 
               <thead>
               <tr>
                 <th>No.</th>

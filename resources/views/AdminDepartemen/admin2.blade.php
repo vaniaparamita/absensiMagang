@@ -14,6 +14,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- DataTables -->
   <link rel="stylesheet" href="{{ asset('/lte/plugins/datatables/dataTables.bootstrap4.css') }}">
+  <link rel="stylesheet" href="{{ asset('/lte/plugins/datatables/jquery.dataTables.css') }}">
   <!-- Icons-->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Font Awesome Icons -->
@@ -79,7 +80,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- small box -->
             <div class="small-box bg-cyan">
               <div class="inner">
-                <h3>44</h3>
+              <!-- TABLE BUKAN SETELAH KARYAWAN PER-DEPARTEMEN -->
+                <h3>{{ DB::table('model_karyawans')->count()}}</h3>
 
                 <p>Karyawan Aktif</p>
               </div>
@@ -129,5 +131,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{ asset('/lte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('/lte/dist/js/adminlte.min.js') }}"></script>
+<!-- DataTables -->
+<script src="{{ asset('/lte/plugins/datatables/jquery.dataTables.js') }}"></script>
 </body>
 </html>

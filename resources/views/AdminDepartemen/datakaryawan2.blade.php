@@ -26,9 +26,36 @@
                 <th>JK</th>
                 <th>Alamat</th>
                 <th>NoHape</th>
+                <th>Jabatan</th>
+                <th>Department</th>
+                <th>Proses</th>
               </tr>
               </thead>
-              
+              <body>
+              @php $no = 1; @endphp
+                @foreach($data as $d)
+                <tr>
+                      <td>{{ $no++ }}</td>
+                      <td>{{ $d->nik }}</td>
+                      <td style="text-transform: capitalize">{{ $d->nama }}</td>
+                      <td>{{ $d->jenis_kelamin }}</td>
+                      <td>{{ $d->tanggal_lahir }}</td>
+                      <td>{{ $d->tempat_lahir }}</td>
+                      <td>{{ $d->telepon }}</td>
+                      <td>{{ $d->jabatan }}</td>
+                      <td>{{ $d->department }}</td>
+                      <td>
+      
+                      <form action="{{ route('datakaryawan.destroy', $d->id) }}" method="post">
+                              {{ csrf_field() }}
+                              {{ method_field('DELETE') }}
+                      <a href="{{ route('datakaryawan.edit', $d->id) }}" class=" btn btn-sm btn-primary">Edit</a>
+                      <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Hapus</button>
+                      </form>
+                      </td>
+                </tr>
+                @endforeach
+            </body>
             </table>
             <div class="box-tools pull-right">
             <ul class="pagination" style="float:right">
