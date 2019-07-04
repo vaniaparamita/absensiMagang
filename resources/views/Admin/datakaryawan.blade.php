@@ -37,7 +37,7 @@
                 <tr>
                       <td>{{ $no++ }}</td>
                       <td>{{ $d->nik }}</td>
-                      <td style="text-transform: capitalize">{{ $d->nama_lengkap }}</td>
+                      <td style="text-transform: capitalize">{{ $d->nama }}</td>
                       <td>{{ $d->jenis_kelamin }}</td>
                       <td>{{ $d->tanggal_lahir }}</td>
                       <td>{{ $d->tempat_lahir }}</td>
