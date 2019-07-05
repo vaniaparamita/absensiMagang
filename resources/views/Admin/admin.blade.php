@@ -150,10 +150,5 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script type="text/javascript" charset="utf8" src="{{ asset('/lte/plugins/datatables/jquery.dataTables.js') }}"></script>
 <script src="{{ asset('/lte/plugins/datatables/dataTables.bootstrap4.js') }}"></script>
 <script src="{{ asset('/lte/plugins/datatables/dataTables.bootstrap4.min.js') }}"></script>
-<script type="text/javascript">
-	    $(document).ready(function(){
-		  $('#example').DataTable();
-	});
-</script>
 </body>
 </html>

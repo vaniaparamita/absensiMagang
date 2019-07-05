@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
 use App\ModelKaryawan;
+use Yajra\Datatables\DataTables;
 
 class DataKaryawan extends Controller
 {
@@ -12,6 +13,7 @@ class DataKaryawan extends Controller
     public function index(){
         $data = ModelKaryawan::all();
         return view('Admin/datakaryawan', compact('data'));
+        //return view('Admin/datakaryawan');
     }
 
     public function create()
@@ -74,5 +76,10 @@ class DataKaryawan extends Controller
     {
         //
     }
+
+    /*public function datakaryawan()
+    {
+        return DataTables::of(ModelKaryawan::query())->make(true);
+    }*/
 
 }

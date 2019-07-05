@@ -79,9 +79,9 @@
                 </div>
 
                 <div class="links">
-                    <a>HRD MANAGEMENT</a>
+                    <a>HR Sistem Informasi</a>
                 </div>
-                <br />
+                <br /><br />
                 <div class=image>
                     <img src="/jcm.png" alt="User Image" width="300px">
                 </div>
