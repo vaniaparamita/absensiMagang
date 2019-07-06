@@ -11,7 +11,7 @@
 			<br />
             <h1 class="m-0 text-dark">Tambah Karyawan</h1>
             <hr>
-            <form action="{{ route('tambahkaryawan.store') }}" method="post"enctype="multipart/form-data">
+            <form action="{{ route('karyawan.store') }}" method="post" enctype="multipart/form-data">
 			{{ csrf_field() }}
 					<div class="form-group">
 						<label for="nama">NIK :</label>

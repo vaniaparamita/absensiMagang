@@ -10,7 +10,7 @@
             <h1 class="m-0 text-dark">Edit Karyawan</h1>
             <hr>
 			@foreach($data as $d)
-            <form action="{{ route('editkaryawan.update', $data->id) }}" method="post">
+            <form action="{{ route('karyawan.update', $d->nik) }}" method="post" enctype="multipart/form-data">
 			{{ csrf_field() }}
 			{{ method_field('PUT') }}
 					<div class="form-group">
@@ -20,7 +20,7 @@
 
 					<div class="form-group">
 						<label for="nama">Nama :</label>
-						<input type="text" class="form-control" id="nama" name="nama" value="{{ $d->nama_lengkap }}">
+						<input type="text" class="form-control" id="nama" name="nama" value="{{ $d->nama }}">
 					</div>
 
 					<div class="form-group">
@@ -55,10 +55,12 @@
 				   
 					<div class="form-group">
 					  <button type="submit" class="btn btn-md btn-primary">Save</button>
-					  <button type="reset" class="btn btn-md btn-danger">Cancel</button>
+					  <a class="btn btn-danger" href="{{route('karyawan.index')}}" role="button">Cancel</a>
 					</div>
 				</form>
 				@endforeach
+
+				
           </div><!-- /.col -->
           <div class="col-sm-6">
           </div><!-- /.col -->

@@ -5,20 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
 use App\ModelKaryawan;
-use Yajra\Datatables\DataTables;
 
 class DataKaryawan extends Controller
 {
     //
-    public function index(){
+    public function index(){ //view
         $data = ModelKaryawan::all();
-        return view('Admin/datakaryawan', compact('data'));
-        //return view('Admin/datakaryawan');
+        return view('Admin.datakaryawan', compact('data'));
     }
 
-    public function create()
+    public function create() 
     {
-        return view('DataKaryawan');
+        return view('Admin.tambahkaryawan');
     }
     /**
      * Store a newly created resource in storage.
@@ -29,7 +27,17 @@ class DataKaryawan extends Controller
 
     public function store(Request $request)
     {
-        
+        $data = new ModelKaryawan();
+        $data->nik = $request->nik;
+        $data->nama = $request->nama;
+        $data->jenis_kelamin = $request->jenis_kelamin;
+        $data->tempat_lahir = $request->tempat_lahir;
+        $data->tanggal_lahir = $request->tanggal_lahir;
+        $data->telepon = $request->telepon;
+        $data->jabatan = $request->jabatan;
+        $data->department = $request->department;
+        $data->save();
+        return redirect()->route('karyawan.index')->with('alert-success','Berhasil Menambahkan Data!');
     }
 
     /**
@@ -51,7 +59,8 @@ class DataKaryawan extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = ModelKaryawan::where('nik','=',$id)->get();
+        return view('Admin.editkaryawan', compact('data'));
     }
 
     /**
@@ -63,7 +72,17 @@ class DataKaryawan extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = ModelKaryawan::where('nik',$id)->first();
+        $data->nik = $request->nik;
+        $data->nama = $request->nama;
+        $data->jenis_kelamin = $request->jenis_kelamin;
+        $data->tempat_lahir = $request->tempat_lahir;
+        $data->tanggal_lahir = $request->tanggal_lahir;
+        $data->telepon = $request->telepon;
+        $data->jabatan = $request->jabatan;
+        $data->department = $request->department;
+        $data->save();
+        return redirect()->route('karyawan.index')->with('alert-success','Berhasil Menambahkan Data!');
     }
 
     /**
@@ -74,12 +93,9 @@ class DataKaryawan extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = ModelKaryawan::where('nik',$id)->first();
+        $data->delete();
+        return redirect()->route('karyawan.index')->with('alert-success','Delete Data Successfully!');
     }
-
-    /*public function datakaryawan()
-    {
-        return DataTables::of(ModelKaryawan::query())->make(true);
-    }*/
 
 }
