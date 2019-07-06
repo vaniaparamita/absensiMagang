@@ -1,4 +1,7 @@
 @extends('Admin/base')
+@section('styles')
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
+@endsection
 @section('content')
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -16,7 +19,7 @@
              
             </div>
             </div>
-            <table class="table table-bordered">
+            <table class="table table-bordered" id="table_cutidone">
               <thead>
               <tr>
                 <th>No.</th>
@@ -31,19 +34,6 @@
               </thead>
               
             </table>
-            <div class="box-tools pull-right">
-            <ul class="pagination" style="float:right">
-              <li class="paginate_button page-item previous" id="example2_previous">
-                <a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
-                <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
-                <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="2" tabindex="0" class="page-link">2</a></li>
-                <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="3" tabindex="0" class="page-link">3</a></li>
-                <li class="paginate_button page-item active"><a href="#" aria-controls="example2" data-dt-idx="4" tabindex="0" class="page-link">4</a></li>
-                <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="5" tabindex="0" class="page-link">5</a></li>
-                <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="6" tabindex="0" class="page-link">6</a></li>
-                <li class="paginate_button page-item next" id="example2_next"><a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>
-              </ul>
-              </div>
           </div><!-- /.col -->
           <div class="col-sm-6">
            
@@ -51,5 +41,15 @@
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script> 
+    <script>
+      $(document).ready( function () {
+      $('#table_cutidone').DataTable();
+      });
+    </script>
     <!-- /.content-header -->
 @endsection

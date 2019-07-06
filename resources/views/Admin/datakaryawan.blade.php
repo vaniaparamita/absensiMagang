@@ -1,7 +1,4 @@
 @extends('Admin/base')
-@section('styles')
-    <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
-@endsection
 @section('content')
 <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -17,8 +14,8 @@
               <h2 class="box-title">Daftar Karyawan</h2>
              </div>
             </div>
-
-            <table class="table table-bordered" id="myTable"> 
+            <br />
+            <table class="table table-bordered table-striped" id="datakaryawan"> 
               <thead>
               <tr>
                 <th>No.</th>
@@ -73,10 +70,9 @@
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script> 
     <script>
       $(document).ready( function () {
-      $('#myTable').DataTable();
+      $('#datakaryawan').DataTable();
       });
     </script>
     <!-- /.content-header -->
