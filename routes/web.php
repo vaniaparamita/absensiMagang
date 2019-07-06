@@ -15,32 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-Route::get('/izin', 'IzinController@index');
-
-Route::get('/cuti', 'CutiController@index');
-Route::resource('cuti','CutiController');
-Route::post('/cuti/store', 'CutiController@store');
-
-
-//KARYAWAN
-Route::get('/tambahkaryawan', 'TambahKaryawan@index');
-Route::resource('tambahkaryawan','TambahKaryawan');
-Route::post('/tambahkaryawan/store', 'TambahKaryawan@store');
-Route::post('/datakaryawan/destroy', 'TambahKaryawan@destroy');
-
-Route::resource('izin','IzinController');
-
-Route::get('/izin', function () {
-    return view('izin');
+Route::get('/datakaryawan', function () {
+    return view('Admin/datakaryawan');
 });
-
-Route::post('/izin/store', 'IzinController@store');
-
-Route::resource('home','HomeController');
-Route::get('my-notification/{type}', 'HomeController@myNotification');
 
 Route::get('/welcomeDepartemen', function () {
     return view('welcomeDepartemen');
@@ -50,34 +27,74 @@ Route::get('/tambahuser', function () {
     return view('Admin/tambahuseraccess');
 });
 
-Route::get('/editkaryawan', function () {
-    return view('Admin/editkaryawan');
+// Route::get('/editkaryawan', function () {
+//     return view('Admin/editkaryawan');
+// });
+
+Route::get('/admin', function () {
+    return view('Admin/admin');
 });
-Route::post('/editkaryawan/edit', 'TambahKaryawan@edit');
-Route::post('/editkaryawan/update', 'TambahKaryawan@update');
 
+Route::get('/admin2', function () {
+    return view('admin2');
+});
 
+Route::get('/useraccess', function () {
+    return view('Admin/useraccess');
+});
 
-Route::get('/admin', 'AdminController@index');
-Route::resource('/izindiajukan', 'IzinDiajukan@index');
-Route::get('/izindone', 'IzinDone@index');
-Route::resource('/cutidiajukan', 'CutiDiajukan@index');
-Route::get('/cutidone', 'CutiDone@index');
+Route::get('/datakaryawan2', function () {
+    return view('AdminDepartemen/datakaryawan2');
+});
+Route::get('/tambahkaryawan', function () {
+    return view('Admin/tambahkaryawan');
+});
+
+//KARYAWAN
 Route::resource('/datakaryawan', 'DataKaryawan@index');
 
-Route::get('/useraccess', 'UserAccess@index');
+Route::resource('karyawan', 'DataKaryawan');
 
-Route::get('/admin2', 'Admin2Controller@index');
-Route::resource('/izindiajukan2', 'IzinDiajukan2@index');
-Route::get('/izindone2', 'IzinDone2@index');
-Route::resource('/cutidiajukan2', 'CutiDiajukan2@index');
-Route::get('/cutidone2', 'CutiDone2@index');
-Route::get('/datakaryawan2', 'DataKaryawan2@index');
+Route::post('/tambahkaryawan/store', 'DataKaryawan@store');
+Route::post('/datakaryawan/destroy', 'DataKaryawan@destroy');
+// Route::post('/datakaryawan/edit', 'DataKaryawan@edit');
+// Route::post('/editkaryawan/update', 'TambahKaryawan@update');
+
+//IZIN
+Route::resource('izin','IzinController');
+Route::post('/izin/store', 'IzinController@store');
+  //hrd
+  Route::resource('/izindiajukan', 'IzinDiajukan@index');
+  Route::get('/izindone', 'IzinDone@index');
+  //atasan
+  Route::resource('/izindiajukan2', 'IzinDiajukan2@index');
+  Route::get('/izindone2', 'IzinDone2@index');
+
+//CUTI
+Route::resource('cuti','CutiController');
+Route::post('/cuti/store', 'CutiController@store');
+  //hrd
+  Route::resource('/cutidiajukan', 'CutiDiajukan@index');
+  Route::get('/cutidone', 'CutiDone@index');
+  //atasan
+  Route::resource('/cutidiajukan2', 'CutiDiajukan2@index');
+  Route::get('/cutidone2', 'CutiDone2@index');
+
+Route::resource('home','HomeController');
+Route::get('my-notification/{type}', 'HomeController@myNotification');
+
+Route::get('newsletter',[
+    'uses'=>'NewsLetterController@create',
+    'as'=>'newsletter'
+]);
+Route::post('apply',[
+    'uses'=>'NewsLetterController@store',
+    'as'=>'apply'
+]);
+
 
 Route::resource('file','File');
-
-
-
+Auth::routes();
 
 
 

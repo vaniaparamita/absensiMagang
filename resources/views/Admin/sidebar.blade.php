@@ -91,7 +91,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/tambahkaryawan" class="nav-link">
+                <a href="{{ route('karyawan.create') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Karyawan</p>
                 </a>

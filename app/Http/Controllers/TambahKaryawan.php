@@ -21,7 +21,7 @@ class TambahKaryawan extends Controller
 
     public function create()
     {
-        return view('DataAnggota');
+        return view('Admin.datakaryawan');
     }
 
     public function store(Request $request)
@@ -57,8 +57,8 @@ class TambahKaryawan extends Controller
      */
     public function edit($id)
     {
-        $data = ModelKaryawan::where('id',$id)->get();
-        return view('editkaryawan',compact('data'));
+        $datas = ModelKaryawan::where('nik',$id)->get();
+        return view('editkaryawan', compact('datas'));
     }
 
     /**
@@ -70,7 +70,7 @@ class TambahKaryawan extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = ModelKaryawan::where('id',$id)->first();
+        $data = ModelKaryawan::where('nik',$id)->first();
         $data->nik = $request->nik;
         $data->nama = $request->nama;
         $data->jenis_kelamin = $request->jenis_kelamin;
