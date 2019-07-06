@@ -13,6 +13,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- DataTables -->
   <link rel="stylesheet" href="{{ asset('/lte/plugins/datatables/dataTables.bootstrap4.css') }}">
+  <link rel="stylesheet" href="{{ asset('/lte/plugins/datatables/dataTables.bootstrap4.min.css') }}">
   <!-- Icons Ion -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Font Awesome Icons -->
@@ -48,6 +49,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- small box -->
             <div class="small-box bg-red">
               <div class="inner">
+                <!-- TABLE BUKAN SETELAH APPROVE PIHAK DEPARTEMEN -->
                 <h3>{{ DB::table('model_izins')->count()}}</h3>
 
                 <p>Pengajuan Izin</p>
@@ -63,6 +65,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- small box -->
             <div class="small-box bg-green">
               <div class="inner">
+                <!-- TABLE BUKAN SETELAH APPROVE PIHAK DEPARTEMEN -->
                 <h3>{{ DB::table('model_cutis')->count()}}</h3>
 
                 <p>Pengajuan Cuti</p>
@@ -78,7 +81,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- small box -->
             <div class="small-box bg-purple">
               <div class="inner">
-                <h3>94</h3>
+                <h3>{{ DB::table('model_karyawans')->count()}}</h3>
 
                 <p>Karyawan Aktif</p>
               </div>
@@ -144,7 +147,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- AdminLTE App -->
 <script src="{{ asset('/lte/dist/js/adminlte.min.js') }}"></script>
 <!-- DataTables -->
-<script src="{{ asset('/lte/plugins/datatables/jquery.dataTables.js') }}"></script>
+<script type="text/javascript" charset="utf8" src="{{ asset('/lte/plugins/datatables/jquery.dataTables.js') }}"></script>
 <script src="{{ asset('/lte/plugins/datatables/dataTables.bootstrap4.js') }}"></script>
+<script src="{{ asset('/lte/plugins/datatables/dataTables.bootstrap4.min.js') }}"></script>
 </body>
 </html>

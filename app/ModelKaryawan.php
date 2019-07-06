@@ -13,4 +13,6 @@ class ModelKaryawan extends Model
         'nik', 'nama', 'jenis_kelamin', 'tempat_lahir', 'tanggal_lahir', 'telepon', 'jabatan', 'department', 
     ];
 
+  
+
 }
