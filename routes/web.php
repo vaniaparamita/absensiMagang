@@ -51,7 +51,7 @@ Route::get('/tambahkaryawan', function () {
 });
 
 //KARYAWAN
-Route::resource('/datakaryawan', 'DataKaryawan@index');
+Route::resource('/datakaryawan', 'DataKaryawan');
 
 Route::resource('karyawan', 'DataKaryawan');
 
@@ -64,20 +64,20 @@ Route::post('/datakaryawan/destroy', 'DataKaryawan@destroy');
 Route::resource('izin','IzinController');
 Route::post('/izin/store', 'IzinController@store');
   //hrd
-  Route::resource('/izindiajukan', 'IzinDiajukan@index');
+  Route::resource('/izindiajukan', 'IzinDiajukan');
   Route::get('/izindone', 'IzinDone@index');
   //atasan
-  Route::resource('/izindiajukan2', 'IzinDiajukan2@index');
+  Route::resource('/izindiajukan2', 'IzinDiajukan2');
   Route::get('/izindone2', 'IzinDone2@index');
 
 //CUTI
 Route::resource('cuti','CutiController');
 Route::post('/cuti/store', 'CutiController@store');
   //hrd
-  Route::resource('/cutidiajukan', 'CutiDiajukan@index');
+  Route::resource('/cutidiajukan', 'CutiDiajukan');
   Route::get('/cutidone', 'CutiDone@index');
   //atasan
-  Route::resource('/cutidiajukan2', 'CutiDiajukan2@index');
+  Route::resource('/cutidiajukan2', 'CutiDiajukan2');
   Route::get('/cutidone2', 'CutiDone2@index');
 
 Route::resource('home','HomeController');
@@ -92,6 +92,11 @@ Route::post('apply',[
     'as'=>'apply'
 ]);
 
+Route::get('admin-login','Auth\LoginAdminController@showLoginForm');
+Route::post('admin-login', ['as' => 'admin-login', 'uses' => 'Auth\LoginAdminController@login']);
+Route::get('admin-register','Auth\LoginAdminController@showRegisterPage');
+Route::post('admin-register', 'Auth\LoginAdminController@register')->name('admin.register');
+
 
 Route::resource('file','File');
 Auth::routes();
@@ -104,3 +109,7 @@ Auth::routes();
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
