@@ -36,7 +36,7 @@ Route::get('/admin', function () {
 });
 
 Route::get('/admin2', function () {
-    return view('admin2');
+    return view('AdminDepartemen/admin2');
 });
 
 Route::get('/useraccess', function () {
