@@ -9,16 +9,21 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+        
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #f0f3f7;
-                color: #858585;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
+                background-image:url(bg.jpg);
+                background-size: cover;
+                background-attachment:fixed;
+                color:#ffffff;
+                font-family: 'Raleway', sans-serif;     
+                font-weight: bold;
                 height: 100vh;
                 margin: 0;
+            }
+            .hr-si{
+                color:#1b6615;
             }
 
             .full-height {
@@ -60,7 +65,34 @@
             }
 
             .m-b-md {
-                margin-bottom: 30px;
+                margin-bottom: 28px;
+            }
+
+            .button{
+                position:relative;
+                background-color:#505254;
+                border:2px solid #e6e6e6;
+                display:inline-block;
+                cursor:pointer;
+                border-radius:8px;
+                padding: 15px 56px;
+                opacity:0.6;
+                color:#ffffff;
+                text-align:center;
+                text-decoration:none;
+                font-size:18px;   
+            }
+
+            .button:hover {
+               background-color:#383838;  
+            }
+
+            .zoom-effect {  
+                position: relative;
+                width: 100%;
+                height: 360px;
+                margin: 0 auto;
+                overflow: hidden;  
             }
         </style>
     </head>
@@ -68,23 +100,24 @@
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
-                    <a href="{{ url('/login') }}">Login</a>
+                    
+                <a href="{{ url('/login') }}">Login</a>
                     <a href="{{ url('/register') }}">Register</a>
                 </div>
             @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    PT. Garuda Mitra Sejati
+               <div class="content">
+                  <div class=image>
+                      <img src="/jcm.png" alt="User Image" width="250px">
+                 </div> 
+                <br />
+                <div class="title m-b-md">            
+                   WELCOME TO HR-IS
                 </div>
-
                 <div class="links">
-                    <a>HR Sistem Informasi</a>
+                    <a style="color:white">HANYA UNTUK KARYAWAN PT.GARUDA MITRA SEJATI</a>
                 </div>
-                <br /><br />
-                <div class=image>
-                    <img src="/jcm.png" alt="User Image" width="300px">
-                </div>
+                <br /><br /><br />
+                    <a href="{{ url('/login') }}" class="button">LOGIN</a>
             </div>
         </div>
     </body>
