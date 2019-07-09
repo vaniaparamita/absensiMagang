@@ -30,7 +30,7 @@
 
 					<div class="form-group">
 						<label for="nama">Tempat Lahir :</label>
-						<input type="date" class="form-control" id="tempat_lahir" name="tempat_lahir" value="{{ $d->tempat_lahir}}">
+						<input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" value="{{ $d->tempat_lahir}}">
 					</div>
 
 					<div class="form-group">
