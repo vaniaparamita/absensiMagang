@@ -20,6 +20,15 @@
         margin-left: auto;
         margin-right: auto;
     }
+    .imagecontainer{
+       text-align:center;
+       margin:24px 0 12px 0; 
+    }
+    img.avatar{
+        width: 25%;
+        border-radius: 50%;
+        border: 2px solid;
+    }
     </style>
     <!-- Scripts -->
     <script>
@@ -32,7 +41,7 @@
     <link rel="stylesheet" type="text/css" href="/pathto/css/sweetalert.css">
 
 </head>
-<body>
+<body style="background-image:url(bg.jpg)">
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
@@ -63,14 +72,12 @@
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
                                     aria-expanded="false" style="text-transform: capitalize">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
-
                                 <ul class="dropdown-menu" role="menu">
                                      <li>
                                         <a href="{{ url('/logout') }}"
@@ -78,7 +85,6 @@
                                                      document.getElementById('logout-form').submit();">
                                             Logout
                                         </a>
-
                                         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>

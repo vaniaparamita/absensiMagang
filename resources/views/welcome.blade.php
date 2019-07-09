@@ -75,8 +75,8 @@
                 display:inline-block;
                 cursor:pointer;
                 border-radius:8px;
-                padding: 16px 64px;
-                opacity:0.7;
+                padding: 15px 56px;
+                opacity:0.6;
                 color:#ffffff;
                 text-align:center;
                 text-decoration:none;
@@ -86,19 +86,28 @@
             .button:hover {
                background-color:#383838;  
             }
+
+            .zoom-effect {  
+                position: relative;
+                width: 100%;
+                height: 360px;
+                margin: 0 auto;
+                overflow: hidden;  
+            }
         </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
-                  
+                    <a href="{{ url('/login') }}">Login</a>
+                    <a href="{{ url('/register') }}">Register</a>
                 </div>
             @endif
                <div class="content">
                   <div class=image>
                       <img src="/jcm.png" alt="User Image" width="250px">
-                  </div>
+                 </div> 
                 <br />
                 <div class="title m-b-md">            
                    WELCOME TO HR-IS
