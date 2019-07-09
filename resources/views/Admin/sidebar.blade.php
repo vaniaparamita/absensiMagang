@@ -21,8 +21,8 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-               <li class="nav-item">
-            <a href="/admin" class="nav-link">
+              <li class="nav-item">
+            <a href="/admin" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -109,11 +109,18 @@
                   <p>Sign Out</p>
                 </a>
               </li>
-          </li>
+           </li>
           
-        </ul>
+         </ul>
       </nav>
       <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-    </aside>
+  </div>
+      <!-- /.sidebar -->
+       <script src="/lte/plugins/jquery/jquery.min.js"></script>
+          <script>
+            $('.nav-item').on('click','li', function(){
+              $('.nav-item').removeClass('active');
+              $(this).addClass('active');
+            });
+       </script>
+</aside>
