@@ -13,12 +13,11 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-image:url(bg.jpg);
+                background-image:url(bg2.png);
                 background-size: cover;
                 background-attachment:fixed;
                 color:#ffffff;
                 font-family: 'Raleway', sans-serif;     
-                font-weight: bold;
                 height: 100vh;
                 margin: 0;
             }
@@ -70,21 +69,22 @@
 
             .button{
                 position:relative;
-                background-color:#505254;
-                border:2px solid #e6e6e6;
+                background-color: transparant;
+                border:3px solid #c7c7c7;
                 display:inline-block;
                 cursor:pointer;
-                border-radius:8px;
+                border-radius:5px;
                 padding: 15px 56px;
-                opacity:0.6;
                 color:#ffffff;
                 text-align:center;
                 text-decoration:none;
-                font-size:18px;   
+                font-size:18px;  
+                font-weight: bold; 
             }
 
             .button:hover {
-               background-color:#383838;  
+               background-color:#c7c7c7;
+               opacity: 0.5;  
             }
 
             .zoom-effect {  
@@ -99,12 +99,11 @@
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
-                <div class="top-right links">
-                    
-                <a href="{{ url('/login') }}">Login</a>
+            <div class="top-right links">
+                    <a href="{{ url('/login') }}">Home</a>
                     <a href="{{ url('/register') }}">Register</a>
                 </div>
-            @endif
+            @endif   
                <div class="content">
                   <div class=image>
                       <img src="/jcm.png" alt="User Image" width="250px">

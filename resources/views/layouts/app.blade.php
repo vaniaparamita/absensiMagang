@@ -41,7 +41,7 @@
     <link rel="stylesheet" type="text/css" href="/pathto/css/sweetalert.css">
 
 </head>
-<body style="background-image:url(bg.jpg)">
+<body style="background-image:url(bg2.png)">
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
