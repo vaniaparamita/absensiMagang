@@ -116,7 +116,7 @@
                     <a style="color:white">HANYA UNTUK KARYAWAN PT.GARUDA MITRA SEJATI</a>
                 </div>
                 <br /><br /><br />
-                    <a href="{{ url('/login') }}" class="button">LOGIN</a>
+                    <a href="{{ url('/login') }}" class="button">MASUK</a>
             </div>
         </div>
     </body>

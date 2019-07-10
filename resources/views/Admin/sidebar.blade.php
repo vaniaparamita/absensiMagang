@@ -1,7 +1,7 @@
 <aside class="main-sidebar sidebar-dark-secondary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link sidebar-dark-primary">
-      <span class="brand-text font-weight-light">PT. GARUDA MITRA SEJATI</span>
+    <a href="index3.html" class="brand-link sidebar-dark-primary"> 
+      <span class="brand-text font-weight-light-bold">PT. GARUDA MITRA SEJATI</span>
     </a>
 
     <!-- Sidebar -->
@@ -9,10 +9,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="/avatar2.png" class="img-circle elevation-2" alt="User Image" style="width:36px; height:36px">
+          <img src="/avatar2.png" class="img-circle elevation-2" alt="User Image" style="width:36px; height:36px; border:1.5px solid">
         </div>
         <div class="info">
-          <a href="#" class="d-block" style="font-size:14px">HRD Admin</a>
+          <a href="#" class="d-block" style="font-size:14px; color:black">HRD Admin</a>
         </div>
       </div>
 
