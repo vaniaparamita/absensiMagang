@@ -11,7 +11,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <title>AdminLTE 3 | Starter</title>
   <!-- Bootstrap4 -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <!-- DataTable -->  
   <link rel="stylesheet" href="{{ asset('/lte/plugins/datatables/dataTables.bootstrap4.css') }}">
   <!-- Font Awesome Icons -->
