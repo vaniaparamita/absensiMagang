@@ -29,8 +29,10 @@
               </p>
             </a>
           </li>
-          <li class="nav-item has-treeview {{ Request::segment(1) === 'cutidiajukan2' ? 'menu-open' : null }}">
-            <a href="#" class="nav-link nav-link {{ Request::segment(1) === 'cutidiajukan2' ? 'nav-link active' : null }}">
+          <li class="nav-item has-treeview {{ Request::segment(1) === 'cutidiajukan2' ? 'menu-open' : null }}
+                {{ Request::segment(1) === 'cutidone2' ? 'menu-open' : null }}">
+            <a href="#" class="nav-link {{ Request::segment(1) === 'cutidiajukan2' ? 'nav-link active' : null }}
+                  {{ Request::segment(1) === 'cutidone2' ? 'nav-link active' : null }}">
               <i class="nav-icon fas fa-folder"></i>
               <p>
                 Cuti
@@ -52,8 +54,10 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item has-treeview {{ Request::segment(1) === 'izindiajukan2' ? 'menu-open' : null }}">
-            <a href="#" class="nav-link {{ Request::segment(1) === 'izindiajukan2' ? 'nav-link active' : null }}">
+          <li class="nav-item has-treeview {{ Request::segment(1) === 'izindiajukan2' ? 'menu-open' : null }}
+              {{ Request::segment(1) === 'izindone2' ? 'menu-open' : null }}">
+            <a href="#" class="nav-link {{ Request::segment(1) === 'izindiajukan2' ? 'nav-link active' : null }}
+                {{ Request::segment(1) === 'izindone2' ? 'nav-link active' : null }}">
               <i class="nav-icon fas fa-folder"></i>
               <p>
                 Izin

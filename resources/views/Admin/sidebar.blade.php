@@ -22,15 +22,17 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
               <li class="nav-item">
-            <a href="/admin" class="nav-link nav-link {{ Request::segment(1) === 'admin' ? 'nav-link active' : null }}">
+            <a href="/admin" class="nav-link {{ Request::segment(1) === 'admin' ? 'nav-link active' : null }}">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
               </p>
             </a>
           </li>
-          <li class="nav-item has-treeview {{ Request::segment(1) === 'cutidiajukan' ? 'menu-open' : null }}">
-            <a href="#" class="nav-link {{ Request::segment(1) === 'cutidiajukan' ? 'nav-link active' : null }}">
+          <li class="nav-item has-treeview {{ Request::segment(1) === 'cutidiajukan' ? 'menu-open' : null }}
+              {{ Request::segment(1) === 'cutidone' ? 'menu-open' : null }}">
+            <a href="#" class="nav-link {{ Request::segment(1) === 'cutidiajukan' ? 'nav-link active' : null }}
+              {{ Request::segment(1) === 'cutidone' ? 'nav-link active' : null }}">
               <i class="nav-icon fas fa-folder"></i>
               <p>
                 Cuti
@@ -52,8 +54,10 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item has-treeview {{ Request::segment(1) === 'izindiajukan' ? 'menu-open' : null }}">
-            <a href="#" class="nav-link {{ Request::segment(1) === 'izindiajukan' ? 'nav-link active' : null }}">
+          <li class="nav-item has-treeview {{ Request::segment(1) === 'izindiajukan' ? 'menu-open' : null }}
+              {{ Request::segment(1) === 'izindone' ? 'menu-open' : null }}">
+            <a href="#" class="nav-link {{ Request::segment(1) === 'izindiajukan' ? 'nav-link active' : null }}
+              {{ Request::segment(1) === 'izindone' ? 'nav-link active' : null }}">
               <i class="nav-icon fas fa-folder"></i>
               <p>
                 Izin
@@ -75,8 +79,12 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item has-treeview {{ Request::segment(1) === 'datakaryawan' ? 'menu-open' : null }}">
-            <a href="#" class="nav-link {{ Request::segment(1) === 'datakaryawan' ? 'nav-link active' : null }}">
+          <li class="nav-item has-treeview {{ Request::segment(1) === 'datakaryawan' ? 'menu-open' : null }}
+                  {{ Request::segment(1) === 'karyawan' ? 'menu-open' : null }} {{ Request::segment(1) === 'useraccess' ? 'menu-open' : null }}
+                      {{ Request::segment(1) === 'tambahuser' ? 'menu-open' : null }}">
+            <a href="#" class="nav-link {{ Request::segment(1) === 'datakaryawan' ? 'nav-link active' : null }}
+                  {{ Request::segment(1) === 'karyawan' ? 'nav-link active' : null }} {{ Request::segment(1) === 'useraccess' ? 'nav-link active' : null }}
+                      {{ Request::segment(1) === 'tambahuser' ? 'nav-link active' : null }}">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Karyawan
@@ -97,7 +105,8 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/useraccess" class="nav-link {{ Request::segment(1) === 'useraccess' ? 'nav-link active' : null }}">
+                <a href="/useraccess" class="nav-link {{ Request::segment(1) === 'useraccess' ? 'nav-link active' : null }}
+                {{ Request::segment(1) === 'tambahuser' ? 'nav-link active' : null }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Akses Karyawan</p>
                 </a>

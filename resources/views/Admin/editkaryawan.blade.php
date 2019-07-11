@@ -7,8 +7,8 @@
       <div class="container-fluid">
         <div class="row mb-2">
         <div class="col-md-8 col-md-offset-6">
-            <h1 class="m-0 text-dark">Edit Karyawan</h1>
-            <hr>
+			<h1 class="m-0 text-dark">Edit Karyawan</h1>
+			<hr>
 			@foreach($data as $d)
             <form action="{{ route('karyawan.update', $d->nik) }}" method="post" enctype="multipart/form-data">
 			{{ csrf_field() }}
