@@ -27,13 +27,13 @@
     23 => 'Illuminate\\Notifications\\NexmoChannelServiceProvider',
     24 => 'Illuminate\\Notifications\\SlackChannelServiceProvider',
     25 => 'Laravel\\Tinker\\TinkerServiceProvider',
-    26 => 'Collective\\Html\\HtmlServiceProvider',
-    27 => 'Maatwebsite\\Excel\\ExcelServiceProvider',
-    28 => 'Carbon\\Laravel\\ServiceProvider',
-    29 => 'UxWeb\\SweetAlert\\SweetAlertServiceProvider',
-    30 => 'Yajra\\DataTables\\DataTablesServiceProvider',
-    31 => 'UxWeb\\SweetAlert\\SweetAlertServiceProvider',
-    32 => 'Laravel\\Tinker\\TinkerServiceProvider',
+    26 => 'Carbon\\Laravel\\ServiceProvider',
+    27 => 'Spatie\\Permission\\PermissionServiceProvider',
+    28 => 'UxWeb\\SweetAlert\\SweetAlertServiceProvider',
+    29 => 'Yajra\\DataTables\\DataTablesServiceProvider',
+    30 => 'UxWeb\\SweetAlert\\SweetAlertServiceProvider',
+    31 => 'Laravel\\Tinker\\TinkerServiceProvider',
+    32 => 'Spatie\\Permission\\PermissionServiceProvider',
     33 => 'App\\Providers\\AppServiceProvider',
     34 => 'App\\Providers\\AuthServiceProvider',
     35 => 'App\\Providers\\EventServiceProvider',
@@ -55,16 +55,17 @@
     10 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
     11 => 'Illuminate\\Notifications\\NexmoChannelServiceProvider',
     12 => 'Illuminate\\Notifications\\SlackChannelServiceProvider',
-    13 => 'Maatwebsite\\Excel\\ExcelServiceProvider',
-    14 => 'Carbon\\Laravel\\ServiceProvider',
+    13 => 'Carbon\\Laravel\\ServiceProvider',
+    14 => 'Spatie\\Permission\\PermissionServiceProvider',
     15 => 'UxWeb\\SweetAlert\\SweetAlertServiceProvider',
     16 => 'Yajra\\DataTables\\DataTablesServiceProvider',
     17 => 'UxWeb\\SweetAlert\\SweetAlertServiceProvider',
-    18 => 'App\\Providers\\AppServiceProvider',
-    19 => 'App\\Providers\\AuthServiceProvider',
-    20 => 'App\\Providers\\EventServiceProvider',
-    21 => 'App\\Providers\\RouteServiceProvider',
-    22 => 'Yajra\\Datatables\\DatatablesServiceProvider',
+    18 => 'Spatie\\Permission\\PermissionServiceProvider',
+    19 => 'App\\Providers\\AppServiceProvider',
+    20 => 'App\\Providers\\AuthServiceProvider',
+    21 => 'App\\Providers\\EventServiceProvider',
+    22 => 'App\\Providers\\RouteServiceProvider',
+    23 => 'Yajra\\Datatables\\DatatablesServiceProvider',
   ),
   'deferred' => 
   array (
@@ -170,10 +171,6 @@
     'validator' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'validation.presence' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'command.tinker' => 'Laravel\\Tinker\\TinkerServiceProvider',
-    'html' => 'Collective\\Html\\HtmlServiceProvider',
-    'form' => 'Collective\\Html\\HtmlServiceProvider',
-    'Collective\\Html\\HtmlBuilder' => 'Collective\\Html\\HtmlServiceProvider',
-    'Collective\\Html\\FormBuilder' => 'Collective\\Html\\HtmlServiceProvider',
   ),
   'when' => 
   array (
@@ -214,9 +211,6 @@
     array (
     ),
     'Laravel\\Tinker\\TinkerServiceProvider' => 
-    array (
-    ),
-    'Collective\\Html\\HtmlServiceProvider' => 
     array (
     ),
   ),
