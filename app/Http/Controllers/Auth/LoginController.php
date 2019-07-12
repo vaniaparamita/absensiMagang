@@ -37,18 +37,26 @@ class LoginController extends Controller
         $this->middleware('guest', ['except' => 'logout']);
     }
 
-    public function username()
-    {
-        return 'username'; //or whatever field
-    }
+    // public function username()
+    // {
+    //     return 'username'; //or whatever field
+    // }
 
 
     protected function authenticated(\Illuminate\Http\Request $request, $user)
     {
-        if($user->role=='admin')
+        if($user->role=='user')
+        {
+            return redirect('/home');
+        }
+        else if($user->role=='admin')
         {
             return redirect('/admin');
         }
+        else if(auth()->user()->role=='admin-departemen')
+        {
+            return redirect('/admin2');
+        }   
         else
         {
             return redirect('/');

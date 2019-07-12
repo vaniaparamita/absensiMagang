@@ -11,37 +11,68 @@
 			<br />
             <h1 class="m-0 text-dark">Tambah Akses</h1>
             <hr>
-				<form action="/datakaryawan" method="post">
-					<div class="form-group">
-						<label for="nama">NIK :</label>
-						<input type="text" class="form-control" id="" name="">
-					</div>
-							<div class="form-group">
-						<label for="nama">Nama :</label>
-						<input type="text" class="form-control" id="" name="">
-					</div>
-							<div class="form-group">
-						<label for="nama">Tanggal Lahir :</label>
-						<input type="date" class="form-control" id="" name="">
-					</div>
+            <form action="{{ route('admin.store') }}" method="post" enctype="multipart/form-data">
+			{{ csrf_field() }}	
+				<div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            <label for="name" class="col-md-4 control-label">Name</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+
+                                @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
 							 <div class="form-group">
-						<label for="nama">Jenis Kelamin :</label>
+						<label for="nama">Role :</label>
                     <br/>
-						<input type="radio" name="">Perempuan<br/>
-                        <input type="radio" name="">Laki-laki
+					<select  class="form-control" name="role">
+						<option value="user">User</option>
+						<option value="admin">Admin</option>
+						<option value="admin-departemen">Admin Departemen</option>
+					</select>
 					</div>
-					<div class="form-group">
-					   <label for="nama">Alamat :</label>
-					   <input type="address" class="form-control" id="" name="">
-				   </div>
-				   <div class="form-group">
-					  <label for="nama">Departemen :</label>
-					  <input type="text" class="form-control" id="" name="">
-				  </div>
-				 <label for="picture">Foto Profile Karyawan</label>
-					<div class="form-group">
-						<input type="file" class="form-control" id="file" name="file">
-					</div>
+					
+					<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                            <label for="password" class="col-md-4 control-label">Password</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control" name="password" required>
+
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+
+                            <div class="col-md-6">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            </div>
+                        </div>
+					
 					<div class="form-group">
 						<button type="submit" class="btn btn-md btn-primary">Submit</button>
 						<button type="reset" class="btn btn-md btn-danger">Cancel</button>

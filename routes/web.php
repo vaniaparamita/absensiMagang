@@ -52,9 +52,7 @@ Route::get('/tambahkaryawan', function () {
 
 //KARYAWAN
 Route::resource('/datakaryawan', 'DataKaryawan');
-
 Route::resource('karyawan', 'DataKaryawan');
-
 Route::post('/tambahkaryawan/store', 'DataKaryawan@store');
 Route::post('/datakaryawan/destroy', 'DataKaryawan@destroy');
 // Route::post('/datakaryawan/edit', 'DataKaryawan@edit');
@@ -92,24 +90,22 @@ Route::post('apply',[
     'as'=>'apply'
 ]);
 
-Route::get('admin-login','Auth\LoginAdminController@showLoginForm');
-Route::post('admin-login', ['as' => 'admin-login', 'uses' => 'Auth\LoginAdminController@login']);
-Route::get('admin-register','Auth\LoginAdminController@showRegisterPage');
-Route::post('admin-register', 'Auth\LoginAdminController@register')->name('admin.register');
-
-
 Route::resource('file','File');
 Auth::routes();
 
+Route::get('/home', 'HomeController@index');
 
+Route::middleware(['admin'])->group(function () {
+    Route::resource('admin', 'UserController');
+});
 
-
-
-
-
-
+Route::middleware(['admin-departemen'])->group(function () {
+    Route::resource('admin2', 'Admin2Controller');
+});
 
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('useraccess', 'UserAccess');
+

@@ -164,6 +164,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
         Laravel\Tinker\TinkerServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
+
 
 
         /*
