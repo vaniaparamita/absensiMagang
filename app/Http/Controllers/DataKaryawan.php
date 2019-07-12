@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
 use App\ModelKaryawan;
+use DataTables;
 
 class DataKaryawan extends Controller
 {
@@ -37,7 +38,7 @@ class DataKaryawan extends Controller
         $data->jabatan = $request->jabatan;
         $data->department = $request->department;
         $data->save();
-        return redirect()->route('karyawan.index')->with('alert-success','Berhasil Menambahkan Data!');
+        return redirect()->route('karyawan.index')->with('alert-success-store','Berhasil Menambahkan Data!');
     }
 
     /**
@@ -82,7 +83,7 @@ class DataKaryawan extends Controller
         $data->jabatan = $request->jabatan;
         $data->department = $request->department;
         $data->save();
-        return redirect()->route('karyawan.index')->with('alert-success','Berhasil Menambahkan Data!');
+        return redirect()->route('karyawan.index')->with('alert-success-update','Berhasil Menambahkan Data!');
     }
 
     /**
@@ -95,7 +96,11 @@ class DataKaryawan extends Controller
     {
         $data = ModelKaryawan::where('nik',$id)->first();
         $data->delete();
-        return redirect()->route('karyawan.index')->with('alert-success','Delete Data Successfully!');
+        return redirect()->route('karyawan.index')->with('alert-success-delete','Delete Data Successfully!');
     }
+
+   /* public function json(){
+        return Datatables::of(ModelKaryawan::all())->make(true);
+    } */
 
 }

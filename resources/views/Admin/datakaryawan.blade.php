@@ -15,6 +15,36 @@
              </div>
             </div>
             <br />
+            @if(session('alert-success-store'))
+            <div class="alert alert-success alert-dismissible">
+              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <h5>
+                  <i class="icon fas fa-check"></i>
+                   Success!
+                 </h5>
+                   Data baru berhasil ditambahkan    
+            </div>
+            @endif
+            @if(session('alert-success-update'))
+            <div class="alert alert-success alert-dismissible">
+    				  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+              <h5>
+                  <i class="icon fas fa-check"></i>
+                   Success!
+                 </h5>
+                   Data baru berhasil diubah 
+            </div>
+            @endif
+            @if(session('alert-success-delete'))
+            <div class="alert alert-success alert-dismissible">
+    				  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+              <h5>
+                  <i class="icon fas fa-check"></i>
+                   Success!
+                 </h5>
+                   Data baru berhasil dihapuskan 
+            </div>
+            @endif
             <table class="table table-bordered table-striped" id="datakaryawan"> 
               <thead>
               <tr>
@@ -36,19 +66,19 @@
                 <tr>
                       <td>{{ $no++ }}</td>
                       <td>{{ $d->nik }}</td>
-                      <td style="text-transform: capitalize">{{ $d->nama }}</td>
-                      <td>{{ $d->jenis_kelamin }}</td>
-                      <td>{{ $d->tanggal_lahir }}</td>
-                      <td>{{ $d->tempat_lahir }}</td>
+                      <td style="text-transform: uppercase">{{ $d->nama }}</td>
+                      <td style="text-transform: uppercase">{{ $d->jenis_kelamin }}</td>
+                      <td >{{ $d->tanggal_lahir }}</td>
+                      <td style="text-transform: uppercase">{{ $d->tempat_lahir }}</td>
                       <td>{{ $d->telepon }}</td>
-                      <td>{{ $d->jabatan }}</td>
-                      <td>{{ $d->department }}</td>
+                      <td style="text-transform: uppercase">{{ $d->jabatan }}</td>
+                      <td style="text-transform: uppercase">{{ $d->department }}</td>
                       <td>
                       <form action="{{route('karyawan.destroy', $d->nik)}}" method="post">
                                 {{csrf_field()}}
                                 {{method_field('DELETE')}}
                                 <a href="{{route('karyawan.edit',$d->nik)}}" class="btn btn-sm btn-primary">Edit</a>
-                                <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>
+                                <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Apakah anda yakin ingin menghapus data?')">Delete</button>
                             </form>
                       </form>
                       </td>

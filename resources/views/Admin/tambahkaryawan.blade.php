@@ -10,17 +10,17 @@
         <div class="col-md-8 col-md-offset-6">
 			<br />
             <h1 class="m-0 text-dark">Tambah Karyawan</h1>
-            <hr>
-            <form action="{{ route('karyawan.store') }}" method="post" enctype="multipart/form-data">
+			<hr>
+			<form action="{{ route('karyawan.store') }}" method="post" enctype="multipart/form-data">
 			{{ csrf_field() }}
 					<div class="form-group">
 						<label for="nama">NIK :</label>
-						<input type="text" class="form-control" id="nik" name="nik">
+						<input type="text" class="form-control" id="nik" name="nik" >
 					</div>
 
 					<div class="form-group">
 						<label for="nama">Nama :</label>
-						<input type="text" class="form-control" id="nama" name="nama">
+						<input type="text" class="form-control" id="nama" name="nama" style="text-transform: capitalize">
 					</div>
 
 					<div class="form-group">

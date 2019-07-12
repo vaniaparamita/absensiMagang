@@ -58,7 +58,6 @@
                                 <button type="submit" class="btn btn-primary">
                                     Masuk
                                 </button>
-
                                 <a class="btn btn-link" href="{{ url('/password/reset') }}">
                                     Lupa Kata Sandi?
                                 </a>
