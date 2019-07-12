@@ -180,7 +180,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Yajra\Datatables\DatatablesServiceProvider::class,
+        
+        Yajra\DataTables\DataTablesServiceProvider::class,
 
     ],
 
@@ -206,7 +207,7 @@ return [
         'Config' => Illuminate\Support\Facades\Config::class,
         'Cookie' => Illuminate\Support\Facades\Cookie::class,
         'Crypt' => Illuminate\Support\Facades\Crypt::class,
-        'Datatables' => Yajra\Datatables\Facades\Datatables::class,
+        'Datatables' => Yajra\DataTables\Facades\DataTables::class,
         'DB' => Illuminate\Support\Facades\DB::class,
         'Eloquent' => Illuminate\Database\Eloquent\Model::class,
         'Event' => Illuminate\Support\Facades\Event::class,

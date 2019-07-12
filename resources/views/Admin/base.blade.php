@@ -10,7 +10,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <title>AdminLTE 3 | Starter</title>
-  <!-- Bootstrap4 -->
   <!-- DataTable -->  
   <link rel="stylesheet" href="{{ asset('/lte/plugins/datatables/dataTables.bootstrap4.css') }}">
   <!-- Font Awesome Icons -->
