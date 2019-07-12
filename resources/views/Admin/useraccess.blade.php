@@ -20,9 +20,9 @@
              </div>
             </div>
             <br />
-            <table class="table table-bordered" id="datauser">
+            <table class="table table-bordered table-responsive-xl" id="datauser">
               <thead>
-              <tr>
+              <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
                 <th>No.</th>
                 <th>Foto</th>
                 <th>NIK</th>
@@ -50,5 +50,4 @@
       $('#datauser').DataTable();
       });
     </script>
-
 @endsection

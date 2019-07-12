@@ -73,7 +73,6 @@
                 border:3px solid #c7c7c7;
                 display:inline-block;
                 cursor:pointer;
-                border-radius:5px;
                 padding: 15px 56px;
                 color:#ffffff;
                 text-align:center;

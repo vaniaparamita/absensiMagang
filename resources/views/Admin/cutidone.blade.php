@@ -19,9 +19,9 @@
              
             </div>
             </div>
-            <table class="table table-bordered" id="table_cutidone">
+            <table class="table table-bordered table-responsive-xl" id="table_cutidone">
               <thead>
-              <tr>
+              <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
                 <th>No.</th>
                 <th>NIK</th>
                 <th>Nama</th>
