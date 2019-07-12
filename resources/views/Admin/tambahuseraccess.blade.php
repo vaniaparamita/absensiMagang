@@ -41,14 +41,16 @@
                             </div>
                         </div>
 
-							 <div class="form-group">
+							 <div class="form-group"> 
 						<label for="nama">Role :</label>
                     <br/>
+                    <div class= "col-md-6">
 					<select  class="form-control" name="role">
 						<option value="user">User</option>
 						<option value="admin">Admin</option>
 						<option value="admin-departemen">Admin Departemen</option>
 					</select>
+                    </div>
 					</div>
 					
 					<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">

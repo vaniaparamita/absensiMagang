@@ -96,11 +96,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::middleware(['admin'])->group(function () {
-    Route::resource('admin', 'UserController');
+    Route::resource('Admin/admin', 'UserController');
 });
 
 Route::middleware(['admin-departemen'])->group(function () {
-    Route::resource('admin2', 'Admin2Controller');
+    Route::resource('AdminDepartemen/admin2', 'Admin2Controller');
 });
 
 
