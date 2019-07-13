@@ -85,13 +85,19 @@
                   <p>Data Karyawan</p>
                 </a>
               </li>
-            <li class="nav-item">
-                <a href="/" class="nav-link">
-                  <i class="far fa-user nav-icon"></i>
-                  <p>Sign Out</p>
-                </a>
-              </li>
-          </li>
+              <li class="nav-item">
+              <i class="far fa-user nav-icon"></i>
+
+                                        <a href="{{ url('/logout') }}" 
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+           </li>
           
         </ul>
       </nav>

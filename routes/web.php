@@ -31,13 +31,13 @@ Route::get('/tambahuser', function () {
 //     return view('Admin/editkaryawan');
 // });
 
-Route::get('/admin', function () {
-    return view('Admin/admin');
-});
+// Route::get('/admin', function () {
+//     return view('Admin/admin');
+// });
 
-Route::get('/admin2', function () {
-    return view('AdminDepartemen/admin2');
-});
+// Route::get('/admin2', function () {
+//     return view('AdminDepartemen/admin2');
+// });
 
 Route::get('/useraccess', function () {
     return view('Admin/useraccess');
@@ -90,7 +90,7 @@ Route::post('apply',[
     'as'=>'apply'
 ]);
 
-Route::resource('file','File');
+//Route::resource('file','File');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
@@ -99,12 +99,11 @@ Route::middleware(['admin'])->group(function () {
     Route::resource('admin', 'UserController');
 });
 
+
 Route::middleware(['admin-departemen'])->group(function () {
-    Route::resource('admin2', 'Admin2Controller');
+    Route::resource('admin2', 'AdminDepartemenController');
 });
 
-
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('useraccess', 'UserAccess');

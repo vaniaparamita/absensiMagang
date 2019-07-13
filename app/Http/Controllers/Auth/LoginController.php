@@ -34,7 +34,7 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest', ['except' => 'logout']);
+        $this->middleware('guest')->except('logout');
     }
 
     // public function username()
@@ -49,7 +49,7 @@ class LoginController extends Controller
         {
             return redirect('/home');
         }
-        else if($user->role=='admin')
+        else if(auth()->user()->role=='admin')
         {
             return redirect('/admin');
         }

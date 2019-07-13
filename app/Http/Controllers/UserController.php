@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Auth;
 
 class UserController extends Controller
 {
@@ -12,22 +13,28 @@ class UserController extends Controller
 *
 * @return void
 */
-// public function __construct()
-// {
-// $this->middleware('auth');
-// }
+    public function __construct()
+    {
+        $this->middleware('auth');
+
+    }
 /**
 * Show the application dashboard.
 *
 * @return \Illuminate\Http\Response
+
 */
+
     public function index(){
+
         return view('Admin/admin');
+
     }
-    public function create()
-    {
-        return view('admin.users.create');
-    }
+
+    // public function create()
+    // {
+    //     return view('admin.users.create');
+    // }
 
     /**
      * Store a newly created resource in storage.
