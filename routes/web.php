@@ -87,6 +87,8 @@ Route::post('/cuti/store', 'CutiController@store');
   Route::get('/cutidone', 'CutiDone@index');
   //atasan
   Route::get('/cutidiajukan2', 'CutiDiajukan2@index');
+  Route::get('/cutidone2', 'CutiDone2@index');
+
 
   Route::resource('home','HomeController');
   Route::get('my-notification/{type}', 'HomeController@myNotification');

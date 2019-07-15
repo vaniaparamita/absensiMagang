@@ -11,6 +11,6 @@ class CutiDone2 extends Controller
     //
     public function index(){
         $data = ModelCuti::where('status', 'Disetujui Departemen')->orwhere('status', 'Ditolak Departemen')->get();
-        return view('AdminDepartemen/cutidone2' compact('data'));
+        return view('AdminDepartemen/cutidone2', compact('data'));
     }
 }
