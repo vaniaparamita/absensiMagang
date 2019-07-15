@@ -78,7 +78,7 @@
                                 {{csrf_field()}}
                                 {{method_field('DELETE')}}
                                   <a href="{{route('karyawan.edit',$d->nik)}}" class="btn btn-sm btn-primary">Edit</a>
-                                    <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Apakah anda yakin ingin menghapus data?')">Delete</button>
+                                    <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Apakah anda yakin ingin menghapus data?')">HAPUS</button>
                         </form>
                       </form>
                       </td>

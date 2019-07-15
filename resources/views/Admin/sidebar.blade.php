@@ -112,21 +112,17 @@
                 </a>
               </li>
             </ul>
-             
-              <li class="nav-item">
-              <i class="far fa-user nav-icon"></i>
-
-                                        <a href="{{ url('/logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-           </li>
-          
+            <li class="nav-item">
+                <a href="{{ url('/logout') }}" class="nav-link"
+                    onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                  <i class="far fa-user nav-icon"></i>
+                  Logout
+                </a>
+                  <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                      {{ csrf_field() }}
+              </form>
+            </li>
          </ul>
       </nav>
       <!-- /.sidebar-menu -->

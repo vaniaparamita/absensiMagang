@@ -51,7 +51,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="inner">
                 <!-- TABLE BUKAN SETELAH APPROVE PIHAK DEPARTEMEN -->
                 <h3>{{ DB::table('model_izins')->count()}}</h3>
-
                 <p>Pengajuan Izin</p>
               </div>
               <div class="icon">
@@ -67,7 +66,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="inner">
                 <!-- TABLE BUKAN SETELAH APPROVE PIHAK DEPARTEMEN -->
                 <h3>{{ DB::table('model_cutis')->count()}}</h3>
-
                 <p>Pengajuan Cuti</p>
               </div>
               <div class="icon">
@@ -82,7 +80,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="small-box bg-purple">
               <div class="inner">
                 <h3>{{ DB::table('model_karyawans')->count()}}</h3>
-
                 <p>Karyawan Aktif</p>
               </div>
               <div class="icon">
@@ -95,9 +92,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- small box -->
             <div class="small-box bg-blue">
               <div class="inner">
-                <h3>2</h3>
-
-                <p>Karyawan Baru</p>
+                <h3>{{ DB::table('users')->where('role', 'admin')->count()}}</h3>
+                <p>Admin HR</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-yellow">
+              <div class="inner">
+                <h3>{{ DB::table('users')->where('role', 'admin-departemen')->count()}}</h3>
+                <p>Admin Departement</p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
@@ -107,6 +117,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </div>
           <!-- ./col -->
         </div>
+      </div>
         <!--------------------------
           | Your Page Content Here |
           -------------------------->

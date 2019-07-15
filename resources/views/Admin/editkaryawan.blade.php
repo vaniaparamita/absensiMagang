@@ -54,8 +54,8 @@
 				    </div>
 				   
 					<div class="form-group">
-					  <button type="submit" class="btn btn-md btn-primary">Save</button>
-					  <a class="btn btn-danger" href="{{route('karyawan.index')}}" role="button">Cancel</a>
+					  <button type="submit" class="btn btn-md btn-primary">Simpan</button>
+					  <a class="btn btn-danger" href="{{route('karyawan.index')}}" role="button">Batalkan</a>
 					</div>
 				</form>
 				@endforeach

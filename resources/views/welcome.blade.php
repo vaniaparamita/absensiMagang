@@ -100,7 +100,6 @@
             @if (Route::has('login'))
             <div class="top-right links">
                     <a href="{{ url('/login') }}">Home</a>
-                    <a href="{{ url('/register') }}">Register</a>
                 </div>
             @endif   
                <div class="content">

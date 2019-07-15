@@ -54,8 +54,8 @@
 				    </div>
 				   
 					<div class="form-group">
-					  <button type="submit" class="btn btn-md btn-primary">Save</button>
-					  <button type="reset" class="btn btn-md btn-danger">Cancel</button>
+					  <button type="submit" class="btn btn-md btn-primary">Simpan</button>
+					  <button type="reset" class="btn btn-md btn-danger">Batalkan</button>
 					</div>
 				</form>
 			
