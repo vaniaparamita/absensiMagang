@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'PT. Garuda Mitra Sejati') }}</title>
+    <title>{{ config('app.name', 'Human Resource Information System') }}</title>
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
@@ -57,7 +57,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}" >
-                        {{ config('app.name', 'PT. Garuda Mitra Sejati') }}
+                        {{ config('app.name', 'JCM - HRIS') }}
                     </a>
                 </div>
 

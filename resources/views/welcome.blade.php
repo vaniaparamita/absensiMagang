@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>PT. Garuda Mitra Sejati</title>
+        <title>Human Resource Information System</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -100,7 +100,6 @@
             @if (Route::has('login'))
             <div class="top-right links">
                     <a href="{{ url('/login') }}">Home</a>
-                    <a href="{{ url('/register') }}">Register</a>
                 </div>
             @endif   
                <div class="content">
@@ -112,7 +111,7 @@
                    WELCOME TO HR-IS
                 </div>
                 <div class="links">
-                    <a style="color:white">HANYA UNTUK KARYAWAN PT.GARUDA MITRA SEJATI</a>
+                    <a style="color:white">HANYA UNTUK KARYAWAN JOGJA CITY MALL</a>
                 </div>
                 <br /><br /><br />
                     <a href="{{ url('/login') }}" class="button">MASUK</a>
