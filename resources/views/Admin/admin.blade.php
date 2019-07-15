@@ -41,7 +41,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <section class="content-header">
           <h2>
               Dashboard Karyawan <br />
-                <small>PT. Garuda Mitra Sejati</small>
+                <small>JCM - HRIS</small>
           </h2>
         </section>
       <div class="row">
@@ -54,7 +54,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <p>Pengajuan Izin</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="ion icon ion-pie-graph"></i>
               </div>
               <a href="/izindiajukan" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
             </div>
@@ -83,7 +83,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <p>Karyawan Aktif</p>
               </div>
               <div class="icon">
-                <i class="ion ion-person-add"></i>
+                <i class="ion icon ion-ios-people"></i>
               </div>
               <a href="/datakaryawan" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
             </div>
@@ -96,7 +96,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <p>Admin HR</p>
               </div>
               <div class="icon">
-                <i class="ion ion-pie-graph"></i>
+                <i class="ion icon ion-person-stalker"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
             </div>
@@ -104,13 +104,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
             <!-- small box -->
-            <div class="small-box bg-yellow">
+            <div class="small-box bg-pink">
               <div class="inner">
                 <h3>{{ DB::table('users')->where('role', 'admin-departemen')->count()}}</h3>
                 <p>Admin Departement</p>
               </div>
               <div class="icon">
-                <i class="ion ion-pie-graph"></i>
+                <i class="ion icon ion-person-stalker"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
             </div>

@@ -1,7 +1,7 @@
 <aside class="main-sidebar sidebar-dark-secondary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link sidebar-dark-primary">
-      <span class="brand-text font-weight">PT. GARUDA MITRA SEJATI</span>
+      <span class="brand-text font-weight">JCM - HRIS</span>
     </a>
 
     <!-- Sidebar -->
@@ -85,22 +85,20 @@
                   <p>Data Karyawan</p>
                 </a>
               </li>
-              <li class="nav-item">
-              <i class="far fa-user nav-icon"></i>
-
-                                        <a href="{{ url('/logout') }}" 
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
+            <li class="nav-item">
+                <a href="{{ url('/logout') }}" class="nav-link"
+                  onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                      <i class="far fa-user nav-icon"></i>
+                      Logout
+                </a>
+                  <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                      {{ csrf_field() }}
+                  </form>
+              </li>
            </li>
-          
         </ul>
-      </nav>
+    </nav>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->

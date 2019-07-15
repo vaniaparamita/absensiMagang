@@ -4,7 +4,7 @@
     </div>
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
-      PT. Garuda Mitra Sejati - Yogyakarta
+      Jogja City Mall - Yogyakarta
     </div>
     <!-- Default to the left -->
     </footer>
