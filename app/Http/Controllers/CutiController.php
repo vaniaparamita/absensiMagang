@@ -49,7 +49,6 @@ class CutiController extends Controller
       $file = $request->file('file');
       $ext = $file->getClientOriginalExtension();
       $file->move('uploads/file',$file->getClientOriginalName());
-      $data->save(); 
       $data->save();
       return redirect()->route('home.index')->with('alert-success','Berhasil Menambahkan Data!');
     }
@@ -73,7 +72,8 @@ class CutiController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = ModelCuti::where('id','=',$id)->get();
+        return view('Admin.cutidiajukan', compact('data'));
     }
 
     /**
@@ -85,7 +85,21 @@ class CutiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $data = ModelCuti::where('id',$id)->first();
+    //   $data->nama = $request->nama;
+    //   $data->tanggal_mulai = $request->tanggal_mulai;
+    //   $data->tanggal_selesai = $request->tanggal_selesai;
+    //   $data->keterangan = $request->keterangan;
+      $data->status = $request->status;
+    //   if($request->file)
+    //     { 
+    //   $file = $request->file('file');
+    //   $ext = $file->getClientOriginalExtension();
+    //   $file->move('uploads/file',$file->getClientOriginalName());
+    //     }
+      $data->save();
+      return redirect()->route('cutidiajukan.index')->with('alert-success','Berhasil Menambahkan Data!');
+        
     }
 
     /**
