@@ -15,9 +15,9 @@
              </div>
             </div>
             <br />
-            <table class="table table-bordered" id="table_izin">
+            <table class="table table-bordered table-responsive-xl" id="table_izin">
               <thead>
-              <tr>
+              <tr class="table-secondary" style="text-align:center; text-transform:uppercase">
                 <th>No.</th>
                 <th>NIK</th>
                 <th>Nama</th>

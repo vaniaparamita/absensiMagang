@@ -15,15 +15,15 @@
              </div>
             </div>
             <br />
-            <table class="table table-bordered" id="table_cutis">
+            <table class="table table-bordered table-responsive-xl" id="table_cutis">
               <thead>
-              <tr>
+              <tr class="table-secondary" style="text-align:center; text-transform:uppercase">
                 <th>No.</th>
-                <th>NIK</th>
                 <th>Nama</th>
                 <th>Tanggal Mulai</th>
                 <th>Tanggal Akhir</th>
                 <th>Keterangan</th>
+                <th>Status</th>
                 <th>Surat Cuti</th>
               </tr>
               </thead>

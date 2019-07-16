@@ -16,9 +16,9 @@
              </div>
             </div>
             <br />
-            <table class="table table-bordered" id="table_izins">
+            <table class="table table-bordered table-responsive-xl" id="table_izins">
               <thead>
-              <tr>
+              <tr class="table-secondary" style="text-align:center; text-transform:uppercase">
                 <th>No.</th>
                 <th>Nama</th>
                 <th>Tanggal Mulai</th>

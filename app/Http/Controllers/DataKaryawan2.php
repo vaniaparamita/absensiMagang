@@ -12,4 +12,7 @@ class DataKaryawan2 extends Controller
         $data = ModelKaryawan::all();
         return view('AdminDepartemen/datakaryawan2', compact('data'));
     }
+  
+  
 }
+

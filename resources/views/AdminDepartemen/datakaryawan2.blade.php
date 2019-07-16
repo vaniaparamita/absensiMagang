@@ -16,9 +16,9 @@
              </div>
             </div>
             <br />
-            <table class="table table-bordered">
+            <table class="table table-bordered table-responsive-xl" id="table_karyawans">
               <thead>
-              <tr>
+              <tr class="table-secondary" style="tet-align:center; text-transform:uppercase">
                 <th>No.</th>
                 <th>Foto</th>
                 <th>NIK</th>
@@ -28,7 +28,6 @@
                 <th>NoHape</th>
                 <th>Jabatan</th>
                 <th>Department</th>
-                <th>Proses</th>
               </tr>
               </thead>
               <body>
@@ -44,15 +43,7 @@
                       <td>{{ $d->telepon }}</td>
                       <td>{{ $d->jabatan }}</td>
                       <td>{{ $d->department }}</td>
-                      <td>
-      
-                      <form action="{{ route('datakaryawan.destroy', $d->id) }}" method="post">
-                              {{ csrf_field() }}
-                              {{ method_field('DELETE') }}
-                      <a href="{{ route('datakaryawan.edit', $d->id) }}" class=" btn btn-sm btn-primary">Edit</a>
-                      <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Hapus</button>
-                      </form>
-                      </td>
+                     
                 </tr>
                 @endforeach
             </body>
@@ -66,4 +57,14 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script> 
+    <script>
+      $(document).ready( function () {
+      $('#table_karyawans').DataTable();
+      });
+    </script>
 @endsection

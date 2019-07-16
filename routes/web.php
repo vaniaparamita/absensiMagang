@@ -49,11 +49,9 @@ Route::get('/datakaryawan2', function () {
 Route::get('/tambahkaryawan', function () {
     return view('Admin/tambahkaryawan');
 });
-//   Route::get('/cutidiajukan2', 'CutiDiajukan2');
 Route::get('/cutidiajukan2', function () {
     return view('AdminDepartemen/cutidiajukan2');
 });
-//   Route::get('/cutidone2', 'CutiDone2');
 Route::get('/cutidone2', function () {
     return view('AdminDepartemen/cutidone2');
 });
@@ -65,6 +63,8 @@ Route::resource('/datakaryawan', 'DataKaryawan');
 Route::resource('karyawan', 'DataKaryawan');
 Route::post('/tambahkaryawan/store', 'DataKaryawan@store');
 Route::post('/datakaryawan/destroy', 'DataKaryawan@destroy');
+Route::get('/datakaryawan2', 'DataKaryawan2@index');
+
 // Route::post('/datakaryawan/edit', 'DataKaryawan@edit');
 // Route::post('/editkaryawan/update', 'TambahKaryawan@update');
 

@@ -53,7 +53,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="inner">
                 <h3>{{ DB::table('model_izins')->count()}}</h3>
 
-                <p>Karyawan Izin Disetujui</p>
+                <p>Izin Disetujui</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
@@ -68,7 +68,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="inner">
                 <h3>{{ DB::table('model_cutis')->where('status','disetujui')->count()}}</h3>
 
-                <p>Karyawan Cuti Disetujui</p>
+                <p>Cuti Disetujui</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
