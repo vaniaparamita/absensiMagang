@@ -65,7 +65,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="small-box bg-green">
               <div class="inner">
                 <!-- TABLE BUKAN SETELAH APPROVE PIHAK DEPARTEMEN -->
-                <h3>{{ DB::table('model_cutis')->count()}}</h3>
+                <h3>{{ DB::table('model_cutis')->where('status','Disetujui Departemen')->count()}}</h3>
                 <p>Pengajuan Cuti</p>
               </div>
               <div class="icon">

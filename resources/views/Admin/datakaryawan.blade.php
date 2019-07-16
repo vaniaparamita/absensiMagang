@@ -103,5 +103,10 @@
            $('#datakaryawan').DataTable();
            });
       </script>
+    @section('Admin/footer')
+    <script>
+        swal("HELLO WORLD!");
+    </script>
+    @stop
 <!-- /.content-header -->
 @endsection

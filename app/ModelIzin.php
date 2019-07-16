@@ -9,7 +9,7 @@ class ModelIzin extends Model
     protected $table = "model_izins";
 
     protected $fillable = [
-        'nama', 'tanggal_mulai', 'tanggal_selesai','keterangan','file'
+        'nama', 'tanggal_mulai', 'tanggal_selesai','keterangan','status','file'
     ];
 
 }

@@ -25,7 +25,6 @@
                 <th>Tanggal Akhir</th>
                 <th>Keterangan</th>
                 <th>Surat Cuti</th>
-                <th>Status</th>
               </tr>
               </thead>
               <tbody>
@@ -63,5 +62,4 @@
       $('#table_cutis').DataTable();
       });
     </script>
-
 @endsection

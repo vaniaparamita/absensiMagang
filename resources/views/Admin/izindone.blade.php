@@ -24,7 +24,6 @@
               <thead>
               <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
                 <th>No.</th>
-                <th>NIK</th>
                 <th>Nama</th>
                 <th>Tanggal Mulai</th>
                 <th>Tanggal Akhir</th>
@@ -33,6 +32,21 @@
                 <th>Status</th>
               </tr>
               </thead>
+              <tbody>
+                @php $no = 1; @endphp
+                @foreach($data as $d)
+                    <tr>
+                      <td>{{ $no++ }}</td>
+                      <td style="text-transform: capitalize">{{ $d->nama }}</td>
+                      <td>{{ $d->tanggal_mulai }}</td>
+                      <td>{{ $d->tanggal_selesai }}</td>
+                      <td>{{ $d->keterangan }}</td>
+                      <td>{{ $d->status }}</td>
+                      <td>
+                      <img width="150px" src="{{ url('/uploads/file'.$d->file) }}">
+                      </td>
+                    </tr>
+                    @endforeach
               
             </table>
             <br />

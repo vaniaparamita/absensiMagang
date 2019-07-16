@@ -24,7 +24,6 @@
                 <th>Tanggal Mulai</th>
                 <th>Tanggal Selesai</th>
                 <th>Keterangan</th>
-                <th>Status</th>
                 <th>Surat Cuti</th>
                 <th>Aksi</th>
               </tr>
