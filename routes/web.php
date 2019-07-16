@@ -70,6 +70,7 @@ Route::post('/datakaryawan/destroy', 'DataKaryawan@destroy');
 
 //IZIN
 Route::resource('izin','IzinController');
+Route::resource('izin2','IzinDiajukan2');
 Route::post('/izin/store', 'IzinController@store');
   //hrd
   Route::resource('/izindiajukan', 'IzinDiajukan');

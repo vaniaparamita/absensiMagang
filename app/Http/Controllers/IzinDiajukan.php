@@ -10,7 +10,7 @@ class IzinDiajukan extends Controller
 {
     //
     public function index(){
-        $data = ModelIzin::all();
+        $data = ModelIzin::where('status', 'Disetujui Departemen')->get();
         return view('Admin/izindiajukan', compact('data'));
         }
         

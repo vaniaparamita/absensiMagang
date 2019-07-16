@@ -71,7 +71,8 @@ class IzinController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = ModelIzin::where('id','=',$id)->get();
+        return view('Admin.izindiajukan', compact('data'));
     }
 
     /**
@@ -83,7 +84,10 @@ class IzinController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = ModelIzin::where('id',$id)->first();
+        $data->status = $request->status;
+        $data->save();
+        return redirect()->route('izindiajukan.index')->with('alert-success','Berhasil Menambahkan Data!');
     }
 
     /**

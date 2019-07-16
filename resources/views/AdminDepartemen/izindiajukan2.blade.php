@@ -41,9 +41,14 @@
                       <img width="150px" src="{{ url('uploads/file'.$d->file) }}">
                       </td>
                       
-                      <td><a href="#" class=" btn btn-sm btn-primary">Disetujui</a>
-                      <a href="#" class=" btn btn-sm btn-danger">Tidak</a>
+                      <form action="{{ route('izin2.update', $d->id) }}" method="post" enctype="multipart/form-data">
+		      	  {{ csrf_field() }}
+			        {{ method_field('PUT') }}
+                      <td>
+                      <button name="status" value="Disetujui Departemen" class=" btn btn-sm btn-primary">Disetujui</button>
+                      <button name="status" value="Ditolak Departemen" class=" btn btn-sm btn-danger">Tidak</button>
                       </td>
+                      </form>
                     </tr>
                     @endforeach
                 </tbody>
