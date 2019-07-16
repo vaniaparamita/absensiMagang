@@ -28,6 +28,7 @@
                 <th>Tanggal Mulai</th>
                 <th>Tanggal Akhir</th>
                 <th>Keterangan</th>
+                <th>Status</th>
                 <th>Surat Cuti</th>
                 <th>Proses</th>
               </tr>
@@ -41,13 +42,18 @@
                       <td>{{ $d->tanggal_mulai }}</td>
                       <td>{{ $d->tanggal_selesai }}</td>
                       <td>{{ $d->keterangan }}</td>
+                      <td>{{ $d->status }}</td>
                       <td>
                       <img width="150px" src="{{ url('/uploads/file'.$d->file) }}">
                       </td>
-                      
-                      <td><a href="#" class=" btn btn-sm btn-primary">Disetujui</a>
-                      <a href="#" class=" btn btn-sm btn-danger">Tidak</a>
+            <form action="{{ route('cuti.update', $d->id) }}" method="post" enctype="multipart/form-data">
+		      	  {{ csrf_field() }}
+			        {{ method_field('PUT') }}
+                      <td>
+                      <button name="status" value="Disetujui" class=" btn btn-sm btn-primary">Disetujui</button>
+                      <button name="status" value="Ditolak" class=" btn btn-sm btn-danger">Tidak</button>
                       </td>
+            </form>
                     </tr>
                     @endforeach
                 </tbody>

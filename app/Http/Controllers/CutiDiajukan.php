@@ -10,7 +10,7 @@ class CutiDiajukan extends Controller
 {
     //
     public function index(){
-        $data = ModelCuti::all();
+        $data = ModelCuti::where('status', 'Disetujui Departemen')->get();
         return view('Admin/cutidiajukan', compact('data'));
     }
 }

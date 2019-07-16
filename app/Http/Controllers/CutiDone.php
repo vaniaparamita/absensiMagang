@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\ModelCuti;
+
 
 class CutiDone extends Controller
 {
     //
     public function index(){
-    return view('Admin/cutidone');
+    $data = ModelCuti::where('status', 'Disetujui')->orwhere('status', 'Ditolak')->get();
+    return view('Admin/cutidone',  compact('data'));
     }
 }

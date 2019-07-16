@@ -49,6 +49,16 @@ Route::get('/datakaryawan2', function () {
 Route::get('/tambahkaryawan', function () {
     return view('Admin/tambahkaryawan');
 });
+//   Route::get('/cutidiajukan2', 'CutiDiajukan2');
+Route::get('/cutidiajukan2', function () {
+    return view('AdminDepartemen/cutidiajukan2');
+});
+//   Route::get('/cutidone2', 'CutiDone2');
+Route::get('/cutidone2', function () {
+    return view('AdminDepartemen/cutidone2');
+});
+
+
 
 //KARYAWAN
 Route::resource('/datakaryawan', 'DataKaryawan');
@@ -70,16 +80,18 @@ Route::post('/izin/store', 'IzinController@store');
 
 //CUTI
 Route::resource('cuti','CutiController');
+Route::resource('cuti2','CutiDiajukan2');
 Route::post('/cuti/store', 'CutiController@store');
   //hrd
   Route::resource('/cutidiajukan', 'CutiDiajukan');
   Route::get('/cutidone', 'CutiDone@index');
   //atasan
-  Route::resource('/cutidiajukan2', 'CutiDiajukan2');
+  Route::get('/cutidiajukan2', 'CutiDiajukan2@index');
   Route::get('/cutidone2', 'CutiDone2@index');
 
-Route::resource('home','HomeController');
-Route::get('my-notification/{type}', 'HomeController@myNotification');
+
+  Route::resource('home','HomeController');
+  Route::get('my-notification/{type}', 'HomeController@myNotification');
 
 Route::get('newsletter',[
     'uses'=>'NewsLetterController@create',
@@ -93,7 +105,6 @@ Route::post('apply',[
 //Route::resource('file','File');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
 
 Route::middleware(['admin'])->group(function () {
     Route::resource('admin', 'UserController');
@@ -105,6 +116,5 @@ Route::middleware(['admin-departemen'])->group(function () {
 });
 
 
-Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('useraccess', 'UserAccess');
 
