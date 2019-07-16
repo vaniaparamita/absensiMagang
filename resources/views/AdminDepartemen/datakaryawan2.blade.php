@@ -28,7 +28,6 @@
                 <th>NoHape</th>
                 <th>Jabatan</th>
                 <th>Department</th>
-                <th>Proses</th>
               </tr>
               </thead>
               <body>
@@ -44,15 +43,7 @@
                       <td>{{ $d->telepon }}</td>
                       <td>{{ $d->jabatan }}</td>
                       <td>{{ $d->department }}</td>
-                      <td>
-      
-                      <form action="{{ route('datakaryawan.destroy', $d->id) }}" method="post">
-                              {{ csrf_field() }}
-                              {{ method_field('DELETE') }}
-                      <a href="{{ route('datakaryawan.edit', $d->id) }}" class=" btn btn-sm btn-primary">Edit</a>
-                      <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Hapus</button>
-                      </form>
-                      </td>
+                     
                 </tr>
                 @endforeach
             </body>
