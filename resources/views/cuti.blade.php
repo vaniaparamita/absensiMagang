@@ -14,8 +14,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
 
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
-  @include('sweet::alert')
 
 </head>
 
@@ -28,7 +26,7 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Detail Cuti </div>
-                <form action="{{ route('cuti.store') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('cuti.store') }}" method="post" enctype="multipart/form-data" id="tambah_cutis">
                 {{ csrf_field() }}
                 <div class="panel-body">Nama
                     <div>
@@ -87,6 +85,14 @@
             </div>
         </div>
     </div>
-
+    <script>
+        $('#tambah_cutis').submit(function(){
+          Swal.fire(
+            'Sukses!',
+            'Cuti anda berhasil diajukan.',
+            'success',
+            4500
+          )
+        });
+    </script>
 @endsection
-

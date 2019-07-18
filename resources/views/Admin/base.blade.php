@@ -10,6 +10,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <title>AdminLTE 3 | Starter</title>
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="{{ asset('/lte/plugins/sweetalert2/sweetalert2.min.css') }}">
   <!-- DataTable -->  
   <link rel="stylesheet" href="{{ asset('/lte/plugins/datatables/dataTables.bootstrap4.css') }}">
   <!-- Font Awesome Icons -->
@@ -73,6 +75,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{ asset('/lte/plugins/datatables/jquery.dataTables.js') }}"></script>
 <script src="{{ asset('/lte/plugins/datatables/dataTables.bootstrap4.js') }}"></script>
 <!-- SweetAlert -->
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="{{ asset('/lte/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+@include('sweet::alert')
 </body>
 </html>
