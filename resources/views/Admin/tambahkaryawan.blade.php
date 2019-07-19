@@ -11,7 +11,7 @@
 			<br />
             <h1 class="m-0 text-dark">Tambah Karyawan</h1>
 			<hr>
-			<form action="{{ route('karyawan.store') }}" method="post" enctype="multipart/form-data">
+			<form action="{{ route('karyawan.store') }}" method="post" enctype="multipart/form-data" id="tambah_karyawans">
 			{{ csrf_field() }}
 					<div class="form-group">
 						<label for="nama">NIK :</label>
@@ -66,4 +66,20 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
+@endsection
+@section('sweet')
+    <script>
+        $('#tambah_karyawans').submit(function(e){
+            e.preventDefault(); 
+                Swal.fire(
+                    'Sukses!',
+                    'Data karyawan baru berhasil ditambahkan.',
+                    'success',
+              ).then((result)=>{
+                if(result.value){
+                    this.submit();
+                }
+              })
+            });
+    </script>
 @endsection

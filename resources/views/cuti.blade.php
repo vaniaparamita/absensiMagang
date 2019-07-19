@@ -13,8 +13,6 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
-
 </head>
 
 
@@ -26,73 +24,67 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Detail Cuti </div>
-                <form action="{{ route('cuti.store') }}" method="post" enctype="multipart/form-data" id="tambah_cutis">
-                {{ csrf_field() }}
-                <div class="panel-body">Nama
-                    <div>
-                        <input id="nama" type="text" class="form-control" name="nama"  required autofocus
-                            value="{{ Auth::user()->name }}" style="text-transform: capitalize" >
+                    <form action="{{ route('cuti.store') }}" method="post" enctype="multipart/form-data" id="tambah_cutis">
+                        {{ csrf_field() }}
+                          <div class="panel-body">Nama
+                        <div>
+                              <input id="nama" type="text" class="form-control" name="nama"  required autofocus
+                                 value="{{ Auth::user()->name }}" style="text-transform: capitalize" >
+                        </div>
                     </div>
-                </div>
                 <div class="panel-body">Tanggal Mulai Cuti
-                <div>
-                <input id="tanggal_mulai"  class="date form-control" name="tanggal_mulai" autocomplete="off">
+            <div>
+                    <input id="tanggal_mulai"  class="date form-control" name="tanggal_mulai" autocomplete="off">
                         </div>
-                                <script type="text/javascript">
-
-                                    $('.date').datepicker({  
-
+                            <script type="text/javascript">
+                                $('.date').datepicker({  
                                     format: 'dd-mm-yyyy'
-
                                     });  
-
                                 </script>  
-                        </div>
+                            </div>
                         <div class="panel-body">Tanggal Selesai Cuti
-                <div>
+                    <div>
                 <input id="tanggal_selesai"  class="date form-control" name="tanggal_selesai" autocomplete="off">
-                        </div>
-                                <script type="text/javascript">
-
-                                    $('.date').datepicker({  
-
-                                    format: 'dd-mm-yyyy'
-
-                                    });  
-
-                                </script>  
-                        </div>
-                <div class="panel-body">Keterangan
-                <div>
-                        <input id="keterangan" type="text" class="form-control" name="keterangan" autocomplete="off" required autofocus>
                     </div>
-                </div>
-                <div class="panel-body">Surat Keterangan
-               
-                
-                <div class="form-group">
-                   
-                    <input type="file" class="form-control" id="file" name="file">
-
-                </div>
+                        <script type="text/javascript">
+                                $('.date').datepicker({  
+                                    format: 'dd-mm-yyyy'
+                                    });  
+                                </script>  
+                    </div>
+                <div class="panel-body">Keterangan
+            <div>
+                <input id="keterangan" type="text" class="form-control" name="keterangan" autocomplete="off" required autofocus>
+                    </div>
+                        </div>
+                    <div class="panel-body">Surat Keterangan
+                        <div class="form-group">
+                            <input type="file" class="form-control" id="file" name="file">
+                    </div>
                 <div class="panel-body">
-                <div class="form-group">
-                    <button type="submit" class="btn btn-md btn-primary">Submit</button>
-                    <button type="reset" class="btn btn-md btn-danger">Cancel</button>
-                </div>
-            </form>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-md btn-primary">Submit</button>
+                            <button type="reset" class="btn btn-md btn-danger">Cancel</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+    @endsection
+    @section('sweet')
     <script>
-        $('#tambah_cutis').submit(function(){
-          Swal.fire(
-            'Sukses!',
-            'Cuti anda berhasil diajukan.',
-            'success',
-            4500
-          )
-        });
+        $('#tambah_cutis').submit(function(e){
+            e.preventDefault(); 
+                Swal.fire(
+                    'Sukses!',
+                    'Cuti anda berhasil diajukan.',
+                    'success',
+              ).then((result)=>{
+                if(result.value){
+                    this.submit();
+                }
+              })
+            });
     </script>
-@endsection
+    @endsection

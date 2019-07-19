@@ -20,7 +20,7 @@
              </div>
             </div>
             <br />
-            <table class="table table-bordered table-responsive-xl" id="datauser">
+            <table class="table table-bordered table-responsive-sm" id="datauser">
               <thead>
               <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
                 <th>No.</th>

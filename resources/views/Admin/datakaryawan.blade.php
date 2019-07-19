@@ -44,7 +44,7 @@
                       <td>{{ $d->jabatan }}</td>
                       <td>{{ $d->department }}</td>
                       <td>
-                        <form action="{{route('karyawan.destroy', $d->nik)}}" method="post" id="karyawans">
+                        <form action="{{route('karyawan.destroy', $d->nik)}}" method="post" class="form-delete">
                                 {{csrf_field()}}
                                 {{method_field('DELETE')}}
                                   <a href="{{route('karyawan.edit',$d->nik)}}" class="btn btn-sm btn-primary">Edit</a>
@@ -64,6 +64,8 @@
      </div><!-- /.row -->
     </div><!-- /.container-fluid -->
    </div>
+   @endsection
+   @section('sweet')
    <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -74,7 +76,7 @@
            });
       </script>
     <script>
-        $('#karyawans').submit(function(e){
+        $('.form-delete').submit(function(e){
           e.preventDefault();
           Swal.fire({
             title: 'Apakah anda yakin untuk menghapus data?',
@@ -89,12 +91,14 @@
               if (result.value){
                 Swal.fire(
                   'Sukses!',
-                  'Data anda berhasil dihapus.',
-                  'success',
-                  4500
+                  'Data and a berhasil dihapus.',
+                  'success'  
                 )
                 this.submit();
               }
+              else {
+                Swal.fire("Di Batalkan", "Data anda masih tersimpan", "error");
+            }
           })
         });
     </script>
