@@ -13,11 +13,11 @@ class UserController extends Controller
 *
 * @return void
     */
-    public function __construct()
-    {
-        $this->middleware('auth');
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
 
-    }
+    // }
 /**
 * Show the application dashboard.
 *
@@ -47,6 +47,8 @@ class UserController extends Controller
     //    $this->validate($request, User::rules());
         
         $data = new User();
+        $data->id = $request->id;
+        $data->id_departemen = $request->id_departemen;
         $data->name = $request->name;
         $data->email = $request->email;
         $data->role = $request->role;

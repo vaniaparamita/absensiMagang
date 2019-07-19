@@ -13,6 +13,34 @@
             <hr>
             <form action="{{ route('admin.store') }}" method="post" enctype="multipart/form-data">
 			{{ csrf_field() }}	
+           
+            <div class="form-group{{ $errors->has('id') ? ' has-error' : '' }}">
+                            <label for="id" class="col-md-4 control-label">ID User :</label>
+
+                            <div class="col-md-6">
+                                <input id="id" type="text" class="form-control" name="id" value="{{ old('id') }}" required autofocus>
+
+                                @if ($errors->has('id'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('id') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            <label for="name" class="col-md-4 control-label">ID Departemen :</label>
+
+                            <div class="col-md-6">
+                                <input id="id_departemen" type="text" class="form-control" name="id_departemen" value="{{ old('id_departemen') }}" required autofocus>
+
+                                @if ($errors->has('id_departemen'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('id_departemen') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 				<div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Nama :</label>
 
@@ -40,6 +68,8 @@
                                 @endif
                             </div>
                         </div>
+
+                        
 
 							 <div class="form-group"> 
 						<label for="nama" class="col-md-4 control-label">Role :</label>

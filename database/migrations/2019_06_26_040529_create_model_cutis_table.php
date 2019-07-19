@@ -16,6 +16,7 @@ class CreateModelCutisTable extends Migration
         Schema::create('model_cutis', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama');
+            $table->string('id_user');
             $table->string('tanggal_mulai');
             $table->string('tanggal_selesai');
             $table->string('keterangan');

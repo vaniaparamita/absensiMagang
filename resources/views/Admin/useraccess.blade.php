@@ -24,14 +24,25 @@
               <thead>
               <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
                 <th>No.</th>
-                <th>Foto</th>
-                <th>NIK</th>
                 <th>Nama</th>
-                <th>Departemen</th>
-                <th>Jabatan</th>
+                <th>Email</th>
+                <th>Role</th>
                 <th>Aksi</th>
               </tr>
               </thead>
+              <body>
+              @php $no = 1; @endphp
+                @foreach($data as $d)
+                  <tr style="text-transform: uppercase">
+                      <td>{{ $no++ }}</td>
+                      <td>{{ $d->name }}</td>
+                      <td>{{ $d->email }}</td>
+                      <td>{{ $d->role }}</td>
+                      <td></td>
+                </tr>
+                @endforeach
+
+                </body>
             </table>
           </div><!-- /.col -->
           <div class="col-sm-6">

@@ -118,4 +118,6 @@ Route::middleware(['admin-departemen'])->group(function () {
 
 
 Route::resource('useraccess', 'UserAccess');
+//Route::get('/useraccess', 'UserAccess@index');
+
 
