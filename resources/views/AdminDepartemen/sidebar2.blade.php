@@ -90,7 +90,7 @@
                   onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
                       <i class="far fa-user nav-icon"></i>
-                      Logout
+                      <p>Logout</p>
                 </a>
                   <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                       {{ csrf_field() }}

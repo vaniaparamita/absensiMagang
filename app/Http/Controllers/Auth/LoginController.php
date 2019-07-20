@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Alert;
 
 class LoginController extends Controller
 {
@@ -48,7 +47,7 @@ class LoginController extends Controller
     {
         if($user->role=='user')
         {
-            return redirect('/home');
+            return redirect('/home')->with('info', 'Informasi persetujuan pengajuan cuti dan info akan dikirim ke email user.');
         }
         else if(auth()->user()->role=='admin')
         {

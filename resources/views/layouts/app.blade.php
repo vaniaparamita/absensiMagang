@@ -95,13 +95,12 @@
                 </div>
             </div>
         </nav>
-        @yield('content')
+        @yield('content')   
     </div>
-    @include('sweet::alert')
-    @yield('sweet')
     <!-- Scripts -->
     <script src="/js/app.js"></script>
     <!-- SweetAlert -->
     <script src="{{ asset('/lte/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+    @yield('sweet')
 </body>
 </html>

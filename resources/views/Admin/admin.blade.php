@@ -131,7 +131,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content -->
-  </div>
   <!-- /.content-wrapper -->
 
   <!-- Control Sidebar -->
@@ -143,10 +142,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </div>
   </aside>
   <!-- /.control-sidebar -->
-
   <!-- Main Footer -->
   @include('admin/footer')
-</div>
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->

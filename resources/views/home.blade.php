@@ -34,5 +34,18 @@
                 </div>
             </div>
 @endsection
+@section('sweet')
+  <script>
+      var isiPesan = '{{Session::get('info') }}';
+      var exist = '{{Session::has('info') }}';
+      if(exist){
+        Swal.fire(
+          'Pengumuman!',
+          isiPesan,
+          'info'
+        )
+      }
+  </script>
+@endsection
 
 
