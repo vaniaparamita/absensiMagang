@@ -15,36 +15,6 @@
              </div>
             </div>
            <br />
-            @if(session('alert-success-store'))
-            <div class="alert alert-success alert-dismissible">
-              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                <h5>
-                   <i class="icon fas fa-check"></i>
-                     Success!
-                </h5>
-                     Data baru berhasil ditambahkan    
-            </div>
-            @endif
-            @if(session('alert-success-update'))
-             <div class="alert alert-success alert-dismissible">
-    				   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                <h5>
-                  <i class="icon fas fa-check"></i>
-                    Success!
-                  </h5>
-                    Data baru berhasil diubah 
-              </div>
-            @endif
-            @if(session('alert-success-delete'))
-             <div class="alert alert-success alert-dismissible">
-    				   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                 <h5>
-                   <i class="icon fas fa-check"></i>
-                     Success!
-                 </h5>
-                     Data berhasil dihapuskan 
-             </div>
-            @endif
             <table class="table table-bordered table-striped table-responsive-xl" id="datakaryawan"> 
               <thead>
                 <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
@@ -76,11 +46,11 @@
                       <td>{{ $d->department }}</td>
                       <td>{{ $d->id_departemen }}</td>
                       <td>
-                        <form action="{{route('karyawan.destroy', $d->nik)}}" method="post">
+                        <form action="{{route('karyawan.destroy', $d->nik)}}" method="post" class="form-delete">
                                 {{csrf_field()}}
                                 {{method_field('DELETE')}}
                                   <a href="{{route('karyawan.edit',$d->nik)}}" class="btn btn-sm btn-primary">Edit</a>
-                                    <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Apakah anda yakin ingin menghapus data?')">HAPUS</button>
+                                  <button class="btn btn-sm btn-danger">HAPUS</button>
                         </form>
                       </form>
                       </td>
@@ -96,6 +66,8 @@
      </div><!-- /.row -->
     </div><!-- /.container-fluid -->
    </div>
+   @endsection
+   @section('sweet')
    <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -105,5 +77,32 @@
            $('#datakaryawan').DataTable();
            });
       </script>
+    <script>
+        $('.form-delete').submit(function(e){
+          e.preventDefault();
+          Swal.fire({
+            title: 'Apakah anda yakin untuk menghapus data?',
+            text : "Data akan hilang secara permanent!",
+            type : 'warning',
+            showCancelButton : true,
+            confirmButtonColor : '#3085d6',
+            cancelButtonColor : '#d33',
+            cancelButtonText : 'Batalkan',
+            confirmButtonText: 'Ya, Hapus Data!'
+          }).then((result)=> {
+              if (result.value){
+                Swal.fire(
+                  'Sukses!',
+                  'Data and a berhasil dihapus.',
+                  'success'  
+                )
+                this.submit();
+              }
+              else {
+                Swal.fire("Di Batalkan", "Data anda masih tersimpan", "error");
+            }
+          })
+        });
+    </script>
 <!-- /.content-header -->
 @endsection

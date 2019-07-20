@@ -52,7 +52,7 @@ class CutiController extends Controller
       request()->file->move(public_path('uploads/file'), $photoFileName);
 
       $data->save();
-      return redirect()->route('home.index')->with('alert-success','Berhasil Menambahkan Data!');
+      return redirect()->route('home.index')->with('success','Berhasil Menambahkan Data!');
     }
 
     /**

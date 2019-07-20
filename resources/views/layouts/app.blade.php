@@ -13,7 +13,8 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="{{ asset('/lte/plugins/sweetalert2/sweetalert2.min.css') }}">    
     <style>
     .position{
         display: block;
@@ -36,9 +37,6 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
-
-    <!-- Alert -->
-    <link rel="stylesheet" type="text/css" href="/pathto/css/sweetalert.css">
 
 </head>
 <body style="background-image:url(bg2.png)">
@@ -97,15 +95,12 @@
                 </div>
             </div>
         </nav>
-
-        @yield('content')
+        @yield('content')   
     </div>
-
     <!-- Scripts -->
     <script src="/js/app.js"></script>
-    <script src="/pathto/js/sweetalert.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
- <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
-    @include('sweet::alert')
+    <!-- SweetAlert -->
+    <script src="{{ asset('/lte/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+    @yield('sweet')
 </body>
 </html>

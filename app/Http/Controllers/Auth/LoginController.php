@@ -48,7 +48,7 @@ class LoginController extends Controller
     {
         if($user->role=='user')
         {
-            return redirect('/home');
+            return redirect('/home')->with('info', 'Informasi persetujuan pengajuan cuti dan info akan dikirim ke email user.');
         }
         else if(auth()->user()->role=='admin')
         {

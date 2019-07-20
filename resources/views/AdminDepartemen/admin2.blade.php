@@ -36,10 +36,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <div class="content-wrapper">
       <!-- Content Header (Page header) -->
+      <section class="content container-fluid">
       <section class="content-header">
         <h2>
           Dashboard Karyawan Departemen X<br />
-          <small>PT. Garuda Mitra Sejati</small>
+          <small>JCM - HRIS</small>
         </h2>
       </section>
 
@@ -52,7 +53,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="inner">
                 <h3>{{ DB::table('model_izins')->count()}}</h3>
 
-                <p>Karyawan Izin</p>
+                <p>Izin Disetujui</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
@@ -65,14 +66,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- small box -->
             <div class="small-box bg-blue">
               <div class="inner">
-                <h3>{{ DB::table('model_cutis')->count()}}</h3>
+                <h3>{{ DB::table('model_cutis')->where('status','disetujui')->count()}}</h3>
 
-                <p>Karyawan Cuti</p>
+                <p>Cuti Disetujui</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
               </div>
-              <a href="/cutidiajukan2" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+              <a href="/cutidone2" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->

@@ -11,7 +11,7 @@
 			<br />
             <h1 class="m-0 text-dark">Tambah Akses</h1>
             <hr>
-            <form action="{{ route('admin.store') }}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('admin.store') }}" method="post" enctype="multipart/form-data" id="tambah_users">
 			{{ csrf_field() }}	
            
             <div class="form-group{{ $errors->has('id') ? ' has-error' : '' }}">
@@ -105,16 +105,32 @@
                             </div>
                         </div>
 					
-					<div class="col-md-6 form-group">
+					  <div class="col-md-6 form-group">
 						<button type="submit" class="btn btn-md btn-primary">Simpan</button>
 						<button type="reset" class="btn btn-md btn-danger">Batalkan</button>
-					</div>
+				  </div>
 				</form>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
+              </div><!-- /.col -->
+            <div class="col-sm-6">
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
+@endsection
+@section('sweet')
+    <script>
+        $('#tambah_users').submit(function(e){
+            e.preventDefault(); 
+                Swal.fire(
+                    'Sukses!',
+                    'User Akses baru berhasil ditambahkan.',
+                    'success',
+              ).then((result)=>{
+                if(result.value){
+                    this.submit();
+                  }
+               })
+            });
+    </script>
 @endsection

@@ -16,16 +16,16 @@
              </div>
             </div>
             <br />
-            <table class="table table-bordered">
+            <table class="table table-bordered table-responsive-xl" id="table_karyawans">
               <thead>
-              <tr>
+              <tr class="table-secondary" style="tet-align:center; text-transform:uppercase">
                 <th>No.</th>
                 <th>Foto</th>
                 <th>NIK</th>
                 <th>Nama</th>
                 <th>JK</th>
                 <th>Alamat</th>
-                <th>NoHape</th>
+                <th>Telepon</th>
                 <th>Jabatan</th>
                 <th>Department</th>
               </tr>
@@ -57,4 +57,14 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script> 
+    <script>
+      $(document).ready( function () {
+      $('#table_karyawans').DataTable();
+      });
+    </script>
 @endsection

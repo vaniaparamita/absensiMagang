@@ -11,7 +11,7 @@
         <div class="image">
           <img src="/avatar2.png" class="img-circle elevation-2" alt="User Image" style="width:36px; height:36px; border:1.5px solid">
         </div>
-        <div class="info">
+      <div class="info">
           <a href="#" class="d-block" style="font-size:14px; color:black">HRD Admin</a>
         </div>
       </div>
@@ -114,16 +114,16 @@
             </ul>
             <li class="nav-item">
                 <a href="{{ url('/logout') }}" class="nav-link"
-                    onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();">
-                  <i class="far fa-user nav-icon"></i>
-                  Logout
-                </a>
-                  <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                      onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();">
+                   <i class="far fa-user nav-icon"></i>
+                 <p>Logout</p>
+              </a>
+                <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                       {{ csrf_field() }}
-              </form>
-            </li>
-         </ul>
+                </form>
+             </li>
+          </ul>
       </nav>
       <!-- /.sidebar-menu -->
   </div>
