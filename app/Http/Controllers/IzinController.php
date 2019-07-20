@@ -40,14 +40,17 @@ class IzinController extends Controller
     {
         $data = new ModelIzin();
       $data->nama = $request->nama;
+      $data->id_user = $request->id_user;
       $data->tanggal_mulai = $request->tanggal_mulai;
       $data->tanggal_selesai = $request->tanggal_selesai;
       $data->keterangan = $request->keterangan;
 
       
-      $file = $request->file('file');
-      $ext = $file->getClientOriginalExtension();
-      $file->move('uploads/file',$file->getClientOriginalName());
+      $photoFileName = 'sponsor-'.time().'.'.request()->file->getClientOriginalExtension();
+      $path = asset('uploads/file').'/'.$photoFileName;
+      $data->file = $path; //uploads/file/
+      request()->file->move(public_path('uploads/file'), $photoFileName);
+      
       $data->save();
       return redirect()->route('home.index')->with('alert-success','Berhasil Menambahkan Data!');
     }

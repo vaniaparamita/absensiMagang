@@ -18,13 +18,13 @@ class CutiDiajukan2 extends Controller
         ->where('status', null)
         ->whereHas('cuti', function($q) use ($category)
           {$q-> where('id_departemen', $category);}
-        )->get();
+          )->get();
         return view('AdminDepartemen.cutidiajukan2', compact('data'));
     }
 
     public function edit($id)
     {
-        $data = ModelCuti::where('i살인의 추억d','=',$id)->get();
+        $data = ModelCuti::where('id','=',$id)->get();
         return view('AdminDepartemen.cutidiajukan2', compact('data'));
     }
 

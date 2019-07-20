@@ -9,7 +9,11 @@ class ModelIzin extends Model
     protected $table = "model_izins";
 
     protected $fillable = [
-        'nama', 'tanggal_mulai', 'tanggal_selesai','keterangan','status','file'
+        'nama',  'id_user', 'tanggal_mulai', 'tanggal_selesai','keterangan','status','file'
     ];
+
+    public function izin(){
+    	return $this->belongsTo('App\User', 'id_user');
+    }
 
 }

@@ -28,8 +28,8 @@
                 <th>Tanggal Mulai</th>
                 <th>Tanggal Akhir</th>
                 <th>Keterangan</th>
-                <th>Surat Izin</th>
                 <th>Status</th>
+                <th>Surat Izin</th>
               </tr>
               </thead>
               <tbody>
@@ -43,7 +43,9 @@
                       <td>{{ $d->keterangan }}</td>
                       <td>{{ $d->status }}</td>
                       <td>
-                      <img width="150px" src="{{ url('/uploads/file'.$d->file) }}">
+                        <a href="{{ asset($d->file) }}" target="_blank">
+                          <img width="150px" src="{{ asset($d->file) }}">
+                        </a>
                       </td>
                     </tr>
                     @endforeach
