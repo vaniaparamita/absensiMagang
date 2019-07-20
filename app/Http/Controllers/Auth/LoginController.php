@@ -43,12 +43,11 @@ class LoginController extends Controller
     //     return 'username'; //or whatever field
     // }
 
-
     protected function authenticated(\Illuminate\Http\Request $request, $user)
     {
         if($user->role=='user')
         {
-            return redirect('/home')->with('info', 'Informasi persetujuan pengajuan cuti dan info akan dikirim ke email user.');
+            return redirect('/home')->with('info', 'Informasi persetujuan pengajuan cuti dan izin akan dikirim ke email user.');
         }
         else if(auth()->user()->role=='admin')
         {

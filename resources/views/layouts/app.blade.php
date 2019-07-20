@@ -94,9 +94,9 @@
                     </ul>
                 </div>
             </div>
-        </nav>
-        @yield('content')   
+        </nav>   
     </div>
+    @yield('content') 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
     <!-- SweetAlert -->

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Laravel Bootstrap Datepicker</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
@@ -22,16 +21,15 @@
                             value="{{ Auth::user()->name }}" style="text-transform: capitalize">
                         </div>
                     </div>
-                </div>
                 <div class="panel-body">NIK
                     <div>
                         <input id="id_user" type="text" class="form-control" name="id_user" required autofocus
-                        value="{{ Auth::user()->id }}" style="text-transform: capitalize">
-                    </div>
-                </div>
-                <div class="panel-body">Tanggal Mulai Izin
-            <div>
-                <input id="tanggal_mulai"  class="date form-control" name="tanggal_mulai" autocomplete="off">
+                            value="{{ Auth::user()->id }}" style="text-transform: capitalize">
+                      </div>
+                  </div>
+               <div class="panel-body">Tanggal Mulai Izin
+                    <div>
+                        <input id="tanggal_mulai"  class="date form-control" name="tanggal_mulai" autocomplete="off">
                     </div>
                         <script type="text/javascript">
                             $('.date').datepicker({  
@@ -39,9 +37,9 @@
                                 });  
                         </script>  
                     </div>
-                <div class="panel-body">Tanggal Selesai Izin
-            <div>
-                <input id="tanggal_selesai"  class="date form-control" name="tanggal_selesai" autocomplete="off">
+              <div class="panel-body">Tanggal Selesai Izin
+                    <div>
+                        <input id="tanggal_selesai"  class="date form-control" name="tanggal_selesai" autocomplete="off">
                     </div>
                         <script type="text/javascript">
                             $('.date').datepicker({  
@@ -50,10 +48,10 @@
                         </script>  
                     </div>
                <div class="panel-body">Keterangan
-                  <div>
-                    <input id="keterangan" type="text" class="form-control" name="keterangan" autocomplete="off" required autofocus>
+                    <div>
+                        <input id="keterangan" type="text" class="form-control" name="keterangan" autocomplete="off" required autofocus>
                       </div>
-                    </div>
+                         </div>
                 <div class="panel-body">Surat Keterangan
                     <div class="form-group">       
                         <input type="file" class="form-control" id="file" name="file">
