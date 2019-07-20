@@ -25,7 +25,7 @@
                 <th>Nama</th>
                 <th>JK</th>
                 <th>Alamat</th>
-                <th>NoHape</th>
+                <th>Telepon</th>
                 <th>Jabatan</th>
                 <th>Department</th>
               </tr>

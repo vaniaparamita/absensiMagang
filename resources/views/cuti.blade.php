@@ -32,6 +32,12 @@
                                  value="{{ Auth::user()->name }}" style="text-transform: capitalize" >
                         </div>
                     </div>
+                </div>
+                <div class="panel-body">NIK
+                    <div>
+                        <input id="id_user" type="text" class="form-control" name="id_user">
+                    </div>
+                </div>
                 <div class="panel-body">Tanggal Mulai Cuti
             <div>
                     <input id="tanggal_mulai"  class="date form-control" name="tanggal_mulai" autocomplete="off">

@@ -4,13 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ModelCuti;
+use App\User;
 use File;
+use Auth;
 
 class CutiDiajukan2 extends Controller
 {
     //
     public function index(){
-        $data = ModelCuti::where('status', null)->get();
+        $category = Auth::user()->id_departemen;
+        // dd($category);
+        $data = ModelCuti::with('cuti')
+        ->where('status', null)
+        ->whereHas('cuti', function($q) use ($category)
+          {$q-> where('id_departemen', $category);}
+          )->get();
         return view('AdminDepartemen.cutidiajukan2', compact('data'));
     }
 

@@ -44,7 +44,9 @@
                       <td>{{ $d->keterangan }}</td>
                       <td>{{ $d->status }}</td>
                       <td>
-                      <img width="150px" src="{{ url('/uploads/file'.$d->file) }}">
+                        <a href="{{ asset($d->file) }}" target="_blank">
+                          <img width="150px" src="{{ asset($d->file) }}">
+                        </a>
                       </td>
             <form action="{{ route('cuti.update', $d->id) }}" method="post" enctype="multipart/form-data">
 		      	  {{ csrf_field() }}

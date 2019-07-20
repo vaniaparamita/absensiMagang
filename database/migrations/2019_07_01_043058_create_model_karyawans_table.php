@@ -22,6 +22,7 @@ class CreateModelKaryawansTable extends Migration
                 $table->string('telepon');
                 $table->string('jabatan');
                 $table->string('department');
+                $table->string('id_departemen');
                 $table->timestamps();
             });  
     }

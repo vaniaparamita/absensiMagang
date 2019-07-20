@@ -27,6 +27,7 @@
                   <th>Telepon</th>
                   <th>Jabatan</th>
                   <th>Departemen</th>
+                  <th>ID Departemen</th>
                   <th>Aksi</th>
                </tr>
               </thead>
@@ -43,6 +44,7 @@
                       <td>{{ $d->telepon }}</td>
                       <td>{{ $d->jabatan }}</td>
                       <td>{{ $d->department }}</td>
+                      <td>{{ $d->id_departemen }}</td>
                       <td>
                         <form action="{{route('karyawan.destroy', $d->nik)}}" method="post" class="form-delete">
                                 {{csrf_field()}}

@@ -4,14 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ModelIzin;
+use App\User;
 use File;
+use Auth;
+
 
 class IzinDiajukan2 extends Controller
 {
     
     public function index(){
-        $data = ModelIzin::where('status', null)->get();
-        return view('AdminDepartemen/izindiajukan2', compact('data'));
+      $category = Auth::user()->id_departemen;
+      // dd($category);
+      $data = ModelIzin::with('izin')
+      ->where('status', null)
+      ->whereHas('izin', function($q) use ($category)
+        {$q-> where('id_departemen', $category);}
+        )->get();
+      return view('AdminDepartemen.izindiajukan2', compact('data'));
     }
     public function edit($id)
     {

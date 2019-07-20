@@ -43,7 +43,9 @@
                       <td>{{ $d->tanggal_selesai }}</td>
                       <td>{{ $d->keterangan }}</td>
                       <td>
-                      <img width="150px" src="{{ url('uploads/file'.$d->file) }}">
+                        <a href="{{ asset($d->file) }}" target="_blank">
+                          <img width="150px" src="{{ asset($d->file) }}">
+                        </a>
                       </td>
                       
                       <form action="{{ route('izin.update', $d->id) }}" method="post" enctype="multipart/form-data">

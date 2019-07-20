@@ -38,6 +38,7 @@ class DataKaryawan extends Controller
         $data->telepon = $request->telepon;
         $data->jabatan = $request->jabatan;
         $data->department = $request->department;
+        $data->id_departemen = $request->id_departemen;
         $data->save();
         return redirect()->route('karyawan.index')->with('success','Berhasil Menambahkan Data!');
     }
@@ -83,6 +84,7 @@ class DataKaryawan extends Controller
         $data->telepon = $request->telepon;
         $data->jabatan = $request->jabatan;
         $data->department = $request->department;
+        $data->id_departemen = $request->id_departemen;
         $data->save();
         return redirect()->route('karyawan.index')->with('success','Berhasil Menambahkan Data!');
     }
