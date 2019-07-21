@@ -20,11 +20,11 @@
               <thead>
               <tr class="table-secondary" style="tet-align:center; text-transform:uppercase">
                 <th>No.</th>
-                <th>Foto</th>
                 <th>NIK</th>
                 <th>Nama</th>
                 <th>JK</th>
-                <th>Alamat</th>
+                <th>Tanggal Lahir</th>
+                <th>Tempat Lahir</th>
                 <th>Telepon</th>
                 <th>Jabatan</th>
                 <th>Department</th>
