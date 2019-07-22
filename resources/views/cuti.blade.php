@@ -30,7 +30,7 @@
                                  value="{{ Auth::user()->name }}" style="text-transform: capitalize"
                                   >
                         </div>
-                    </div>
+                </div>
                     <div class="panel-body">NIK
                         <div>
                             <input id="id_user" type="text" class="form-control" name="id_user"
@@ -48,27 +48,31 @@
                                     });  
                                 </script>  
                             </div>
-                        <div class="panel-body">Tanggal Selesai Cuti
-                    <div>
-                <input id="tanggal_selesai"  class="date form-control" name="tanggal_selesai" autocomplete="off">
-                    </div>
-                        <script type="text/javascript">
+                <div class="panel-body">Tanggal Selesai Cuti
+            <div>
+                    <input id="tanggal_selesai"  class="date form-control" name="tanggal_selesai" autocomplete="off">
+                        </div>
+                            <script type="text/javascript">
                                 $('.date').datepicker({  
                                     format: 'dd-mm-yyyy'
                                     });  
                                 </script>  
-                    </div>
+                            </div>
                 <div class="panel-body">Keterangan
             <div>
-                <input id="keterangan" type="text" class="form-control" name="keterangan" autocomplete="off" required autofocus>
-                    </div>
+                    <input id="keterangan" type="text" class="form-control" name="keterangan" autocomplete="off" required autofocus>
                         </div>
-                    <div class="panel-body">Surat Keterangan
-                        <div class="form-group">
-                            <input type="file" class="form-control" id="file" name="file">
+                            </div>
+                                <div class="panel-body">
+                                    <div class="alert alert-info">
+                                        <strong>Info!</strong> Maximum Size Upload : 2MB
+                                    </div>
+                                        Surat Keterangan
+                                    <div class="form-group">
+                                        <input type="file" class="form-control" id="file" name="file">
                     </div>
                 <div class="panel-body">
-                        <div class="form-group">
+                    <div class="form-group">
                             <button type="submit" class="btn btn-md btn-primary">Submit</button>
                             <button type="reset" class="btn btn-md btn-danger">Cancel</button>
                         </div>
