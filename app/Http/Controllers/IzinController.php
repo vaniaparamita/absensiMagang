@@ -46,7 +46,7 @@ class IzinController extends Controller
       $data->keterangan = $request->keterangan;
 
       
-      $photoFileName = 'sponsor-'.time().'.'.request()->file->getClientOriginalExtension();
+      $photoFileName = 'izin-'.time().'.'.request()->file->getClientOriginalExtension();
       $path = asset('uploads/file').'/'.$photoFileName;
       $data->file = $path; //uploads/file/
       request()->file->move(public_path('uploads/file'), $photoFileName);
