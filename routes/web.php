@@ -15,8 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
+Route::get('/dashboard_cuti', function () {
+    return view('dashboard_cuti');
+});
+
+Route::get('/dashboard_izin', function () {
+    return view('dashboard_izin');
 });
 
 Route::get('/datakaryawan', function () {

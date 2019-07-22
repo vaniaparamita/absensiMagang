@@ -72,7 +72,7 @@
                             <li><a href="{{ url('/login') }}">Login</a></li>
                         @else
                             <li><a href="/home">Home</a></li>
-                            <li><a href="/dashboard">Dashboard</a></li>
+                            <li><a href="/dashboard_cuti">Dashboard</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
                                     aria-expanded="false" style="text-transform: capitalize">

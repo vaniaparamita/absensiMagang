@@ -1,15 +1,15 @@
 @extends('layouts.app')
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-    @media (max-width:1199.98px){
         .table-responsive-xl{
-            display:block;
-            width:100%;
-            overflow-x:auto;
-            -webkit-overflow-scrolling:touch;
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border: 1px solid #ddd;
         }
         .table-responsive-xl>.table-bordered{
             border:0}
-        }
+
         .button {
             float: right;
             background-color: #008CBA;
@@ -37,10 +37,12 @@
             <div class="box box-primary">
             <div class="box-header">
                 <br />
-              <h2 class="box-title">Riwayat Pengajuan Cuti</h2>
-              <button class="button">IZIN</button>
-              <button class="button">CUTI</button>
-            </div>
+              <h2 class="box-title">Riwayat Pengajuan Izin</h2>
+                    <button class="button">IZIN</button>
+                <form action="/dashboard_cuti">
+                    <button class="button">CUTI</button>
+                </form>
+                </div>
             </div>
             <br />
             <table class="table table-bordered table-responsive-xl">
@@ -52,7 +54,7 @@
                 <th>Tanggal Akhir</th>
                 <th>Keterangan</th>
                 <th>Status</th>
-                <th>Surat Cuti</th>
+                <th>Surat Izin</th>
                 <th>Proses</th>
               </tr>
               </thead>
