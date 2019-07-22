@@ -27,7 +27,15 @@
                           <div class="panel-body">Nama
                         <div>
                               <input id="nama" type="text" class="form-control" name="nama"  required autofocus
-                                 value="{{ Auth::user()->name }}" style="text-transform: capitalize" >
+                                 value="{{ Auth::user()->name }}" style="text-transform: capitalize"
+                                  >
+                        </div>
+                    </div>
+                    <div class="panel-body">NIK
+                        <div>
+                            <input id="id_user" type="text" class="form-control" name="id_user"
+                            required autofocus
+                            value="{{ Auth::user()->id }}" style="text-transform: capitalize">
                         </div>
                     </div>
                 <div class="panel-body">Tanggal Mulai Cuti
