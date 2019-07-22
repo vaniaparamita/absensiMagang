@@ -51,7 +51,12 @@
 				    <div class="form-group">
 					  <label for="nama">Departemen :</label>
 					  <input type="text" class="form-control" id="department" name="department" value="{{ $d->department}}">
-				    </div>
+					</div>
+					
+					<div class="form-group">
+						<label for="nama">Departemen :</label>
+						<input type="text" class="form-control" id="id_departemen" name="id_departemen" value="{{ $d->id_departmen}}">
+					  </div>
 				   
 					<div class="form-group">
 					  <button type="submit" class="btn btn-md btn-primary">Simpan</button>
