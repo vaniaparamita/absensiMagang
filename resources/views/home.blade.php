@@ -9,8 +9,8 @@
           <img src="/user.jpg" class="img-circle elevation-2" style="width:150px; border:2px solid black; display: block;
                     margin-left: auto; margin-right: auto;">
           <br />      
-              <h4 style="text-align:center; text-transform: capitalize; color: #000000">Selamat Datang "{{ Auth::user()->name }}"</h4>   
-                 <div class="panel-heading" style="text-align:center">Silahkan Pilih Salah Satu</div>
+              <h4 style="text-align:center; text-transform: capitalize; color: #000000">Selamat Datang "{{ Auth::user()->name }}"</h4>      
+              <div class="panel-heading" style="text-align:center">Silahkan Pilih Salah Satu</div>  
                     <div class="panel-body">
                         <table class="table table-responsive">
                             <tr>

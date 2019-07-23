@@ -1,7 +1,7 @@
 <aside class="main-sidebar sidebar-dark-secondary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link sidebar-dark-primary"> 
-      <span class="brand-text font-weight-light-bold">PT. GARUDA MITRA SEJATI</span>
+      <span class="brand-text font-weight-light-bold">HR-IS JCM</span>
     </a>
 
     <!-- Sidebar -->

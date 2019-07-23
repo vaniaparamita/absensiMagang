@@ -14,9 +14,7 @@
             <div class="box-header">
               <i class="ion ion-clipboard"></i>
                 <br />
-
               <h2 class="box-title">Daftar Pengajuan Cuti</h2>
-             
             </div>
             </div>
             <br />
