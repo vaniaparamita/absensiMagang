@@ -57,6 +57,11 @@
 						<label for="id_departemen">ID Departemen :</label>
 						<input type="text" class="form-control" id="id_departemen" name="id_departemen">
 					  </div>
+
+					  <div class="form-group">
+						<label for="id_departemen">Status:</label>
+						<input type="text" class="form-control" id="status" name="status">
+					  </div>
 				   
 					<div class="form-group">
 					  <button type="submit" class="btn btn-md btn-primary">Simpan</button>
