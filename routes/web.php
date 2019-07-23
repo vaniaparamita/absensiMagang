@@ -128,4 +128,8 @@ Route::middleware(['admin-departemen'])->group(function () {
 Route::resource('useraccess', 'UserAccess');
 //Route::get('/useraccess', 'UserAccess@index');
 
+Route::resource('cutihistory','CutiHistory');
+Route::get('dashboard_cuti', 'CutiHistory@index');
 
+Route::resource('izinhistory','IzinHistory');
+Route::get('dashboard_izin', 'IzinHistory@index');

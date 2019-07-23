@@ -26,6 +26,8 @@
                 <th>Tanggal Mulai</th>
                 <th>Tanggal Akhir</th>
                 <th>Keterangan</th>
+                <th>Tanggung Jawab</th>
+                <th>No Telepon Darurat</th>
                 <th>Status</th>
                 <th>Surat Cuti</th>
                 <th>Proses</th>
@@ -40,6 +42,8 @@
                       <td>{{ $d->tanggal_mulai }}</td>
                       <td>{{ $d->tanggal_selesai }}</td>
                       <td>{{ $d->keterangan }}</td>
+                      <td>{{ $d->tanggung_jawab }}</td>
+                      <td>{{ $d->telepon }}</td>
                       <td>{{ $d->status }}</td>
                       <td>
                         <a href="{{ asset($d->file) }}" target="_blank">

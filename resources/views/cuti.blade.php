@@ -63,6 +63,16 @@
                     <input id="keterangan" type="text" class="form-control" name="keterangan" autocomplete="off" required autofocus>
                         </div>
                             </div>
+                            <div class="panel-body">Tanggung Jawab
+                                <div>
+                                        <input id="tanggung_jawab" type="text" class="form-control" name="tanggung_jawab" autocomplete="off" required autofocus>
+                                            </div>
+                                        </div>
+                      <div class="panel-body">Nomor Telepon Darurat
+                      <div>
+                      <input id="telepon" type="text" class="form-control" name="telepon" autocomplete="off" required autofocus>
+                      </div>   
+                    </div>
                                 <div class="panel-body">
                                     <div class="alert alert-info">
                                         <strong>Info!</strong> Maximum Size Upload : 2MB
@@ -71,10 +81,11 @@
                                     <div class="form-group">
                                         <input type="file" class="form-control" id="file" name="file">
                     </div>
+                                   
                 <div class="panel-body">
                     <div class="form-group">
                             <button type="submit" class="btn btn-md btn-primary">Submit</button>
-                            <button type="reset" class="btn btn-md btn-danger">Cancel</button>
+                            <a class="btn btn-danger" href="{{route('home.index')}}" role="button">Cancel</a>
                         </div>
                     </form>
                 </div>

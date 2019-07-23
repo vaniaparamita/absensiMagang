@@ -45,6 +45,8 @@ class CutiController extends Controller
       $data->tanggal_mulai = $request->tanggal_mulai;
       $data->tanggal_selesai = $request->tanggal_selesai;
       $data->keterangan = $request->keterangan;
+      $data->tanggung_jawab = $request->tanggung_jawab;
+      $data->telepon = $request->telepon;
 
       $photoFileName = 'cuti-'.time().'.'.request()->file->getClientOriginalExtension();
       $path = asset('uploads/file').'/'.$photoFileName;

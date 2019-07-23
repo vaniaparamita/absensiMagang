@@ -59,6 +59,24 @@
                 <th>Proses</th>
               </tr>
               </thead>
+              <tbody>
+                @php $no = 1; @endphp
+                @foreach($data as $d)
+                    <tr>
+                      <td>{{ $no++ }}</td>
+                      <td style="text-transform: capitalize">{{ $d->nama }}</td>
+                      <td>{{ $d->tanggal_mulai }}</td>
+                      <td>{{ $d->tanggal_selesai }}</td>
+                      <td>{{ $d->keterangan }}</td>
+                      <td>{{ $d->status }}</td>
+                      <td>
+                        <a href="{{ asset($d->file) }}" target="_blank">
+                          <img width="150px" src="{{ asset($d->file) }}">
+                        </a>
+                      </td>
+                    </tr>
+                    @endforeach
+                </tbody>
             </table>
             <br />
           </div><!-- /.col -->
