@@ -52,7 +52,7 @@ class IzinController extends Controller
       request()->file->move(public_path('uploads/file'), $photoFileName);
       
       $data->save();
-      return redirect()->route('home.index')->with('alert-success','Berhasil Menambahkan Data!');
+      return redirect()->route('home.index')->with('izin_success','Berhasil Mengajukan Izin!');
     }
 
     /**
@@ -90,7 +90,7 @@ class IzinController extends Controller
         $data = ModelIzin::where('id',$id)->first();
         $data->status = $request->status;
         $data->save();
-        return redirect()->route('izindiajukan.index')->with('alert-success','Berhasil Menambahkan Data!');
+        return redirect()->route('izindiajukan.index')->with('izin_success','Berhasil Mengubah Pengajuan Izin!');
     }
 
     /**

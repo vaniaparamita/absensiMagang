@@ -10,7 +10,7 @@
 			<h1 class="m-0 text-dark">Edit Karyawan</h1>
 			<hr>
 			@foreach($data as $d)
-            <form action="{{ route('karyawan.update', $d->nik) }}" method="post" enctype="multipart/form-data" id="edit">
+            <form action="{{ route('karyawan.update', $d->nik) }}" method="post" enctype="multipart/form-data">
 			{{ csrf_field() }}
 			{{ method_field('PUT') }}
 					<div class="form-group">
@@ -78,20 +78,4 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-@endsection
-@section('sweet')
-    <script>
-        $('#edit').submit(function(e){
-            e.preventDefault(); 
-                Swal.fire(
-                    'Sukses!',
-                    'Data karyawan berhasil diubah dan diperbaharui.',
-                    'success',
-              ).then((result)=>{
-                if(result.value){
-                    this.submit();
-                }
-              })
-            });
-    </script>
 @endsection

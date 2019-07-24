@@ -67,20 +67,4 @@
     </div>
 </div>
 @endsection
-@section('sweet')
-    <script>
-        $('#tambah_izins').submit(function(e){
-            e.preventDefault(); 
-                Swal.fire(
-                    'Sukses!',
-                    'Izin anda berhasil diajukan.',
-                    'success',
-              ).then((result)=>{
-                if(result.value){
-                    this.submit();
-                }
-              })
-            });
-    </script>
-@endsection
 

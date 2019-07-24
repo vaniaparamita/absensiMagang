@@ -42,7 +42,7 @@ class DataKaryawan extends Controller
         $data->status = $request->status;
 
         $data->save();
-        return redirect()->route('karyawan.index')->with('success','Berhasil Menambahkan Data!');
+        return redirect()->route('karyawan.index')->with('success', 'Data Berhasil di Tambahkan!');
     }
 
     /**
@@ -90,7 +90,7 @@ class DataKaryawan extends Controller
         $data->status = $request->status;
 
         $data->save();
-        return redirect()->route('karyawan.index')->with('success','Berhasil Menambahkan Data!');
+        return redirect()->route('karyawan.index')->with('success','Berhasil Mengubah Data!');
     }
 
     /**
@@ -103,7 +103,7 @@ class DataKaryawan extends Controller
     {
         $data = ModelKaryawan::find($id);
         $data->delete();
-        return redirect()->route('karyawan.index')->with('success','Delete Data Successfully!');
+        return redirect()->route('karyawan.index')->with('success','Data berhasil dihapuskan!');
     }
 
    /* public function json(){
