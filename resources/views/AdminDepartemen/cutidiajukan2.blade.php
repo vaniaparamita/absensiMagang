@@ -57,7 +57,7 @@
                       </td>
                       </form> --}}
                       <td>
-                      <a class="btn btn-primary" href="{{route('detailcuti.index')}}" role="button">Detail</a>
+                      <a class="btn btn-primary" href="{{route('detailcuti.edit', $d->id)}}" role="button">Detail</a>
                       </td>
 
                     </tr>

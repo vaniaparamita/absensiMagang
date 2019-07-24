@@ -8,60 +8,66 @@
         <div class="row mb-2">
           <div class="col-sm-12" style="background:white">
             <div class="box box-primary">
-            <div class="box-header">
-              <i class="ion ion-clipboard"></i>
-                <br />
-              <h2 class="box-title">Daftar Pengajuan Cuti</h2>
+            <div class="content-header" style="background:#1675d1">
+              <div class="card-title" style="font-size:18px;color:white">Detail Pengajuan Cuti</div>
       
              </div>
             </div>
             <br />
             @foreach($data as $d)
-            <form action="#" method="post" enctype="multipart/form-data" id="edit">
+            <form action="#" method="post" enctype="multipart/form-data">
 			{{ csrf_field() }}
 			{{ method_field('PUT') }}
 					<div class="form-group">
 						<label for="nama">Nama :</label>
-						<input type="text" class="form-control" id="nik" name="nik" value="{{ $d->nik }}">
+						<input type="text" class="form-control" id="nik" name="nik" value="{{ $d->nama }}" disabled>
 					</div>
 
 					<div class="form-group">
-						<label for="nama">Tanggal Mulai :</label>
-						<input type="text" class="form-control" id="nama" name="nama" value="{{ $d->nama }}">
+						<label for="tanggal_mulai">Tanggal Mulai :</label>
+						<input type="text" class="form-control" id="nama" name="tanggal_mulai" value="{{ $d->tanggal_mulai }}" disabled>
 					</div>
 
 					<div class="form-group">
-						<label for="nama">Tanggal Selesai :</label>
-						<input type="text" class="form-control" id="jenis_kelamin" name="jenis_kelamin" value="{{ $d->jenis_kelamin }}"> 
+						<label for="tanggal_selesai">Tanggal Selesai :</label>
+						<input type="text" class="form-control" id="tanggal_selesai" name="tanggal_selesai" value="{{ $d->tanggal_selesai }}" disabled> 
 					</div>
 
 					<div class="form-group">
-						<label for="nama">Keterangan :</label>
-						<input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" value="{{ $d->tempat_lahir}}">
+						<label for="keterangan">Keterangan :</label>
+						<input type="text" class="form-control" id="keterangan" name="keterangan" value="{{ $d->keterangan}}" disabled>
 					</div>
 
 					<div class="form-group">
-						<label for="nama">Tanggung Jawab :</label>
-						<input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" value="{{ $d->tanggal_lahir }}">
+						<label for="tanggung_jawab">Tanggung Jawab :</label>
+						<input type="text" class="form-control" id="tanggung_jawab" name="tanggung_jawab" value="{{ $d->tanggung_jawab }}" disabled>
 					</div>
 
 					<div class="form-group">
-					 	<label for="nama">Telepon :</label>
-					 	<input type="text" class="form-control" id="telepon" name="telepon" value="{{ $d->telepon}} ">
+					 	<label for="telepon">Telepon :</label>
+					 	<input type="text" class="form-control" id="telepon" name="telepon" value="{{ $d->telepon}} " disabled>
 				    </div>
 
-				    <div class="form-group">
-					  	<label for="nama">Status :</label>
-					  	<input type="text" class="form-control" id="jabatan" name="jabatan" value="{{ $d->jabatan}}">
-				    </div>
+					<div class="form-group">
+					  	<label for="surat_cuti">Surat Cuti :</label>
+					  	<input type="text" class="form-control" id="surat_cuti" name="surat_cuti" value="{{ $d->file}}" disabled>
+					</div>
 
 				    <div class="form-group">
-					  	<label for="nama">Surat Cuti :</label>
-					  	<input type="text" class="form-control" id="department" name="department" value="{{ $d->department}}">
+					<label for="status">Status :</label>
+					<select  class="form-control" name="role">
+						<option value="Terima">Terima</option>
+						<option value="Tolak">Tolak</option>
+					</select>  	
 					</div>
+
+					<div class="form-group">
+					  	<label for="alasan">Alasan :</label>
+					  	<textarea class="form-control" id="alasan" name="alasan"></textarea>
+					</div>				 
 					
 					<div class="form-group">
-					  <button type="submit" class="btn btn-md btn-primary">Simpan</button>
+					  <button type="submit" class="btn btn-md btn-primary" style="background-color:#1675d1">Simpan</button>
 					  <a class="btn btn-danger" href="{{route('karyawan.index')}}" role="button">Batalkan</a>
 					</div>
 				</form>
@@ -75,16 +81,6 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script> 
-    <script>
-      $(document).ready( function () {
-      $('#table_cuti').DataTable();
-      });
-    </script>
 
 @endsection
 
