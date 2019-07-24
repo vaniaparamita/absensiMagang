@@ -133,3 +133,7 @@ Route::get('dashboard_cuti', 'CutiHistory@index');
 
 Route::resource('izinhistory','IzinHistory');
 Route::get('dashboard_izin', 'IzinHistory@index');
+
+Route::resource('detailcuti', 'DetailCuti');
+//Route::get('detailcuti', 'DetailCuti@index');
+
