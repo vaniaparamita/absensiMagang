@@ -56,7 +56,6 @@
                 <th>Keterangan</th>
                 <th>Status</th>
                 <th>Surat Cuti</th>
-                <th>Proses</th>
               </tr>
               </thead>
               <tbody>
