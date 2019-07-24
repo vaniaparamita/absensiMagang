@@ -46,6 +46,28 @@
         )
       }
   </script>
+  <script>
+      var isiPesan = '{{Session::get('cuti_success') }}';
+      var exist = '{{Session::has('cuti_success') }}';
+      if(exist){
+        Swal.fire(
+          'Sukses!',
+          isiPesan,
+          'success'
+        )
+      }
+  </script>
+    <script>
+      var isiPesan = '{{Session::get('izin_success') }}';
+      var exist = '{{Session::has('izin_success') }}';
+      if(exist){
+        Swal.fire(
+          'Sukses!',
+          isiPesan,
+          'success'
+        )
+      }
+  </script>
 @endsection
 
 

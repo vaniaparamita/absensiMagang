@@ -93,19 +93,3 @@
         </div>
     </div>
     @endsection
-    @section('sweet')
-    <script>
-        $('#tambah_cutis').submit(function(e){
-            e.preventDefault(); 
-                Swal.fire(
-                    'Sukses!',
-                    'Cuti anda berhasil diajukan.',
-                    'success',
-              ).then((result)=>{
-                if(result.value){
-                    this.submit();
-                }
-              })
-            });
-    </script>
-    @endsection

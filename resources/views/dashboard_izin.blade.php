@@ -36,7 +36,6 @@
           <div class="col-sm-12" style="background:white">
             <div class="box box-primary">
             <div class="box-header">
-                <br />
               <h2 class="box-title">Riwayat Pengajuan Izin</h2>
                     <button class="button">IZIN</button>
                 <form action="/dashboard_cuti">

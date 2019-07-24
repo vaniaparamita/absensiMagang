@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\ModelCuti;
 use File;
+use Alert;
 
 
 class CutiController extends Controller
@@ -54,7 +55,7 @@ class CutiController extends Controller
       request()->file->move(public_path('uploads/file'), $photoFileName);
 
       $data->save();
-      return redirect()->route('home.index')->with('success','Berhasil Menambahkan Data!');
+      return redirect()->route('home.index')->with('cuti_success','Berhasil Mengajukan Cuti!');
     }
 
     /**
@@ -102,7 +103,7 @@ class CutiController extends Controller
     //   $file->move('uploads/file',$file->getClientOriginalName());
     //     }
       $data->save();
-      return redirect()->route('cutidiajukan.index')->with('alert-success','Berhasil Menambahkan Data!');
+      return redirect()->route('cutidiajukan.index')->with('cuti_success','Berhasil Mengubah Pengajuan Cuti!');
         
     }
 

@@ -56,8 +56,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   @include('admin/footer')
 </div>
 <!-- ./SweetAlert -->
-@include('sweet::alert')
-@yield('sweet')
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
@@ -77,5 +75,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{ asset('/lte/plugins/datatables/dataTables.bootstrap4.js') }}"></script>
 <!-- SweetAlert -->
 <script src="{{ asset('/lte/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+@yield('sweet')
 </body>
 </html>

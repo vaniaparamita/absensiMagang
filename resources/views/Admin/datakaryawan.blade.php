@@ -93,10 +93,7 @@
             confirmButtonText: 'Ya, Hapus Data!'
           }).then((result)=> {
               if (result.value){
-                Swal.fire(
-                  'Sukses!',
-                  'Data and a berhasil dihapus.',
-                  'success'  
+                Swal.fire( 
                 )
                 this.submit();
               }
@@ -105,6 +102,17 @@
             }
           })
         });
+    </script>
+    <script>
+      var isiPesan = '{{Session::get('success') }}';
+      var exist = '{{Session::has('success') }}';
+      if(exist){
+        Swal.fire(
+          'Sukses!',
+          isiPesan,
+          'success'
+        )
+      }
     </script>
 <!-- /.content-header -->
 @endsection
