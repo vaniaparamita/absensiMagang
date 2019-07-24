@@ -15,17 +15,17 @@
             </div>
             <br />
             @foreach($data as $d)
-            <form action="#" method="post" enctype="multipart/form-data">
+            <form action="{{ route('detailcuti.update', $d->id) }}" method="post" enctype="multipart/form-data">
 			{{ csrf_field() }}
 			{{ method_field('PUT') }}
 					<div class="form-group">
 						<label for="nama">Nama :</label>
-						<input type="text" class="form-control" id="nik" name="nik" value="{{ $d->nama }}" disabled>
+						<input type="text" class="form-control" id="nama" name="nama" value="{{ $d->nama }}" disabled>
 					</div>
 
 					<div class="form-group">
 						<label for="tanggal_mulai">Tanggal Mulai :</label>
-						<input type="text" class="form-control" id="nama" name="tanggal_mulai" value="{{ $d->tanggal_mulai }}" disabled>
+						<input type="text" class="form-control" id="tanggal_mulai" name="tanggal_mulai" value="{{ $d->tanggal_mulai }}" disabled>
 					</div>
 
 					<div class="form-group">
@@ -50,25 +50,31 @@
 
 					<div class="form-group">
 					  	<label for="surat_cuti">Surat Cuti :</label>
-					  	<input type="text" class="form-control" id="surat_cuti" name="surat_cuti" value="{{ $d->file}}" disabled>
+						  {{-- <input type="text" class="form-control" id="surat_cuti" name="surat_cuti" href="{{ asset($d->file) }}" target="_blank"  img width="150px" src="{{ asset($d->file) }} " disabled> --}}
+						  <div > <a href="{{ asset($d->file) }}" target="_blank">
+							<img width="150px" src="{{ asset($d->file) }}">
+						  </a>
+
+						</div>
+
 					</div>
 
 				    <div class="form-group">
-					<label for="status">Status :</label>
-					<select  class="form-control" name="role">
-						<option value="Terima">Terima</option>
-						<option value="Tolak">Tolak</option>
+					<label for="status">Pilih Aksi :</label>
+					<select  class="form-control" name="status">
+						<option value="Disetujui Departemen">Diterima</option>
+						<option value="Ditolak Departemen">Ditolak</option>
 					</select>  	
 					</div>
 
 					<div class="form-group">
 					  	<label for="alasan">Alasan :</label>
-					  	<textarea class="form-control" id="alasan" name="alasan"></textarea>
+					  	<textarea class="form-control" id="alasan" name="alasan" placeholder="Isi Apabila Cuti Ditolak"></textarea>
 					</div>				 
 					
 					<div class="form-group">
 					  <button type="submit" class="btn btn-md btn-primary" style="background-color:#1675d1">Simpan</button>
-					  <a class="btn btn-danger" href="{{route('karyawan.index')}}" role="button">Batalkan</a>
+					  <a class="btn btn-danger" href="{{route('detailcuti.index')}}" role="button">Batalkan</a>
 					</div>
 				</form>
 				@endforeach

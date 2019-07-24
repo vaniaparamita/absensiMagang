@@ -28,7 +28,7 @@
                 <th>No Telepon Darurat</th> --}}
                 <th>Status</th>
                 {{-- <th>Surat Cuti</th> --}}
-                <th>Aksi</th>
+                <th>Detail</th>
               </tr>
               </thead>
               <tbody>

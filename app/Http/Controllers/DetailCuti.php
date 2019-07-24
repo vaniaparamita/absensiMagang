@@ -42,6 +42,8 @@ class DetailCuti extends Controller
     //   $data->tanggal_selesai = $request->tanggal_selesai;
     //   $data->keterangan = $request->keterangan;
       $data->status = $request->status;
+      $data->alasan = $request->alasan;
+
     //   if($request->file)
     //     { 
     //   $file = $request->file('file');
@@ -51,5 +53,10 @@ class DetailCuti extends Controller
       $data->save();
       return redirect()->route('cuti2.index')->with('alert-success','Berhasil Menambahkan Data!');
         
+    }
+    public function show($id)
+    {
+        $data = ModelCuti::where('id','=',$id)->get();
+        return view('AdminDepartemen.detailcutiterproses', compact('data'));
     }
 }

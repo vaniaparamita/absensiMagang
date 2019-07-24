@@ -20,6 +20,7 @@ class CreateModelIzinsTable extends Migration
             $table->string('tanggal_mulai');
             $table->string('tanggal_selesai');
             $table->string('keterangan');
+            $table->string('alasan')->nullable();
             $table->string('status')->nullable();
             $table->string('file')->nullable();            
             $table->timestamps();
