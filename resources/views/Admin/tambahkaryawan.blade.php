@@ -24,8 +24,10 @@
 					</div>
 
 					<div class="form-group">
-						<label for="nama">Jenis Kelamin :</label>
-						<input type="text" class="form-control" id="jenis_kelamin" name="jenis_kelamin">
+						<label for="nama">Jenis Kelamin :</label><br />
+						<div class="form-check">
+						<input class="form-check-input" type="radio" id="jenis_kelamin" name="jenis_kelamin" value="laki">Laki - laki<br />
+						<input class="form-check-input" type="radio" id="jenis_kelamin" name="jenis_kelamin" value="perempuan">Perempuan<br /></div>
 					</div>
 
 					<div class="form-group">
@@ -48,15 +50,15 @@
 					  <input type="text" class="form-control" id="jabatan" name="jabatan">
 				    </div>
 
-				    <div class="form-group">
-					  <label for="nama">Departemen :</label>
-					  <input type="text" class="form-control" id="department" name="department">
-					</div>
-					
 					<div class="form-group">
 						<label for="id_departemen">ID Departemen :</label>
 						<input type="text" class="form-control" id="id_departemen" name="id_departemen">
 					  </div>
+					  
+				    <div class="form-group">
+					  <label for="nama">Departemen :</label>
+					  <input type="text" class="form-control" id="department" name="department">
+					</div>
 
 					  <div class="form-group">
 						<label for="id_departemen">Status:</label>
