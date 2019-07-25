@@ -55,7 +55,7 @@ class UserController extends Controller
         $data->password = bcrypt($request->password);
     //    $data->created_at = Carbon::now();
         $data->save();
-        return redirect()->route('useraccess.index')->with('alert','User Berhasil Dibuat!');
+        return redirect()->route('useraccess.index')->with('useraccess_success','User Akses Baru Berhasil Dibuat!');
     }
 
     /**
@@ -104,7 +104,7 @@ class UserController extends Controller
         $data->updated_at = Carbon::now();
         $data->save();
 
-        return redirect()->route('admin.index')->with('alert','User Berhasil Diperbarui!');
+        return redirect()->route('admin.index')->with('useraccess_success','User Akses Berhasil Diperbarui!');
     }
 
     /**
@@ -117,6 +117,6 @@ class UserController extends Controller
     {
         User::destroy($id);
 
-        return redirect()->route('admin.index')->with('alert','User Berhasil Dihapus!'); 
+        return redirect()->route('admin.index')->with('useraccess_success','User Akses Berhasil Dihapus!'); 
     }
 }

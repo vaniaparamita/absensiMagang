@@ -47,7 +47,7 @@ class LoginController extends Controller
     {
         if($user->role=='user')
         {
-            return redirect('/home')->with('info', 'Pengajuan Cuti minimal 1 Bulan sebelum tanggal mulai cuti dan izin, Jika mendadak harap langsung ke bagian HR');
+            return redirect('/home')->with('info', 'Pengajuan Cuti dan Izin minimal 1 Bulan sebelum tanggal mulai, Jika mendadak harap langsung ke bagian HR');
         }
         else if(auth()->user()->role=='admin')
         {

@@ -14,7 +14,10 @@
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
     <!-- SweetAlert2 -->
-    <link rel="stylesheet" href="{{ asset('/lte/plugins/sweetalert2/sweetalert2.min.css') }}">    
+    <link rel="stylesheet" href="{{ asset('/lte/plugins/sweetalert2/sweetalert2.min.css') }}"> 
+    <!-- DataTable -->  
+    <link rel="stylesheet" href="{{ asset('/lte/plugins/datatables/dataTables.bootstrap4.css') }}">
+  
     <style>
     .position{
         display: block;
@@ -97,7 +100,14 @@
             </div>
         </nav>   
     </div>
-    @yield('content') 
+    @yield('content')
+    <!-- jQuery -->
+    <script src="{{ asset('/lte/plugins/jquery/jquery.min.js') }}"></script>
+    <!-- Bootstrap 4 -->
+    <script src="{{ asset('/lte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <!-- DataTables -->
+    <script src="{{ asset('/lte/plugins/datatables/jquery.dataTables.js') }}"></script>
+    <script src="{{ asset('/lte/plugins/datatables/dataTables.bootstrap4.js') }}"></script>
     <!-- Scripts -->
     <script src="/js/app.js"></script>
     <!-- SweetAlert -->

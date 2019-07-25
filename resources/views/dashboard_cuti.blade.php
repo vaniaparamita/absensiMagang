@@ -1,13 +1,13 @@
 @extends('layouts.app')
 <style>
-   .table-responsive-xl{
-            border-collapse: collapse;
-            border-spacing: 0;
-            width: 100%;
-            border: 1px solid #ddd;
-        }
-        .table-responsive-xl>.table-bordered{
-            border:0} 
+        @media (max-width:991.98px){
+          .table-responsive-lg{
+            display:block;
+            width:100%;
+            overflow-x:auto;
+            -webkit-overflow-scrolling:touch
+          }}
+        
         .button {
             float: right;
             background-color: #008CBA;
@@ -22,7 +22,6 @@
             cursor: pointer;
         }
 </style>
-
 @section('content')
  <div class="container">
   <div class="row">
@@ -35,8 +34,8 @@
             <div class="box box-primary">
             <div class="box-header">
               <h2 class="box-title">Riwayat Pengajuan Cuti</h2>
-                <div class="alert alert-info" style="font-size:14px; height:50px">
-                        <strong>Pemberitahuan!</strong>  Sisa Waktu Cuti : 5 Hari
+                <div class="alert alert-info">
+                        <strong>Pemberitahuan!</strong> Sisa Waktu Cuti : 5 Hari
                 </div>
                 <form action="/dashboard_izin">
                     <button class="button">IZIN</button>
@@ -46,7 +45,7 @@
             </div>
             </div>
             <br /><br />
-            <table class="table table-bordered table-responsive-xl">
+            <table class="table table-bordered table-responsive-lg" id="table_cutis">
               <thead>
               <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
                 <th>No.</th>
@@ -73,6 +72,9 @@
                           <img width="150px" src="{{ asset($d->file) }}">
                         </a>
                       </td>
+                      <td>
+                      <button class="btn btn-flat btn-primary">Tombol</button>
+                      </td>
                     </tr>
                     @endforeach
                 </tbody>
@@ -86,4 +88,16 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- AdminLTE App -->
+@endsection
+@section('sweet')
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script> 
+    <script>
+      $(document).ready( function () {
+      $('#table_cutis').DataTable();
+      });
+    </script>
 @endsection

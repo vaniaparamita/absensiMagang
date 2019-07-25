@@ -1,15 +1,12 @@
 @extends('layouts.app')
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-        .table-responsive-xl{
-            border-collapse: collapse;
-            border-spacing: 0;
-            width: 100%;
-            border: 1px solid #ddd;
-        }
-        .table-responsive-xl>.table-bordered{
-            border:0}
-
+        @media (max-width:991.98px){
+          .table-responsive-lg{
+            display:block;
+            width:100%;
+            overflow-x:auto;
+            -webkit-overflow-scrolling:touch
+          }}
         .button {
             float: right;
             background-color: #008CBA;
@@ -24,7 +21,6 @@
             cursor: pointer;
         }
 </style>
-
 @section('content')
  <div class="container">
   <div class="row">
@@ -43,10 +39,10 @@
                 </form>
                 </div>
             </div>
-            <br />
-            <table class="table table-bordered table-responsive-xl">
+            <br /><br />
+            <table class="table table-responsive-lg table-bordered"  id="table_izins">
               <thead>
-              <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
+              <tr class="table-secondary" style="text-align:center;text-transform: uppercase">
                 <th>No.</th>
                 <th>Nama</th>
                 <th>Tanggal Mulai</th>
@@ -54,6 +50,7 @@
                 <th>Keterangan</th>
                 <th>Status</th>
                 <th>Surat Izin</th>
+                <th>Proses</th>
               </tr>
               </thead>
               <tbody>
@@ -71,6 +68,9 @@
                           <img width="150px" src="{{ asset($d->file) }}">
                         </a>
                       </td>
+                      <td>
+                      <button class="btn btn-flat btn-primary">Tombol</button>
+                      </td>
                     </tr>
                     @endforeach
                 </tbody>
@@ -84,4 +84,16 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- AdminLTE App -->
+@endsection
+@section('sweet')
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script> 
+    <script>
+      $(document).ready( function () {
+      $('#table_izins').DataTable();
+      });
+    </script>
 @endsection
