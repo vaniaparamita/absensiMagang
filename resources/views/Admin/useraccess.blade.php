@@ -52,7 +52,9 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-    <script
+@endsection
+@section('sweet')
+<script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"></script>
@@ -60,5 +62,17 @@
       $(document).ready( function () {
       $('#datauser').DataTable();
       });
-    </script>
+</script>
+<script>
+      var isiPesan = '{{Session::get('useraccess_success') }}';
+      var exist = '{{Session::has('useraccess_success') }}';
+      if(exist){
+        Swal.fire(
+          'Sukses!',
+          isiPesan,
+          'success'
+        )
+      }
+</script>
+
 @endsection

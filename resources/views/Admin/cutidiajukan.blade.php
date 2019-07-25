@@ -1,7 +1,4 @@
 @extends('Admin/base')
-@section('styles')
-    <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
-@endsection
 @section('content')
 <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">

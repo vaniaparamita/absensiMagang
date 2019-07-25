@@ -118,19 +118,3 @@
     </div>
     <!-- /.content-header -->
 @endsection
-@section('sweet')
-    <script>
-        $('#tambah_users').submit(function(e){
-            e.preventDefault(); 
-                Swal.fire(
-                    'Sukses!',
-                    'User Akses baru berhasil ditambahkan.',
-                    'success',
-              ).then((result)=>{
-                if(result.value){
-                    this.submit();
-                  }
-               })
-            });
-    </script>
-@endsection
