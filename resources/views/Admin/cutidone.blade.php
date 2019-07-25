@@ -26,9 +26,11 @@
                 <th>Nama</th>
                 <th>Tanggal Mulai</th>
                 <th>Tanggal Akhir</th>
-                <th>Keterangan</th>
+                {{-- <th>Keterangan</th> --}}
                 <th>Status</th>
-                <th>Surat Cuti</th>
+                {{-- <th>Surat Cuti</th> --}}
+                <th>Detail</th>
+
               </tr>
               </thead>
               <tbody>
@@ -39,12 +41,15 @@
                       <td style="text-transform: capitalize">{{ $d->nama }}</td>
                       <td>{{ $d->tanggal_mulai }}</td>
                       <td>{{ $d->tanggal_selesai }}</td>
-                      <td>{{ $d->keterangan }}</td>
+                      {{-- <td>{{ $d->keterangan }}</td> --}}
                       <td>{{ $d->status }}</td>
-                      <td>
+                      {{-- <td>
                         <a href="{{ asset($d->file) }}" target="_blank">
                           <img width="150px" src="{{ asset($d->file) }}">
                         </a>
+                      </td> --}}
+                      <td>
+                      <a class="btn btn-primary" href="{{route('detailcuti_hrd.show', $d->id)}}" role="button">Detail</a>
                       </td>
                     </tr>
                     @endforeach

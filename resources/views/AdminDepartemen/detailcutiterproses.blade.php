@@ -46,7 +46,12 @@
 					<div class="form-group">
 					 	<label for="telepon">Telepon :</label>
 					 	<input type="text" class="form-control" id="telepon" name="telepon" value="{{ $d->telepon}} " disabled>
-				    </div>
+					</div>
+					
+					<div class="form-group">
+						<label for="telepon">Status :</label>
+						<input type="text" class="form-control" id="status" name="status" value="{{ $d->status}} " disabled>
+				   </div>
 
 					<div class="form-group">
 					  	<label for="surat_cuti">Surat Cuti :</label>

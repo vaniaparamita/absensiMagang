@@ -137,5 +137,10 @@ Route::get('dashboard_izin', 'IzinHistory@index');
 Route::resource('detailcuti', 'DetailCuti');
 Route::resource('detailizin', 'DetailIzin');
 
+Route::resource('detailcuti_hrd', 'DetailCutiHRD');
+Route::resource('detailizin_hrd', 'DetailIzinHRD');
+
+
+
 //Route::get('detailcuti', 'DetailCuti@index');
 

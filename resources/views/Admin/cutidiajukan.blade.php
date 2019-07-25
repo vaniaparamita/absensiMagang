@@ -25,12 +25,12 @@
                 <th>Nama</th>
                 <th>Tanggal Mulai</th>
                 <th>Tanggal Akhir</th>
-                <th>Keterangan</th>
+                {{-- <th>Keterangan</th>
                 <th>Tanggung Jawab</th>
-                <th>No Telepon Darurat</th>
+                <th>No Telepon Darurat</th> --}}
                 <th>Status</th>
-                <th>Surat Cuti</th>
-                <th>Proses</th>
+                {{-- <th>Surat Cuti</th> --}}
+                <th>Detail</th>
               </tr>
               </thead>
               <tbody>
@@ -41,23 +41,26 @@
                       <td style="text-transform: capitalize">{{ $d->nama }}</td>
                       <td>{{ $d->tanggal_mulai }}</td>
                       <td>{{ $d->tanggal_selesai }}</td>
-                      <td>{{ $d->keterangan }}</td>
+                      {{-- <td>{{ $d->keterangan }}</td>
                       <td>{{ $d->tanggung_jawab }}</td>
-                      <td>{{ $d->telepon }}</td>
+                      <td>{{ $d->telepon }}</td> --}}
                       <td>{{ $d->status }}</td>
-                      <td>
+                      {{-- <td>
                         <a href="{{ asset($d->file) }}" target="_blank">
                           <img width="150px" src="{{ asset($d->file) }}">
                         </a>
-                      </td>
-            <form action="{{ route('cuti.update', $d->id) }}" method="post" enctype="multipart/form-data">
+                      </td> --}}
+            {{-- <form action="{{ route('cuti.update', $d->id) }}" method="post" enctype="multipart/form-data">
 		      	  {{ csrf_field() }}
 			        {{ method_field('PUT') }}
                       <td>
                       <button name="status" value="Disetujui" class=" btn btn-sm btn-primary">Disetujui</button>
                       <button name="status" value="Ditolak" class=" btn btn-sm btn-danger">Tidak</button>
-                      </td>
-            </form>
+                      </td> --}}
+            {{-- </form> --}}
+            <td>
+              <a class="btn btn-primary" href="{{route('detailcuti_hrd.edit', $d->id)}}" role="button">Detail</a>
+              </td>
                     </tr>
                     @endforeach
                 </tbody>

@@ -27,10 +27,10 @@
                 <th>Nama</th>
                 <th>Tanggal Mulai</th>
                 <th>Tanggal Akhir</th>
-                <th>Keterangan</th>
+                {{-- <th>Keterangan</th> --}}
                 <th>Status</th>
-                <th>Surat Izin</th>
-                <th>Akasi</th>
+                {{-- <th>Surat Izin</th> --}}
+                <th>Detail</th>
               </tr>
               </thead>
               <tbody>
@@ -43,19 +43,22 @@
                       <td>{{ $d->tanggal_selesai }}</td>
                       <td>{{ $d->keterangan }}</td>
                       <td>
+                        <a class="btn btn-primary" href="{{route('detailizin_hrd.edit', $d->id)}}" role="button">Detail</a>
+                        </td>
+                      {{-- <td>
                         <a href="{{ asset($d->file) }}" target="_blank">
                           <img width="150px" src="{{ asset($d->file) }}">
                         </a>
-                      </td>
+                      </td> --}}
                       
-                      <form action="{{ route('izin.update', $d->id) }}" method="post" enctype="multipart/form-data">
+                      {{-- <form action="{{ route('izin.update', $d->id) }}" method="post" enctype="multipart/form-data">
 		      	  {{ csrf_field() }}
 			        {{ method_field('PUT') }}
                       <td>
                       <button name="status" value="Disetujui" class=" btn btn-sm btn-primary">Disetujui</button>
                       <button name="status" value="Ditolak" class=" btn btn-sm btn-danger">Tidak</button>
                       </td>
-            </form>
+            </form> --}}
                     </tr>
                     @endforeach
                 </tbody>
