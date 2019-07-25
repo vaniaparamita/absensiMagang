@@ -20,6 +20,19 @@
             margin: 4px 2px;
             cursor: pointer;
         }
+        .button2 {
+            float: right;
+            border: none;
+            color: white;
+            padding: 6px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
 </style>
 @section('content')
  <div class="container">
@@ -33,7 +46,8 @@
             <div class="box box-primary">
             <div class="box-header">
               <h2 class="box-title">Riwayat Pengajuan Izin</h2>
-                    <button class="button">IZIN</button>
+              <br />
+                    <button class="button2" disabled="disabled">IZIN</button>
                 <form action="/dashboard_cuti">
                     <button class="button">CUTI</button>
                 </form>

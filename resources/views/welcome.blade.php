@@ -111,7 +111,7 @@
                    WELCOME TO HR-IS
                 </div>
                 <div class="links">
-                    <a style="color:white">HANYA UNTUK KARYAWAN JOGJA CITY MALL</a>
+                    <a style="color:white">SISTEM INFORMASI KARYAWAN JOGJA CITY MALL</a>
                 </div>
                 <br /><br /><br />
                     <a href="{{ url('/login') }}" class="button">MASUK</a>

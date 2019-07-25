@@ -7,10 +7,21 @@
             overflow-x:auto;
             -webkit-overflow-scrolling:touch
           }}
-        
         .button {
             float: right;
             background-color: #008CBA;
+            border: none;
+            color: white;
+            padding: 6px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .button2 {
+            float: right;
             border: none;
             color: white;
             padding: 6px 24px;
@@ -34,13 +45,15 @@
             <div class="box box-primary">
             <div class="box-header">
               <h2 class="box-title">Riwayat Pengajuan Cuti</h2>
+               <br /> 
                 <div class="alert alert-info">
                         <strong>Pemberitahuan!</strong> Sisa Waktu Cuti : 5 Hari
                 </div>
                 <form action="/dashboard_izin">
                     <button class="button">IZIN</button>
+                </form>
                 <form action="#">
-                    <button class="button">CUTI</button>
+                    <button class="button2" disabled="disabled">CUTI</button>
                 </form>
             </div>
             </div>
@@ -72,9 +85,6 @@
                           <img width="150px" src="{{ asset($d->file) }}">
                         </a>
                       </td>
-                      <td>
-                      <button class="btn btn-flat btn-primary">Tombol</button>
-                      </td>
                     </tr>
                     @endforeach
                 </tbody>
@@ -90,7 +100,7 @@
     <!-- AdminLTE App -->
 @endsection
 @section('sweet')
-    <script
+<script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"></script>

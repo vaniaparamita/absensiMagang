@@ -11,6 +11,7 @@
             <div class="box-header">
               <i class="ion ion-clipboard"></i>
               <br />
+              
               <h2 class="box-title">Daftar Karyawan</h2>
 
              </div>
@@ -18,7 +19,7 @@
             <br />
             <table class="table table-bordered table-responsive-xl" id="table_karyawans">
               <thead>
-              <tr class="table-secondary" style="tet-align:center; text-transform:uppercase">
+              <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
                 <th>No.</th>
                 <th>NIK</th>
                 <th>Nama</th>
@@ -33,10 +34,10 @@
               <body>
               @php $no = 1; @endphp
                 @foreach($data as $d)
-                <tr>
+                <tr style="text-transform: uppercase">
                       <td>{{ $no++ }}</td>
                       <td>{{ $d->nik }}</td>
-                      <td style="text-transform: capitalize">{{ $d->nama }}</td>
+                      <td>{{ $d->nama }}</td>
                       <td>{{ $d->jenis_kelamin }}</td>
                       <td>{{ $d->tanggal_lahir }}</td>
                       <td>{{ $d->tempat_lahir }}</td>
