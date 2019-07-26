@@ -50,7 +50,7 @@
                             </div>
                 <div class="panel-body">Tanggal Selesai Cuti
             <div>
-                    <input id="tanggal_selesai"  class="date form-control" name="tanggal_selesai" autocomplete="off">
+                    <input id="tanggal_selesai"  class="date form-control" name="tanggal_selesai" autocomplete="off" >
                         </div>
                             <script type="text/javascript">
                                 $('.date').datepicker({  
@@ -63,23 +63,23 @@
                     <input id="keterangan" type="text" class="form-control" name="keterangan" autocomplete="off" required autofocus>
                         </div>
                             </div>
-                            <div class="panel-body">Tanggung Jawab
-                                <div>
-                                        <input id="tanggung_jawab" type="text" class="form-control" name="tanggung_jawab" autocomplete="off" required autofocus>
-                                            </div>
-                                        </div>
-                      <div class="panel-body">Nomor Telepon Darurat
-                      <div>
+                <div class="panel-body">Tanggung Jawab
+            <div>
+                    <input id="tanggung_jawab" type="text" class="form-control" name="tanggung_jawab" autocomplete="off" required autofocus>
+                        </div>
+                            </div>
+                <div class="panel-body">Nomor Telepon Darurat
+            <div>
                       <input id="telepon" type="text" class="form-control" name="telepon" autocomplete="off" required autofocus>
-                      </div>   
+                        </div>   
+                            </div>
+                <div class="panel-body">
+                    <div class="alert alert-info">
+                        <strong>Info!</strong> Maximum Size Upload : 2MB
                     </div>
-                                <div class="panel-body">
-                                    <div class="alert alert-info">
-                                        <strong>Info!</strong> Maximum Size Upload : 2MB
-                                    </div>
-                                        Surat Keterangan
-                                    <div class="form-group">
-                                        <input type="file" class="form-control" id="file" name="file">
+                        Surat Keterangan
+                          <div class="form-group">
+                            <input type="file" class="form-control" id="file" name="file">
                     </div>
                                    
                 <div class="panel-body">
@@ -92,4 +92,4 @@
             </div>
         </div>
     </div>
-    @endsection
+@endsection

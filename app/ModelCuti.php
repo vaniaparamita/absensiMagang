@@ -9,7 +9,7 @@ class ModelCuti extends Model
     protected $table = "model_cutis";
 
     protected $fillable = [
-        'nama', 'id_user', 'tanggal_mulai', 'tanggal_selesai', 'keterangan', 'status',
+        'nama', 'id_user', 'tanggal_mulai', 'tanggal_selesai', 'total', 'keterangan', 'status',
          'tanggung_jawab', 'telepon', 'file', 'alasan',
     ];
 

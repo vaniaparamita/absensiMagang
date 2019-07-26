@@ -38,6 +38,7 @@
                       <td style="text-transform: capitalize">{{ $d->nama }}</td>
                       <td>{{ $d->tanggal_mulai }}</td>
                       <td>{{ $d->tanggal_selesai }}</td>
+                      <td>{{ $d->total}}</td>
                       {{-- <td>{{ $d->keterangan }}</td>
                       <td>{{ $d->tanggung_jawab }}</td>
                       <td>{{ $d->telepon }}</td> --}}
