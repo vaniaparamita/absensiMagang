@@ -47,7 +47,7 @@
               <h2 class="box-title">Riwayat Pengajuan Cuti</h2>
                <br /> 
                 <div class="alert alert-info">
-                        <strong>Pemberitahuan!</strong> Waktu Cuti Yang Sudah Diajukan : {{ DB::table('model_cutis')->sum('total')}} Hari
+                        <strong>Pemberitahuan!</strong> Waktu Cuti Yang Sudah Diajukan : {{ DB::table('model_cutis')->where('status', 'disetujui')->sum('total')}} Hari
                 </div>
                 <form action="/dashboard_izin">
                     <button class="button">IZIN</button>
