@@ -19,6 +19,7 @@ class CreateModelCutisTable extends Migration
             $table->string('id_user');
             $table->string('tanggal_mulai');
             $table->string('tanggal_selesai');
+            $table->string('total')->nullable();
             $table->string('keterangan');
             $table->string('status')->nullable();
             $table->string('tanggung_jawab');

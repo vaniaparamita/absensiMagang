@@ -47,7 +47,7 @@
               <h2 class="box-title">Riwayat Pengajuan Cuti</h2>
                <br /> 
                 <div class="alert alert-info">
-                        <strong>Pemberitahuan!</strong> Sisa Waktu Cuti : 5 Hari
+                        <strong>Pemberitahuan!</strong> Waktu Cuti Yang Sudah Diajukan : {{ DB::table('model_cutis')->sum('total')}} Hari
                 </div>
                 <form action="/dashboard_izin">
                     <button class="button">IZIN</button>
@@ -76,8 +76,8 @@
                     <tr>
                       <td>{{ $no++ }}</td>
                       <td style="text-transform: capitalize">{{ $d->nama }}</td>
-                      <td>{{ $d->tanggal_mulai }}</td>
-                      <td>{{ $d->tanggal_selesai }}</td>
+                      <td id="tgl1">{{ $d->tanggal_mulai }}</td>
+                      <td id="tgl2">{{ $d->tanggal_selesai }}</td>
                       <td>{{ $d->keterangan }}</td>
                       <td>{{ $d->status }}</td>
                       <td>
@@ -110,4 +110,5 @@
       $('#table_cutis').DataTable();
       });
     </script>
+
 @endsection

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\ModelCuti;
 use File;
 use Alert;
+use DateTime;
 
 
 class CutiController extends Controller
@@ -49,6 +50,11 @@ class CutiController extends Controller
       $data->tanggung_jawab = $request->tanggung_jawab;
       $data->telepon = $request->telepon;
 
+      $date_start = new DateTime($request->tanggal_mulai);
+      $date_end = new DateTime($request->tanggal_selesai);
+      $interval = $date_end->diff($date_start);
+      //dd($interval); ->Testing Data
+      $data->total = $interval->d+1;
       $photoFileName = 'cuti-'.time().'.'.request()->file->getClientOriginalExtension();
       $path = asset('uploads/file').'/'.$photoFileName;
       $data->file = $path; //uploads/file/
