@@ -144,3 +144,41 @@ Route::resource('detailizin_hrd', 'DetailIzinHRD');
 
 //Route::get('detailcuti', 'DetailCuti@index');
 
+//Route Sementara AdminGM
+
+Route::get('/admin3', function () {
+    return view('AdminGM/admin3');
+});
+
+//cuti
+Route::get('/cutidiajukan3', function () {
+    return view('AdminGM/cutidiajukan3');
+});
+Route::get('/cutidone3', function () {
+    return view('AdminGM/cutidone3');
+});
+Route::get('/detailcuti3', function () {
+    return view('AdminGM/detailcuti3');
+});
+Route::get('/detailcutiterproses3', function () {
+    return view('AdminGM/detailcutiterproses3');
+});
+
+//izin
+Route::get('/izindiajukan3', function () {
+    return view('AdminGM/izindiajukan3');
+});
+Route::get('/izindone3', function () {
+    return view('AdminGM/izindone3');
+});
+Route::get('/detailizin3', function () {
+    return view('AdminGM/detailizin3');
+});
+Route::get('/detailizinterproses3', function () {
+    return view('AdminGM/detailizinterproses3');
+});
+
+//datakaryawan
+Route::get('/datakaryawan3', function () {
+    return view('AdminGM/datakaryawan3');
+});
