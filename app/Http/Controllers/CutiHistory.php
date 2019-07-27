@@ -14,4 +14,8 @@ class CutiHistory extends Controller
         $data = ModelCuti::where('id_user', '=', Auth::user()->id)->get();
         return view('dashboard_cuti', compact('data'));
     }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 }

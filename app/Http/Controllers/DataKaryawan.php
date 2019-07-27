@@ -11,10 +11,17 @@ use Alert;
 class DataKaryawan extends Controller
 {
     //
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index(){ //view
         $data = ModelKaryawan::all();
         return view('Admin.datakaryawan', compact('data'));
     }
+   
 
     public function create() 
     {

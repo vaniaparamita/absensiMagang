@@ -14,6 +14,11 @@ class DetailCutiHRD extends Controller
         return view('Admin.detailcuti_hrd', compact('data'));
     }
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function edit($id)
     {
         $data = ModelCuti::where('id','=',$id)->get();

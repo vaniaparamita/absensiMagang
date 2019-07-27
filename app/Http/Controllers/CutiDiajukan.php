@@ -13,4 +13,8 @@ class CutiDiajukan extends Controller
         $data = ModelCuti::where('status', 'Disetujui Departemen')->get();
         return view('Admin/cutidiajukan', compact('data'));
     }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 }

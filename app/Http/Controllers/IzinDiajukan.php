@@ -13,5 +13,10 @@ class IzinDiajukan extends Controller
         $data = ModelIzin::where('status', 'Disetujui Departemen')->get();
         return view('Admin/izindiajukan', compact('data'));
         }
+
+        public function __construct()
+        {
+            $this->middleware('auth');
+        }
         
 }

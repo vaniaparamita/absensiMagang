@@ -13,4 +13,8 @@ class UserAccess extends Controller
         return view('Admin/useraccess', compact('data'));
 
     }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 }

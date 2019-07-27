@@ -13,4 +13,9 @@ class IzinDone extends Controller
     $data = ModelIzin::where('status', 'Disetujui')->orwhere('status', 'Ditolak')->get();
     return view('Admin/izindone',  compact('data'));
         }
+
+        public function __construct()
+        {
+            $this->middleware('auth');
+        }
 }

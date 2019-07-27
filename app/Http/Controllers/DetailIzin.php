@@ -21,6 +21,11 @@ class DetailIzin extends Controller
            return view('AdminDepartemen/detaiizin', compact('data'));
     }
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function edit($id)
     {
         $data = ModelIzin::where('id','=',$id)->get();

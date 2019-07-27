@@ -13,4 +13,8 @@ class CutiDone extends Controller
     $data = ModelCuti::where('status', 'Disetujui')->orwhere('status', 'Ditolak')->get();
     return view('Admin/cutidone',  compact('data'));
     }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 }

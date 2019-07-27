@@ -13,6 +13,10 @@ class DetailIzinHRD extends Controller
       $data = ModelIzin::where('status', 'Disetujui Departemen')->get();
       return view('Admin.detailizin_hrd', compact('data'));
     }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function edit($id)
     {

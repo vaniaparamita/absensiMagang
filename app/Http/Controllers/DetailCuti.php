@@ -20,6 +20,10 @@ class DetailCuti extends Controller
         ->get();       
            return view('AdminDepartemen/detailcuti', compact('data'));
     }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function edit($id)
     {

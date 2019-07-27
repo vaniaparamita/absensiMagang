@@ -64,7 +64,6 @@
                 <th>Keterangan</th>
                 <th>Status</th>
                 <th>Surat Izin</th>
-                <th>Proses</th>
               </tr>
               </thead>
               <tbody>
@@ -82,9 +81,7 @@
                           <img width="150px" src="{{ asset($d->file) }}">
                         </a>
                       </td>
-                      <td>
-                      <button class="btn btn-flat btn-primary">Tombol</button>
-                      </td>
+                      
                     </tr>
                     @endforeach
                 </tbody>

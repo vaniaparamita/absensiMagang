@@ -22,6 +22,12 @@ class IzinDiajukan2 extends Controller
         )->get();
       return view('AdminDepartemen.izindiajukan2', compact('data'));
     }
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function edit($id)
     {
         $data = ModelIzin::where('id','=',$id)->get();
