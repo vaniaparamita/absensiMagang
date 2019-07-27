@@ -182,3 +182,17 @@ Route::get('/detailizinterproses3', function () {
 Route::get('/datakaryawan3', function () {
     return view('AdminGM/datakaryawan3');
 });
+
+//pengajuan cuti & izin route sementara
+Route::get('/pengajuancuti', function () {
+    return view('Admin/pengajuancuti');
+});
+Route::get('/pengajuanizin', function () {
+    return view('Admin/pengajuanizin');
+});
+Route::get('/pengajuancuti2', function () {
+    return view('AdminDepartemen/pengajuancuti2');
+});
+Route::get('/pengajuanizin2', function () {
+    return view('AdminDepartemen/pengajuanizin2');
+});

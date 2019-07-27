@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Detail Cuti </div>
+                <div class="panel-heading">Form Pengajuan Cuti </div>
                     <form action="{{ route('cuti.store') }}" method="post" enctype="multipart/form-data" id="tambah_cutis">
                         {{ csrf_field() }}
                           <div class="panel-body">Nama

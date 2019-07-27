@@ -85,6 +85,15 @@
                    <p>Data Karyawan</p>
                 </a>
               </li>
+              <li class="nav-item">
+            <a href="/pengajuancuti2" class="nav-link {{ Request::segment(1) === 'pengajuancuti2' ? 'nav-link active' : null }}
+                {{ Request::segment(1) === 'pengajuanizin2' ? 'nav-link active' : null }}">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                  Pengajuan Cuti & Izin
+              </p>
+            </a>
+          </li>
             <li class="nav-item">
                <a href="{{ url('/logout') }}" class="nav-link"
                   onclick="event.preventDefault();
