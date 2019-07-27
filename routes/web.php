@@ -90,6 +90,8 @@ Route::post('/izin/store', 'IzinController@store');
 //CUTI
 Route::resource('cuti','CutiController');
 Route::resource('cuti2','CutiDiajukan2');
+Route::resource('cuti3','CutiDiajukan3');
+
 Route::post('/cuti/store', 'CutiController@store');
   //hrd
   Route::resource('/cutidiajukan', 'CutiDiajukan');
@@ -97,7 +99,9 @@ Route::post('/cuti/store', 'CutiController@store');
   //atasan
   Route::get('/cutidiajukan2', 'CutiDiajukan2@index');
   Route::get('/cutidone2', 'CutiDone2@index');
-
+  //gm
+  Route::get('/cutidiajukan3', 'CutiDiajukan3@index');
+  Route::get('/cutidone3', 'CutiDone3@index');
 
   Route::resource('home','HomeController');
   Route::get('my-notification/{type}', 'HomeController@myNotification');
@@ -142,43 +146,6 @@ Route::resource('detailizin_hrd', 'DetailIzinHRD');
 
 
 
-//Route::get('detailcuti', 'DetailCuti@index');
 
-//Route Sementara AdminGM
 
-Route::get('/admin3', function () {
-    return view('AdminGM/admin3');
-});
 
-//cuti
-Route::get('/cutidiajukan3', function () {
-    return view('AdminGM/cutidiajukan3');
-});
-Route::get('/cutidone3', function () {
-    return view('AdminGM/cutidone3');
-});
-Route::get('/detailcuti3', function () {
-    return view('AdminGM/detailcuti3');
-});
-Route::get('/detailcutiterproses3', function () {
-    return view('AdminGM/detailcutiterproses3');
-});
-
-//izin
-Route::get('/izindiajukan3', function () {
-    return view('AdminGM/izindiajukan3');
-});
-Route::get('/izindone3', function () {
-    return view('AdminGM/izindone3');
-});
-Route::get('/detailizin3', function () {
-    return view('AdminGM/detailizin3');
-});
-Route::get('/detailizinterproses3', function () {
-    return view('AdminGM/detailizinterproses3');
-});
-
-//datakaryawan
-Route::get('/datakaryawan3', function () {
-    return view('AdminGM/datakaryawan3');
-});

@@ -471,7 +471,9 @@ class ComposerStaticInit5408f51c8dc938397c81ceefcb39aeb2
     );
 
     public static $classMap = array (
+        'CreateCutiDepartemensTable' => __DIR__ . '/../..' . '/database/migrations/2019_07_27_025517_create_cuti_departemens_table.php',
         'CreateDepartemensTable' => __DIR__ . '/../..' . '/database/migrations/2019_07_18_020529_create_departemens_table.php',
+        'CreateIzinDepartemensTable' => __DIR__ . '/../..' . '/database/migrations/2019_07_27_025940_create_izin_departemens_table.php',
         'CreateModelCutisTable' => __DIR__ . '/../..' . '/database/migrations/2019_06_26_040529_create_model_cutis_table.php',
         'CreateModelIzinsTable' => __DIR__ . '/../..' . '/database/migrations/2019_06_27_015751_create_model_izins_table.php',
         'CreateModelKaryawansTable' => __DIR__ . '/../..' . '/database/migrations/2019_07_01_043058_create_model_karyawans_table.php',
