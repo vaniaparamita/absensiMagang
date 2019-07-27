@@ -113,6 +113,15 @@
               </li>
             </ul>
             <li class="nav-item">
+            <a href="/pengajuancuti" class="nav-link {{ Request::segment(1) === 'pengajuancuti' ? 'nav-link active' : null }}
+                {{ Request::segment(1) === 'pengajuanizin' ? 'nav-link active' : null }}">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                  Pengajuan Cuti & Izin
+              </p>
+            </a>
+          </li>
+            <li class="nav-item">
                 <a href="{{ url('/logout') }}" class="nav-link"
                       onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();">
