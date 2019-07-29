@@ -31,8 +31,8 @@
                   </a>
               </li>
               <li class="nav-item">
-                <a a href="/historycuti" class="nav-link {{ Request::segment(1) === 'historycuti' ? 'nav-link active' : null }}
-                    {{ Request::segment(1) === 'historyizin' ? 'nav-link active' : null }}">
+                <a a href="{{route('cutihistoryHRD.index')}}" class="nav-link {{ Request::segment(1) === 'cutihistoryHRD.index' ? 'nav-link active' : null }}
+                    {{ Request::segment(1) === 'izinhistoryHRD.index' ? 'nav-link active' : null }}">
                  <i class=""></i>
                   <p>Riwayat Cuti - Izin</p>
                 </a>
