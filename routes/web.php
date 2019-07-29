@@ -97,6 +97,8 @@ Route::resource('izin','IzinController');
 Route::resource('izin2','IzinDiajukan2');
 Route::resource('izindiajukan3','IzinDiajukan3');
 Route::resource('izin3','IzinD');
+Route::resource('izinHRD','IzinHRD');
+
 
 
 Route::post('/izin/store', 'IzinController@store');
@@ -115,6 +117,8 @@ Route::resource('cuti','CutiController');
 Route::resource('cuti2','CutiDiajukan2');
 Route::resource('cutidiajukan3','CutiDiajukan3');
 Route::resource('cuti3','CutiD');
+Route::resource('cutiHRD','CutiHRD');
+
 
 Route::post('/cuti/store', 'CutiController@store');
 Route::post('/cuti3/store', 'CutiDiajukan3@store');

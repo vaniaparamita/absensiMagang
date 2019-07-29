@@ -16,17 +16,18 @@
                 </form>
             <h1 class="m-0 text-dark">Pengajuan Izin</h1>
 			<hr>
-			<form action="#" method="post" enctype="multipart/form-data">
+			<form action="{{ route('izinHRD.store') }}" method="post" enctype="multipart/form-data">
 			{{ csrf_field() }}
 					<div class="form-group">
 						<label for="nama">Nama :</label>
-						<input type="text" class="form-control" id="nama" name="nama" style="text-transform: capitalize">
-					</div>
+						<input id="nama" type="text" class="form-control" name="nama"  required autofocus
+						value="{{ Auth::user()->name }}" style="text-transform: capitalize">					</div>
 
                     <div class="form-group">
 						<label for="nama">NIK :</label>
-						<input type="text" class="form-control" id="nik" name="nik" >
-					</div>
+						<input id="id_user" type="text" class="form-control" name="id_user"
+						required autofocus
+						value="{{ Auth::user()->id }}" style="text-transform: capitalize">					</div>
 
 					<div class="form-group">
 						<label for="nama">Tanggal Mulai Cuti :</label>
