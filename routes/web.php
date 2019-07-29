@@ -177,8 +177,19 @@ Route::resource('detailizin_hrd', 'DetailIzinHRD');
 Route::resource('detailcuti_gm', 'DetailCutiGM');
 Route::resource('detailizin_gm', 'DetailIzinGM');
 
-
-
+//Route sementara history cuti & izin admin
+Route::get('/historycuti', function () {
+    return view('Admin/historycuti');
+});
+Route::get('/historyizin', function () {
+    return view('Admin/historyizin');
+});
+Route::get('/historycuti2', function () {
+    return view('AdminDepartemen/historycuti2');
+});
+Route::get('/historyizin2', function () {
+    return view('AdminDepartemen/historyizin2');
+});
 
 
 
