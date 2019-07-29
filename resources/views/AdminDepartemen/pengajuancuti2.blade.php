@@ -16,16 +16,19 @@
                 </form>    
             <h1 class="m-0 text-dark">Pengajuan Cuti</h1>
             <hr>
-			<form action="#" method="post" enctype="multipart/form-data">
+			<form action="{{ route('cuti3.store') }}"  method="post" enctype="multipart/form-data" id="tambah_cutids">
 			{{ csrf_field() }}
 					<div class="form-group">
 						<label for="nama">Nama :</label>
-						<input type="text" class="form-control" id="nama" name="nama" style="text-transform: capitalize">
-					</div>
+						<input id="nama" type="text" class="form-control" name="nama"  required autofocus
+						value="{{ Auth::user()->name }}" style="text-transform: capitalize"
+						 >					</div>
 
                     <div class="form-group">
 						<label for="nama">NIK :</label>
-						<input type="text" class="form-control" id="nik" name="nik" >
+						 <input id="id_user" type="text" class="form-control" name="id_user"
+                            required autofocus
+                            value="{{ Auth::user()->id }}" style="text-transform: capitalize">
 					</div>
 
 					<div class="form-group">

@@ -22,13 +22,25 @@
                 <th>Nama</th>
                 <th>Tanggal Mulai</th>
                 <th>Tanggal Akhir</th>
-                <th>Keterangan</th>
                 <th>Status</th>
-                <th>Surat Izin</th>
-
+                <th>Detail</th>
               </tr>
+              <tbody>
+                @php $no = 1; @endphp
+                @foreach($data as $d)
+                    <tr>
+                      <td>{{ $no++ }}</td>
+                      <td style="text-transform: capitalize">{{ $d->nama }}</td>
+                      <td>{{ $d->tanggal_mulai }}</td>
+                      <td>{{ $d->tanggal_selesai }}</td>
+                      <td>{{ $d->keterangan }}</td>
+                      <td>
+                        <a class="btn btn-primary" href="{{route('detailizin_gm.show', $d->id)}}" role="button">Detail</a>
+                      </td>
+                    </tr>
+                    @endforeach
+                </tbody>
               </thead>
-              
             </table>
            <br />
           </div><!-- /.col -->

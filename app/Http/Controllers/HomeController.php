@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Alert;
+use Auth;
+
 
 class HomeController extends Controller
 {

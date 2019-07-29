@@ -24,12 +24,24 @@
                 <th>Tanggal Mulai</th>
                 <th>Tanggal Akhir</th>
                 <th>Status</th>
-
-                {{-- <th>Keterangan</th> --}}
-                {{-- <th>Surat Izin</th> --}}
                 <th>Detail</th>
               </tr>
               </thead>
+              <tbody>
+                @php $no = 1; @endphp
+                @foreach($data as $d)
+                    <tr>
+                      <td>{{ $no++ }}</td>
+                      <td style="text-transform: capitalize">{{ $d->nama }}</td>
+                      <td>{{ $d->tanggal_mulai }}</td>
+                      <td>{{ $d->tanggal_selesai }}</td>
+                      <td>{{ $d->status }}</td>
+                      <td>
+                        <a class="btn btn-primary" href="{{route('detailizin_gm.edit', $d->id)}}" role="button">Detail</a>
+                      </td>
+                    </tr>
+                    @endforeach
+                </tbody>
               
             </table>
             <br />

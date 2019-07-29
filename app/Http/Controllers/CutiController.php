@@ -7,6 +7,8 @@ use App\ModelCuti;
 use File;
 use Alert;
 use DateTime;
+use Auth;
+
 
 
 class CutiController extends Controller

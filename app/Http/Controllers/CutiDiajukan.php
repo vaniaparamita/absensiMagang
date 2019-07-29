@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\ModelCuti;
 use File;
+use Auth;
 
 class CutiDiajukan extends Controller
 {

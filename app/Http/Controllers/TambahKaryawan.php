@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\ModelKaryawan;
 use Illuminate\Database\QueryException;
+use Auth;
+
 
 class TambahKaryawan extends Controller
 {

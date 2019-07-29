@@ -3,15 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\ModelIzin;
+use App\IzinDepartemen;
+use Auth;
 
 
-class IzinDone2 extends Controller
+
+class IzinDone3 extends Controller
 {
     //
     public function index(){
-        $data = ModelIzin::where('status', 'Disetujui Departemen')->orwhere('status', 'Ditolak Departemen')->orwhere('status', 'Disetujui')->orwhere('status', 'Ditolak')->get();
-        return view('AdminDepartemen/izindone2', compact('data'));
+        $data = IzinDepartemen::where('status', 'Disetujui')->orwhere('status', 'Ditolak')->orwhere('status', 'Disetujui')->get();
+        return view('AdminGM/izindone3', compact('data'));
     }
 
     public function __construct()

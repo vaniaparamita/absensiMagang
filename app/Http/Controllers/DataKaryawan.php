@@ -7,6 +7,8 @@ use Illuminate\Database\QueryException;
 use App\ModelKaryawan;
 use DataTables;
 use Alert;
+use Auth;
+
 
 class DataKaryawan extends Controller
 {

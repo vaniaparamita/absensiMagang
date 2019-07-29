@@ -15,6 +15,17 @@ class CreateIzinDepartemensTable extends Migration
     {
         Schema::create('izin_departemens', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nama');
+            $table->string('id_user');
+            $table->string('tanggal_mulai');
+            $table->string('tanggal_selesai');
+            $table->string('total')->nullable();
+            $table->string('keterangan');
+            $table->string('status')->nullable();
+            $table->string('tanggung_jawab');
+            $table->string('telepon');
+            $table->string('alasan')->nullable();
+            $table->string('file')->nullable();            
             $table->timestamps();
         });
     }

@@ -56,7 +56,11 @@ class LoginController extends Controller
         else if(auth()->user()->role=='admin-departemen')
         {
             return redirect('/admin2');
-        }   
+        } 
+        else if(auth()->user()->role=='admin-gm')
+        {
+            return redirect('/admin3');
+        }    
         else
         {
             return redirect('/');

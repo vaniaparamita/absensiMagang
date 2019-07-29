@@ -22,14 +22,27 @@
                 <th>Nama</th>
                 <th>Tanggal Mulai</th>
                 <th>Tanggal Akhir</th>
-               {{--  <th>Keterangan</th>
-                <th>Tanggung Jawab</th>
-                <th>No Telepon Darurat</th> --}}
                 <th>Status</th>
-                {{-- <th>Surat Cuti</th> --}}
                 <th>Detail</th>
               </tr>
-              </thead>    
+              </thead>  
+              <tbody>
+                @php $no = 1; @endphp
+                @foreach($data as $d)
+                    <tr>
+                      <td>{{ $no++ }}</td>
+                      <td style="text-transform: capitalize">{{ $d->nama }}</td>
+                      <td>{{ $d->tanggal_mulai }}</td>
+                      <td>{{ $d->tanggal_selesai }}</td>
+                      <td>{{ $d->status }}</td>
+                      <td>
+                      <a class="btn btn-primary" href="{{route('detailcuti_gm.edit', $d->id)}}" role="button">Detail</a>
+                      </td>
+
+                    </tr>
+                    @endforeach
+                </tbody>
+                
             </table>
             <br />
           </div><!-- /.col -->

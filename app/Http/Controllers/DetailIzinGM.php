@@ -21,7 +21,7 @@ class DetailIzinGM extends Controller
     public function edit($id)
     {
         $data = IzinDepartemen::where('id','=',$id)->get();
-        return view('AdminGM.detailizin_gm', compact('data'));
+        return view('AdminGM.detailizin3', compact('data'));
     }
 
     /**
@@ -33,7 +33,7 @@ class DetailIzinGM extends Controller
      */
     public function update(Request $request, $id)
     {
-      $data = CutiDepartemen::where('id',$id)->first();
+      $data = IzinDepartemen::where('id',$id)->first();
     //   $data->nama = $request->nama;
     //   $data->tanggal_mulai = $request->tanggal_mulai;
     //   $data->tanggal_selesai = $request->tanggal_selesai;
@@ -48,12 +48,12 @@ class DetailIzinGM extends Controller
     //   $file->move('uploads/file',$file->getClientOriginalName());
     //     }
       $data->save();
-      return redirect()->route('izindiajukan.index')->with('alert-success','Berhasil Menambahkan Data!');
+      return redirect()->route('izindiajukan3.index')->with('alert-success','Berhasil Menambahkan Data!');
         
     }
     public function show($id)
     {
         $data = IzinDepartemen::where('id','=',$id)->get();
-        return view('AdminGM.detailizinterproses_hrd', compact('data'));
+        return view('AdminGM.detailizinterproses3', compact('data'));
     }
 }

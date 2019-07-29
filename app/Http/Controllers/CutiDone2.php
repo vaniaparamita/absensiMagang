@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ModelCuti;
+use Auth;
+
 
 
 class CutiDone2 extends Controller

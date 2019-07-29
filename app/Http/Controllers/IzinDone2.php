@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ModelIzin;
+use Auth;
+
 
 
 class IzinDone2 extends Controller

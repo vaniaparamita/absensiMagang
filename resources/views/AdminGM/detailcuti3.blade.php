@@ -15,44 +15,44 @@
             </div>
             <br />
             <!-- @foreach($data as $d) -->
-            <form action="#" method="post" enctype="multipart/form-data">
+            <form action="{{ route('detailcuti_gm.update', $d->id) }}" method="post" enctype="multipart/form-data">
 			{{ csrf_field() }}
 			{{ method_field('PUT') }}
 					<div class="form-group">
 						<label for="nama">Nama :</label>
-						<input type="text" class="form-control" id="nama" name="nama" value="#" disabled>
+						<input type="text" class="form-control" id="nama" name="nama" value="{{ $d->nama }}" disabled>
 					</div>
 
 					<div class="form-group">
 						<label for="tanggal_mulai">Tanggal Mulai :</label>
-						<input type="text" class="form-control" id="tanggal_mulai" name="tanggal_mulai" value="#" disabled>
+						<input type="text" class="form-control" id="tanggal_mulai" name="tanggal_mulai" value="{{ $d->tanggal_mulai }}" disabled>
 					</div>
 
 					<div class="form-group">
 						<label for="tanggal_selesai">Tanggal Selesai :</label>
-						<input type="text" class="form-control" id="tanggal_selesai" name="tanggal_selesai" value="#" disabled> 
+						<input type="text" class="form-control" id="tanggal_selesai" name="tanggal_selesai" value="{{ $d->tanggal_selesai }}" disabled> 
 					</div>
 
 					<div class="form-group">
 						<label for="keterangan">Keterangan :</label>
-						<input type="text" class="form-control" id="keterangan" name="keterangan" value="#" disabled>
+						<input type="text" class="form-control" id="keterangan" name="keterangan" value="{{ $d->keterangan}}" disabled>
 					</div>
 
 					<div class="form-group">
 						<label for="tanggung_jawab">Tanggung Jawab :</label>
-						<input type="text" class="form-control" id="tanggung_jawab" name="tanggung_jawab" value="#" disabled>
+						<input type="text" class="form-control" id="tanggung_jawab" name="tanggung_jawab" value="{{ $d->tanggung_jawab }}" disabled>
 					</div>
 
 					<div class="form-group">
 					 	<label for="telepon">Telepon :</label>
-					 	<input type="text" class="form-control" id="telepon" name="telepon" value="#" disabled>
+					 	<input type="text" class="form-control" id="telepon" name="telepon" value="{{ $d->telepon}}" disabled>
 				    </div>
 
 					<div class="form-group">
 					  	<label for="surat_cuti">Surat Cuti :</label>
 						  {{-- <input type="text" class="form-control" id="surat_cuti" name="surat_cuti" href="#" target="_blank"  img width="150px" src="{{ asset($d->file) }} " disabled> --}}
-						  <div > <a href="#" target="_blank">
-							<img width="150px" src="#">
+						  <div > <a href="{{ asset($d->file) }}" target="_blank">
+							<img width="150px" src="{{ asset($d->file) }}">
 						  </a>
 
 						</div>
@@ -62,8 +62,8 @@
 				    <div class="form-group">
 					<label for="status">Pilih Aksi :</label>
 					<select  class="form-control" name="status">
-						<option value="Disetujui Departemen">Diterima</option>
-						<option value="Ditolak Departemen">Ditolak</option>
+						<option value="Disetujui">Diterima</option>
+						<option value="Ditolak">Ditolak</option>
 					</select>  	
 					</div>
 

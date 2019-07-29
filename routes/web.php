@@ -64,6 +64,22 @@ Route::get('/cutidone2', function () {
     return view('AdminDepartemen/cutidone2');
 });
 
+Route::get('/admin3', function () {
+    return view('AdminGM/admin3');
+});
+Route::get('/pengajuancuti', function () {
+    return view('Admin/pengajuancuti');
+});
+Route::get('/pengajuanizin', function () {
+    return view('Admin/pengajuanizin');
+});
+Route::get('/pengajuancuti2', function () {
+    return view('AdminDepartemen/pengajuancuti2');
+});
+Route::get('/pengajuanizin2', function () {
+    return view('AdminDepartemen/pengajuanizin2');
+});
+
 
 
 //KARYAWAN
@@ -79,6 +95,10 @@ Route::get('/datakaryawan2', 'DataKaryawan2@index');
 //IZIN
 Route::resource('izin','IzinController');
 Route::resource('izin2','IzinDiajukan2');
+Route::resource('izindiajukan3','IzinDiajukan3');
+Route::resource('izin3','IzinD');
+
+
 Route::post('/izin/store', 'IzinController@store');
   //hrd
   Route::resource('/izindiajukan', 'IzinDiajukan');
@@ -86,13 +106,19 @@ Route::post('/izin/store', 'IzinController@store');
   //atasan
   Route::resource('/izindiajukan2', 'IzinDiajukan2');
   Route::get('/izindone2', 'IzinDone2@index');
+  //gm
+  //Route::resource('/izindiajukan3', 'IzinDiajukan3');
+  Route::get('/izindone3', 'IzinDone3@index');
 
 //CUTI
 Route::resource('cuti','CutiController');
 Route::resource('cuti2','CutiDiajukan2');
-Route::resource('cuti3','CutiDiajukan3');
+Route::resource('cutidiajukan3','CutiDiajukan3');
+Route::resource('cuti3','CutiD');
 
 Route::post('/cuti/store', 'CutiController@store');
+Route::post('/cuti3/store', 'CutiDiajukan3@store');
+
   //hrd
   Route::resource('/cutidiajukan', 'CutiDiajukan');
   Route::get('/cutidone', 'CutiDone@index');
@@ -100,7 +126,7 @@ Route::post('/cuti/store', 'CutiController@store');
   Route::get('/cutidiajukan2', 'CutiDiajukan2@index');
   Route::get('/cutidone2', 'CutiDone2@index');
   //gm
-  Route::get('/cutidiajukan3', 'CutiDiajukan3@index');
+ // Route::get('/cutidiajukan3', 'CutiDiajukan3@index');
   Route::get('/cutidone3', 'CutiDone3@index');
 
   Route::resource('home','HomeController');
@@ -143,6 +169,12 @@ Route::resource('detailizin', 'DetailIzin');
 
 Route::resource('detailcuti_hrd', 'DetailCutiHRD');
 Route::resource('detailizin_hrd', 'DetailIzinHRD');
+
+Route::resource('detailcuti_gm', 'DetailCutiGM');
+Route::resource('detailizin_gm', 'DetailIzinGM');
+
+
+
 
 
 

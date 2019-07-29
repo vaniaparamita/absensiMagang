@@ -11,7 +11,7 @@ class DetailCutiGM extends Controller
     //
     public function index(){
       $data = CutiDepartemen::where('status', 'Disetujui')->get();
-        return view('AdminGM.detailcuti_gm', compact('data'));
+        return view('AdminGM.detailcuti3', compact('data'));
     }
 
     public function __construct()
@@ -22,7 +22,7 @@ class DetailCutiGM extends Controller
     public function edit($id)
     {
         $data = CutiDepartemen::where('id','=',$id)->get();
-        return view('AdminGM.detailcuti_gm', compact('data'));
+        return view('AdminGM.detailcuti3', compact('data'));
     }
 
     /**
@@ -49,12 +49,12 @@ class DetailCutiGM extends Controller
     //   $file->move('uploads/file',$file->getClientOriginalName());
     //     }
       $data->save();
-      return redirect()->route('cutidiajukan.index')->with('alert-success','Berhasil Menambahkan Data!');
+      return redirect()->route('cutidiajukan3.index')->with('alert-success','Berhasil Menambahkan Data!');
         
     }
     public function show($id)
     {
         $data = CutiDepartemen::where('id','=',$id)->get();
-        return view('AdminGM.detailcutiterproses_gm', compact('data'));
+        return view('AdminGM.detailcutiterproses3', compact('data'));
     }
 }

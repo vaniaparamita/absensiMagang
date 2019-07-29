@@ -3,24 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\ModelIzin;
+use App\IzinDepartemen;
 use App\User;
 use File;
 use Auth;
 
 
-class IzinDiajukan2 extends Controller
+class IzinDiajukan3 extends Controller
 {
     
     public function index(){
-      $category = Auth::user()->id_departemen;
-      // dd($category);
-      $data = ModelIzin::with('izin')
-      ->where('status', null)
-      ->whereHas('izin', function($q) use ($category)
-        {$q-> where('id_departemen', $category);}
-        )->get();
-      return view('AdminDepartemen.izindiajukan2', compact('data'));
+      $data = IzinDepartemen::where('status', null)->get();
+      return view('AdminGM.izindiajukan3', compact('data'));
     }
 
     public function __construct()
@@ -30,8 +24,8 @@ class IzinDiajukan2 extends Controller
     
     public function edit($id)
     {
-        $data = ModelIzin::where('id','=',$id)->get();
-        return view('AdminDepartemen.izindiajukan2', compact('data'));
+        $data = IzinDepartemen::where('id','=',$id)->get();
+        return view('AdminGM.izindiajukan3', compact('data'));
     }
 
     /**
@@ -43,7 +37,7 @@ class IzinDiajukan2 extends Controller
      */
     public function update(Request $request, $id)
     {
-      $data = ModelIzin::where('id',$id)->first();
+      $data = IzinDepartemen::where('id',$id)->first();
     //   $data->nama = $request->nama;
     //   $data->tanggal_mulai = $request->tanggal_mulai;
     //   $data->tanggal_selesai = $request->tanggal_selesai;
@@ -56,7 +50,7 @@ class IzinDiajukan2 extends Controller
     //   $file->move('uploads/file',$file->getClientOriginalName());
     //     }
       $data->save();
-      return redirect()->route('izin2.index')->with('alert-success','Berhasil Menambahkan Data!');
+      return redirect()->route('izin3.index')->with('alert-success','Berhasil Menambahkan Data!');
         
     }
 }

@@ -78,7 +78,8 @@
 					<select  class="form-control" name="role">
 						<option value="user">User</option>
 						<option value="admin">Admin</option>
-						<option value="admin-departemen">Admin Departemen</option>
+                        <option value="admin-departemen">Admin Departemen</option>
+                        <option value="admin-gm">Admin General Manager</option>
 					</select>
                     </div>
 					</div>
