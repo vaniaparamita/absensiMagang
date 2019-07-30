@@ -35,18 +35,6 @@ Route::get('/tambahuser', function () {
     return view('Admin/tambahuseraccess');
 });
 
-// Route::get('/editkaryawan', function () {
-//     return view('Admin/editkaryawan');
-// });
-
-// Route::get('/admin', function () {
-//     return view('Admin/admin');
-// });
-
-// Route::get('/admin2', function () {
-//     return view('AdminDepartemen/admin2');
-// });
-
 Route::get('/useraccess', function () {
     return view('Admin/useraccess');
 });
@@ -99,8 +87,6 @@ Route::resource('izindiajukan3','IzinDiajukan3');
 Route::resource('izin3','IzinD');
 Route::resource('izinHRD','IzinHRD');
 
-
-
 Route::post('/izin/store', 'IzinController@store');
   //hrd
   Route::resource('/izindiajukan', 'IzinDiajukan');
@@ -112,13 +98,13 @@ Route::post('/izin/store', 'IzinController@store');
   //Route::resource('/izindiajukan3', 'IzinDiajukan3');
   Route::get('/izindone3', 'IzinDone3@index');
 
+
 //CUTI
 Route::resource('cuti','CutiController');
 Route::resource('cuti2','CutiDiajukan2');
 Route::resource('cutidiajukan3','CutiDiajukan3');
 Route::resource('cuti3','CutiD');
 Route::resource('cutiHRD','CutiHRD');
-
 
 Route::post('/cuti/store', 'CutiController@store');
 Route::post('/cuti3/store', 'CutiDiajukan3@store');
@@ -147,13 +133,9 @@ Route::post('apply',[
 
 //Route::resource('file','File');
 Auth::routes();
-
-
 Route::middleware(['admin'])->group(function () {
     Route::resource('admin', 'UserController');
 });
-
-
 Route::middleware(['admin-departemen'])->group(function () {
     Route::resource('admin2', 'AdminDepartemenController');
 });
@@ -163,10 +145,17 @@ Route::resource('useraccess', 'UserAccess');
 //Route::get('/useraccess', 'UserAccess@index');
 
 Route::resource('cutihistory','CutiHistory');
+Route::resource('cutihistoryHRD','CutiHistoryHRD');
+Route::resource('cutihistoryD','CutiHistoryD');
 Route::get('dashboard_cuti', 'CutiHistory@index');
 
+
 Route::resource('izinhistory','IzinHistory');
+Route::resource('izinhistoryHRD','IzinHistoryHRD');
+Route::resource('izinhistoryD','IzinHistoryD');
 Route::get('dashboard_izin', 'IzinHistory@index');
+Route::get('izinhistory', 'IzinHistoryHRD@index');
+
 
 Route::resource('detailcuti', 'DetailCuti');
 Route::resource('detailizin', 'DetailIzin');
@@ -177,19 +166,7 @@ Route::resource('detailizin_hrd', 'DetailIzinHRD');
 Route::resource('detailcuti_gm', 'DetailCutiGM');
 Route::resource('detailizin_gm', 'DetailIzinGM');
 
-//Route sementara history cuti & izin admin
-Route::get('/historycuti', function () {
-    return view('Admin/historycuti');
-});
-Route::get('/historyizin', function () {
-    return view('Admin/historyizin');
-});
-Route::get('/historycuti2', function () {
-    return view('AdminDepartemen/historycuti2');
-});
-Route::get('/historyizin2', function () {
-    return view('AdminDepartemen/historyizin2');
-});
+
 
 
 

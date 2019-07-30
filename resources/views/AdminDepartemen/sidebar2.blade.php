@@ -13,9 +13,7 @@
               {{ Request::segment(1) === 'pengajuanizin2' ? 'menu-open' : null }}{{ Request::segment(1) === 'historycuti2' ? 'menu-open' : null }}
                   {{ Request::segment(1) === 'historyizin2' ? 'menu-open' : null }}">
                     <a href="#" class="nav-link">
-                  <div class="image">
                 <img src="/dept.jpg" class="img-circle elevation-2" alt="User Image" style="width:36px; height:36px; border:1px solid">
-              </div>
             <p>
               Admin Departemen X
               <i class="right fas fa-angle-left"></i>
@@ -30,9 +28,9 @@
                       </p>
                   </a>
               </li>
-            <li class="nav-item">
-              <a a href="/historycuti2" class="nav-link {{ Request::segment(1) === 'historycuti2' ? 'nav-link active' : null }}
-                    {{ Request::segment(1) === 'historyizin2' ? 'nav-link active' : null }}">
+              <li class="nav-item">
+                <a a href="{{route('cutihistoryD.index')}}" class="nav-link {{ Request::segment(1) === 'cutihistoryD.index' ? 'nav-link active' : null }}
+                    {{ Request::segment(1) === 'izinhistoryD.index' ? 'nav-link active' : null }}">
                  <i class=""></i>
                   <p>Riwayat Cuti - Izin</p>
                 </a>

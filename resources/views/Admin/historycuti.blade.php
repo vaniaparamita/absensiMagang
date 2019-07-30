@@ -11,7 +11,7 @@
             <div class="box-header">
               <i class="ion ion-clipboard"></i>
                 <br />
-                <form action="/historyizin">
+                <form action="{{route('izinhistoryHRD.index')}}">
                     <button class="btn btn-md btn-primary" style="float:right">IZIN</button>
                   </form>
 			          <form action="#">
@@ -32,6 +32,24 @@
                 <th>Status</th>
                 <th>Surat Cuti</th>
               </tr>
+              <tbody>
+                @php $no = 1; @endphp
+                @foreach($data as $d)
+                    <tr>
+                      <td>{{ $no++ }}</td>
+                      <td style="text-transform: capitalize">{{ $d->nama }}</td>
+                      <td id="tgl1">{{ $d->tanggal_mulai }}</td>
+                      <td id="tgl2">{{ $d->tanggal_selesai }}</td>
+                      <td>{{ $d->keterangan }}</td>
+                      <td>{{ $d->status }}</td>
+                      <td>
+                        <a href="{{ asset($d->file) }}" target="_blank">
+                          <img width="150px" src="{{ asset($d->file) }}">
+                        </a>
+                      </td>
+                    </tr>
+                    @endforeach
+                </tbody>
               </thead>              
             </table>
             <br />
