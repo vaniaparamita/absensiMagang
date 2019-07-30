@@ -65,11 +65,6 @@
 					</div>
 
 					<div class="form-group">
-						<label for="keterangan">ID Departemen :</label>
-						<input type="text" class="form-control" id="id_departemen" name="id_departemen" value="{{ $d->id_departemen}}" disabled>
-					</div>
-
-					<div class="form-group">
 						<label for="keterangan">Status :</label>
 						<input type="text" class="form-control" id="status" name="status" value="{{ $d->status}}" disabled>
 					</div>
