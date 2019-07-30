@@ -50,6 +50,11 @@ class DataKaryawan extends Controller
         $data->id_departemen = $request->id_departemen;
         $data->status = $request->status;
 
+        $photoFileName = 'cuti-'.time().'.'.request()->file->getClientOriginalExtension();
+        $path = asset('uploads/file').'/'.$photoFileName;
+        $data->file = $path; //uploads/file/
+        request()->file->move(public_path('uploads/file'), $photoFileName);
+
         $data->save();
         return redirect()->route('karyawan.index')->with('success', 'Data Berhasil di Tambahkan!');
     }
@@ -62,7 +67,8 @@ class DataKaryawan extends Controller
      */
     public function show($id)
     {
-        //
+        $data = ModelKaryawan::where('nik','=',$id)->get();
+        return view('Admin.detailkaryawan', compact('data'));       
     }
 
     /**

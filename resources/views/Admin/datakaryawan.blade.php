@@ -21,14 +21,8 @@
                   <th>No.</th>
                   <th>NIK</th>
                   <th>Nama</th>
-                  <th>Jenis Kelamin</th>
-                  <th>Tanggal Lahir</th>
-                  <th>Tempat Lahir</th>
-                  <th>Telepon</th>
                   <th>Jabatan</th>
                   <th>Departemen</th>
-                  <th>ID Departemen</th>
-                  <th>Status</th>
                   <th>Aksi</th>
                </tr>
               </thead>
@@ -39,22 +33,10 @@
                       <td>{{ $no++ }}</td>
                       <td>{{ $d->nik }}</td>
                       <td>{{ $d->nama }}</td>
-                      <td>{{ $d->jenis_kelamin }}</td>
-                      <td>{{ $d->tanggal_lahir }}</td>
-                      <td>{{ $d->tempat_lahir }}</td>
-                      <td>{{ $d->telepon }}</td>
                       <td>{{ $d->jabatan }}</td>
                       <td>{{ $d->department }}</td>
-                      <td>{{ $d->id_departemen }}</td>
-                      <td>{{ $d->status }}</td>
                       <td>
-                        <form action="{{route('karyawan.destroy', $d->nik)}}" method="post" class="form-delete">
-                                {{csrf_field()}}
-                                {{method_field('DELETE')}}
-                                  <a href="{{route('karyawan.edit',$d->nik)}}" class="btn btn-sm btn-primary">Edit</a>
-                                 
-                        </form>
-                      </form>
+                        <a href="{{route('karyawan.show',$d->nik)}}" class="btn btn-sm btn-primary">Detail</a>
                       </td>
                    </tr>
                 @endforeach

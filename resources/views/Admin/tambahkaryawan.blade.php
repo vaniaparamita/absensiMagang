@@ -64,6 +64,11 @@
 						<label for="id_departemen">Status:</label>
 						<input type="text" class="form-control" id="status" name="status">
 					  </div>
+
+					  <div class="form-group">
+						<label for="nama">Foto :</label>
+						<input type="file" class="form-control" id="file" name="file">
+					  </div>
 				   
 					<div class="form-group">
 					  <button type="submit" class="btn btn-md btn-primary">Simpan</button>
