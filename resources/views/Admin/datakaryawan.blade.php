@@ -15,7 +15,7 @@
              </div>
             </div>
            <br />
-            <table class="table table-bordered table-striped table-responsive-xl" id="datakaryawan"> 
+            <table class="table table-bordered table-striped table-responsive-sm" id="datakaryawan"> 
               <thead>
                 <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
                   <th>No.</th>
@@ -42,20 +42,19 @@
                 @endforeach
              </body>
           </table>
-          <br />
-            
+         <br />        
         </div><!-- /.col -->
        <div class="col-sm-6">  
       </div><!-- /.col -->
      </div><!-- /.row -->
     </div><!-- /.container-fluid -->
    </div>
-   @endsection
-   @section('sweet')
    <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"></script>
+   @endsection
+   @section('sweet')
        <script>
          $(document).ready( function () {
            $('#datakaryawan').DataTable();

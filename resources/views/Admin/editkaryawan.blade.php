@@ -52,11 +52,6 @@
 					  <label for="nama">Departemen :</label>
 					  <input type="text" class="form-control" id="department" name="department" value="{{ $d->department}}">
 					</div>
-					
-					<div class="form-group">
-						<label for="nama">ID Departemen :</label>
-						<input type="text" class="form-control" id="id_departemen" name="id_departemen" value="{{ $d->id_departemen}}">
-					  </div>
 
 					  <div class="form-group">
 						<label for="nama">Status :</label>

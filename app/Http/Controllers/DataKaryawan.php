@@ -47,7 +47,6 @@ class DataKaryawan extends Controller
         $data->telepon = $request->telepon;
         $data->jabatan = $request->jabatan;
         $data->department = $request->department;
-        $data->id_departemen = $request->id_departemen;
         $data->status = $request->status;
 
         $photoFileName = 'cuti-'.time().'.'.request()->file->getClientOriginalExtension();
@@ -101,7 +100,6 @@ class DataKaryawan extends Controller
         $data->telepon = $request->telepon;
         $data->jabatan = $request->jabatan;
         $data->department = $request->department;
-        $data->id_departemen = $request->id_departemen;
         $data->status = $request->status;
 
         $data->save();

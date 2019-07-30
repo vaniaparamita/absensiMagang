@@ -19,7 +19,7 @@
              
             </div>
             </div>
-            <table class="table table-bordered table-responsive-xl" id="table_cutidone">
+            <table class="table table-bordered table-striped table-responsive-sm" id="table_cutidone">
               <thead>
               <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
                 <th>No.</th>

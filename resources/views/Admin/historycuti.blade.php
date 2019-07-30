@@ -21,7 +21,7 @@
             </div>
             </div>
             <br />
-            <table class="table table-bordered table-responsive-xl" id="table_cuti">
+            <table class="table table-bordered table-striped table-responsive-xl" id="table_cuti">
               <thead>
               <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
                 <th>No.</th>

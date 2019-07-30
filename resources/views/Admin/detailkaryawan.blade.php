@@ -15,12 +15,15 @@
             <br />
             @foreach($data as $d)
             <form action="{{ route('karyawan.show', $d->nik) }}" method="post" enctype="multipart/form-data">
+			<td>
+				<a href="{{route('karyawan.edit',$d->nik)}}" class="btn btn-md btn-success" style="float:right">Edit</a>       
+			</td>
 			{{ csrf_field() }}
 			{{ method_field('PUT') }}
 					<div class="form-group">
 							<label for="nama">Foto :</label>
 						<div> <a href="{{ asset($d->file) }}" target="_blank">
-						<img width="150px" src="{{ asset($d->file) }}">
+						<img width="150px" src="{{ asset($d->file) }}" style="display:block;margin-left:auto;margin-right:auto">
 						</a>
 					</div>
 
@@ -65,18 +68,9 @@
 					</div>
 
 					<div class="form-group">
-						<label for="keterangan">ID Departemen :</label>
-						<input type="text" class="form-control" id="id_departemen" name="id_departemen" value="{{ $d->id_departemen}}" disabled>
-					</div>
-
-					<div class="form-group">
 						<label for="keterangan">Status :</label>
 						<input type="text" class="form-control" id="status" name="status" value="{{ $d->status}}" disabled>
-					</div>
-
-					<td>
-						<a href="{{route('karyawan.edit',$d->nik)}}" class="btn btn-sm btn-primary">Edit</a>       
-					</td> 
+					</div> 
 				</form>
 				@endforeach
             <br />

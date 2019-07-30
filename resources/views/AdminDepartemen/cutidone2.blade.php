@@ -15,7 +15,7 @@
              </div>
             </div>
             <br />
-            <table class="table table-bordered table-responsive-xl" id="table_cutis">
+            <table class="table table-bordered table-responsive-sm" id="table_cutis">
               <thead>
               <tr class="table-secondary" style="text-align:center; text-transform:uppercase">
                 <th>No.</th>

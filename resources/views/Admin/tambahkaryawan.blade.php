@@ -50,11 +50,6 @@
 					  <input type="text" class="form-control" id="jabatan" name="jabatan">
 				    </div>
 
-					<div class="form-group">
-						<label for="id_departemen">ID Departemen :</label>
-						<input type="text" class="form-control" name="id_departemen">
-					  </div>
-					  
 				    <div class="form-group">
 					  <label for="nama">Departemen :</label>
 					  <input type="text" class="form-control"  name="department" id="id_dept" >
