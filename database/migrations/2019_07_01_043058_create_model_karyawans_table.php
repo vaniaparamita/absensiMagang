@@ -24,6 +24,7 @@ class CreateModelKaryawansTable extends Migration
                 $table->string('department');
                 $table->string('id_departemen');
                 $table->string('status');
+                $table->string('file')->nullable();            
                 $table->timestamps();
             });  
     }

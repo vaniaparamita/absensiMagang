@@ -41,8 +41,8 @@
 					</div>
 
 					<div class="form-group">
-					 <label for="nama">No Telp :</label>
-					 <input type="text" class="form-control" id="telepon" name="telepon">
+					 	<label for="nama">No Telp :</label>
+					 	<input type="text" class="form-control" id="telepon" name="telepon">
 				    </div>
 
 				    <div class="form-group">
@@ -52,17 +52,22 @@
 
 					<div class="form-group">
 						<label for="id_departemen">ID Departemen :</label>
-						<input type="text" class="form-control" id="id_departemen" name="id_departemen">
+						<input type="text" class="form-control" name="id_departemen">
 					  </div>
 					  
 				    <div class="form-group">
 					  <label for="nama">Departemen :</label>
-					  <input type="text" class="form-control" id="department" name="department">
+					  <input type="text" class="form-control"  name="department" id="id_dept" >
 					</div>
 
 					  <div class="form-group">
 						<label for="id_departemen">Status:</label>
 						<input type="text" class="form-control" id="status" name="status">
+					  </div>
+
+					  <div class="form-group">
+						<label for="nama">Foto :</label>
+						<input type="file" class="form-control" id="file" name="file">
 					  </div>
 				   
 					<div class="form-group">
@@ -77,5 +82,22 @@
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
-    <!-- /.content-header -->
+	<!-- /.content-header -->
+@endsection
+@section('sweet')
+<script>
+	$( function(){
+		$.ajax({
+			url: "http://127.0.0.1:8000/tambahkaryawan",
+			dataType: "json",
+			success: function(data){
+				console.log(data);
+				auto = data;
+				$("#id_dept").autocomplete({
+					source: data
+				});
+			} 
+		});
+})
+</script>
 @endsection

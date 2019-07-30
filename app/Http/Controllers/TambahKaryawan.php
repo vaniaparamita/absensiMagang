@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ModelKaryawan;
+use App\Departemen;
 use Illuminate\Database\QueryException;
 use Auth;
 
@@ -102,5 +103,13 @@ class TambahKaryawan extends Controller
       $data = ModelKaryawan::where('id',$id)->first();
       $data->delete();
       return redirect()->route('DataKaryawan.index')->with('alert-success','Delete Data Successfully!');
+    }
+
+    public function json()
+    {
+        $data = Departemen::all();
+        $name = $data->pluck('name');
+        $name->all();
+        return response()->json($name);
     }
 }
