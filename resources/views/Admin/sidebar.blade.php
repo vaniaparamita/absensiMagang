@@ -12,14 +12,12 @@
           <li class="nav-item has-treeview {{ Request::segment(1) === 'pengajuancuti' ? 'menu-open' : null }}
               {{ Request::segment(1) === 'pengajuanizin' ? 'menu-open' : null }}{{ Request::segment(1) === 'historycuti' ? 'menu-open' : null }}
                   {{ Request::segment(1) === 'historyizin' ? 'menu-open' : null }}">
-                    <a href="#" class="nav-link">
-                  <div class="image">
-                <img src="/avatar2.png" class="img-circle elevation-2" alt="User Image" style="width:36px; height:36px; border:1px solid">
-              </div>
-            <p>
-              Admin HRD
-              <i class="right fas fa-angle-left"></i>
-            </p>
+                  <a href="#" class="nav-link">
+                <img src="/avatar2.png" class="img-circle elevation-2" alt="User Image" style="border:1px solid">
+              <p>
+                  Admin HRD
+                  <i class="right fas fa-angle-left"></i>
+              </p>        
           </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
