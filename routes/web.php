@@ -119,6 +119,7 @@ Route::post('/cuti3/store', 'CutiDiajukan3@store');
  // Route::get('/cutidiajukan3', 'CutiDiajukan3@index');
   Route::get('/cutidone3', 'CutiDone3@index');
 
+
   Route::resource('home','HomeController');
   Route::get('my-notification/{type}', 'HomeController@myNotification');
 

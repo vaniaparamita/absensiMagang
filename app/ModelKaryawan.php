@@ -14,6 +14,12 @@ class ModelKaryawan extends Model
          'jabatan', 'department', 'status', 'file',
     ];
 
+    public function karyawan()
+    {
+    	return $this->hasOne('App\User');
+    }
+    
+
   
 
 }

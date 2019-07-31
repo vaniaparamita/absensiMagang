@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Alert;
 use Auth;
-
+use App\User;
+use App\ModelKaryawan;
 
 class HomeController extends Controller
 {
@@ -27,6 +28,13 @@ class HomeController extends Controller
     public function index()
     {
         Alert::info('Info Message', 'Optional Title');
-        return view('home');
+
+        $category = Auth::user()->id_departemen;
+        $data = User::with('data')
+        ->whereHas('data', function($q) use ($category)
+        {$q-> where('nik', $category);}
+        )->get();
+        return view('home', compact('data'));
+        
     }
 }

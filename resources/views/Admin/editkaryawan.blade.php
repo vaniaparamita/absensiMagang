@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+<meta charset=utf-8 />
+</head>
+</html>
 @extends('Admin/base')
 @section('content')
 <!-- Content Wrapper. Contains page content -->
@@ -13,6 +22,24 @@
             <form action="{{ route('karyawan.update', $d->nik) }}" method="post" enctype="multipart/form-data">
 			{{ csrf_field() }}
 			{{ method_field('PUT') }}
+			<div class="form-group">
+				<label for="nama">Foto :</label>
+			<div> <a href="{{ asset($d->file) }}" target="_blank">
+			<img width="150px" src="{{ asset($d->file) }}">
+			</a>
+			<div class="middles">
+				<div class="text">
+				  <label for="change_pic">Change Photo</label>
+				  <div class="form-group">
+						<div class="alert alert-info">
+								<strong>Info!</strong> Maximum Size Upload : 2MB
+							</div>
+				  <input id="file" name ="file" type="file">
+				  </div>
+				</div>
+			</div>
+		</div>
+			
 					<div class="form-group">
 						<label for="nama">NIK :</label>
 						<input type="text" class="form-control" id="nik" name="nik" value="{{ $d->nik }}">
@@ -74,3 +101,18 @@
     </div>
     <!-- /.content-header -->
 @endsection
+@section('js')
+<script>
+function triggerClick(){
+        document.querySelector('#file').click();
+      }
+      function displayImage(e){
+        if(e.files[0]){
+          var reader = new FileReader();
+          reader.onload = function(e){
+            document.querySelector('#DisplayFile').setAttribute('src',e.target.result);
+          }
+          reader.readAsDataURL(e.files[0]);
+        }
+      }
+  @endsection
