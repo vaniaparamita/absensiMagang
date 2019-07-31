@@ -10,7 +10,7 @@
                     margin-left: auto; margin-right: auto;">
           <br/>      
               <h4 style="text-align:center; text-transform: capitalize; color: #000000">Selamat Datang "{{ Auth::user()->name }}"</h4>      
-              <div class="panel-heading" style="text-align:center">Silahkan Pilih Salah Satu</div>  
+              <div class="panel-heading" style="text-align:center;font-size:16px">Silahkan Pilih Salah Satu</div>  
                     <div class="panel-body">
                         <table class="table table-responsive">
                             <tr>

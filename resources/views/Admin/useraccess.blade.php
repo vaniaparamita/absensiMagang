@@ -20,7 +20,7 @@
              </div>
             </div>
             <br />
-            <table class="table table-bordered table-responsive-sm" id="datauser">
+            <table class="table table-bordered table-striped table-responsive-sm" id="datauser">
               <thead>
               <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
                 <th>No.</th>
@@ -51,13 +51,13 @@
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
-    <!-- /.content-header -->
-@endsection
-@section('sweet')
 <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"></script>
+    <!-- /.content-header -->
+@endsection
+@section('sweet')
     <script>
       $(document).ready( function () {
       $('#datauser').DataTable();
@@ -69,7 +69,7 @@
       if(exist){
         Swal.fire(
           'Sukses!',
-          isiPesan,
+            isiPesan,
           'success'
         )
       }

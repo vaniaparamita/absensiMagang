@@ -20,7 +20,7 @@
              </div>
             </div>
             <br/>
-            <table class="table table-bordered table-responsive-xl" id="table_izin">
+            <table class="table table-bordered table-striped table-responsive-sm" id="table_izin">
               <thead>
               <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
                 <th>No.</th>

@@ -15,13 +15,14 @@
             </div>
             </div>
             <br />
-            <table class="table table-bordered table-responsive-xl" id="table_cuti">
+            <table class="table table-bordered table-striped table-responsive-sm" id="table_cuti">
               <thead>
               <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
                 <th>No.</th>
                 <th>Nama</th>
                 <th>Tanggal Mulai</th>
                 <th>Tanggal Akhir</th>
+                <th>Total</th>
                 {{-- <th>Keterangan</th>
                 <th>Tanggung Jawab</th>
                 <th>No Telepon Darurat</th> --}}

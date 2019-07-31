@@ -1,7 +1,7 @@
-<aside class="main-sidebar sidebar-dark-secondary elevation-4">
+<aside class="main-sidebar sidebar-dark-info elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link sidebar-dark-primary"> 
-      <span class="brand-text font-weight-light-bold">HR-IS JCM</span>
+    <a href="index3.html" class="brand-link">
+      <span class="brand-text font-weight" style="margin-left:15px">HRIS Jogja City Mall</span>
     </a>
 
     <!-- Sidebar -->

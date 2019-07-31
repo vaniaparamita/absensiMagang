@@ -167,6 +167,8 @@ Route::resource('detailizin_hrd', 'DetailIzinHRD');
 Route::resource('detailcuti_gm', 'DetailCutiGM');
 Route::resource('detailizin_gm', 'DetailIzinGM');
 
+//ROUTE SEMENTARA
+Route::get('/tambahkaryawan','TambahKaryawan@json')->name('json');
 
 
 
