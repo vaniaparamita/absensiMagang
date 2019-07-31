@@ -37,26 +37,34 @@
  <div class="container">
   <div class="row">
       <br />
-    <div class="col-md-10 col-md-offset-1">
+      <div class="col-sm-3">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <div class="panel-title text-center" style="background:#e0e0e0">
+                <b class="box-title">TOTAL CUTI</b>
+              </div>
+              <div class="panel-body text-center">
+                Waktu Cuti Yang Sudah Diajukan : <b>{{ DB::table('model_cutis')->where('status', 'disetujui')->sum('total')}}</b> 
+                Dari 12 Hari
+              </div>
+            </div>
+          </div>
+      </div>    
+    <div class="col-md-9">
       <div class="panel panel-default">
         <div class="container-fluid">
-        <div class="row mb-2">
           <div class="col-sm-12" style="background:white">
             <div class="box box-primary">
             <div class="box-header">
               <h2 class="box-title">Riwayat Pengajuan Cuti</h2>
                <br /> 
-                <div class="alert alert-info">
-                        <strong>Pemberitahuan!</strong> Waktu Cuti Yang Sudah Diajukan : {{ DB::table('model_cutis')->where('status', 'disetujui')->sum('total')}} Dari 12 Hari
-                </div>
                 <form action="/dashboard_izin">
                     <button class="button">IZIN</button>
-                </form>
                 <form action="#">
                     <button class="button2" disabled="disabled">CUTI</button>
                 </form>
             </div>
-            </div>
+
             <br /><br />
             <table class="table table-bordered table-responsive-lg" id="table_cutis">
               <thead>
@@ -90,13 +98,10 @@
                 </tbody>
             </table>
             <br />
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-           
-          </div><!-- /.col -->
-        </div><!-- /.row -->
+            </div><!-- /.col -->
+            </div><!-- /.row -->
       </div><!-- /.container-fluid -->
-    </div>
+          
     <!-- AdminLTE App -->
 @endsection
 @section('sweet')

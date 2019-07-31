@@ -1,7 +1,7 @@
-<aside class="main-sidebar sidebar-dark-secondary elevation-4">
+<aside class="main-sidebar sidebar-dark-info elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link sidebar-dark-primary"> 
-      <span class="brand-text font-weight-light-bold">HR-IS JCM</span>
+    <a href="index3.html" class="brand-link">
+      <span class="brand-text font-weight" style="margin-left:15px">HRIS Jogja City Mall</span>
     </a>
 
     <!-- Sidebar -->
@@ -14,7 +14,7 @@
                   {{ Request::segment(1) === 'historyizin' ? 'menu-open' : null }}">
                   <a href="#" class="nav-link">
                 <img src="/avatar2.png" class="img-circle elevation-2" alt="User Image" style="border:1px solid">
-              <p>
+              <p style="margin-left:5px">
                   Admin HRD
                   <i class="right fas fa-angle-left"></i>
               </p>        

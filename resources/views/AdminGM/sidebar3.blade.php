@@ -1,7 +1,7 @@
-<aside class="main-sidebar sidebar-dark-secondary elevation-4">
+<aside class="main-sidebar sidebar-dark-info elevation-4">
   <!-- Brand Logo -->
-  <a href="index3.html" class="brand-link sidebar-dark-primary">
-      <span class="brand-text font-weight">JCM - HRIS</span>
+  <a href="index3.html" class="brand-link">
+      <span class="brand-text font-weight" style="margin-left:15px">HRIS Jogja City Mall</span>
   </a>
 
     <!-- Sidebar -->
@@ -9,7 +9,7 @@
        <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
            <div class="image">
-                <img src="/gm.jpg" class="img-circle elevation-3" alt="User Image" style="width:36px;height:36px;border: 1.5px solid">
+                <img src="/gm.jpg" class="img-circle elevation-3" alt="User Image">
            </div>
         <div class="info">
             <a href="#" class="d-block" style="font-size:14px">Departemen General Manager</a>

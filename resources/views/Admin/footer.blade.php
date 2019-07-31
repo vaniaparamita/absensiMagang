@@ -1,7 +1,5 @@
 <footer class="main-footer">
-    <div class=image>
-        <img src="/jcm.png" alt="User Image" width="100px">
-    </div>
+<strong>Copyright © 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
       Jogja City Mall - Yogyakarta

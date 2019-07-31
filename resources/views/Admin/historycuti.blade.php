@@ -18,10 +18,14 @@
                     <button class="btn btn-md btn-secondary" style="float:right" disabled>CUTI</button>
                 </form>    
               <h2 class="box-title">Riwayat Pengajuan Cuti</h2>
+              <br />
+              <div class="alert alert-info">
+                        <strong>Pemberitahuan!</strong> Waktu Cuti Yang Sudah Diajukan : {{ DB::table('model_cutis')->where('status', 'disetujui')->sum('total')}} Dari 12 Hari
+                </div>
             </div>
             </div>
             <br />
-            <table class="table table-bordered table-striped table-responsive-xl" id="table_cuti">
+            <table class="table table-bordered table-striped table-responsive-md" id="table_cuti">
               <thead>
               <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
                 <th>No.</th>
