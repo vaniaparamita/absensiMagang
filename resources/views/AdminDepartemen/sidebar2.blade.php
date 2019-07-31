@@ -15,7 +15,7 @@
                     <a href="#" class="nav-link">
                 <img src="/dept.jpg" class="img-circle elevation-2" alt="User Image">
             <p style="margin-left:5px">
-              Admin Departemen X
+            DEPARTEMEN {{DB::table('departemens')->where('id', '=', Auth::user()->id_departemen)->value('name')}}
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>

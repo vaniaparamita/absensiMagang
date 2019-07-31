@@ -22,6 +22,7 @@
                 <th>Nama</th>
                 <th>Tanggal Mulai</th>
                 <th>Tanggal Akhir</th>
+                <th>Total</th>
                 {{-- <th>Keterangan</th>
                 <th>Tanggung Jawab</th>
                 <th>No Telepon Darurat</th> --}}

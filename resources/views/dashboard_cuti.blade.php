@@ -44,7 +44,8 @@
                 <b class="box-title">TOTAL CUTI</b>
               </div>
               <div class="panel-body text-center">
-                Waktu Cuti Yang Sudah Diajukan : <b>{{ DB::table('model_cutis')->where('status', 'disetujui')->sum('total')}}</b> 
+                Waktu Cuti Yang Sudah Diajukan : <b>{{DB::table('model_cutis')->where('id_user', '=', Auth::user()->id)
+                    ->where('status','disetujui')->sum('total')}}</b> 
                 Dari 12 Hari
               </div>
             </div>

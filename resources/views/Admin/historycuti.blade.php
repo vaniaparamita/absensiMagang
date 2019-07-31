@@ -20,7 +20,8 @@
               <h2 class="box-title">Riwayat Pengajuan Cuti</h2>
               <br />
               <div class="alert alert-info">
-                        <strong>Pemberitahuan!</strong> Waktu Cuti Yang Sudah Diajukan : {{ DB::table('model_cutis')->where('status', 'disetujui')->sum('total')}} Dari 12 Hari
+                        <strong>Pemberitahuan!</strong> Waktu Cuti Yang Sudah Diajukan : {{DB::table('model_cutis')->where('id_user', '=', Auth::user()->id)
+                            ->where('status','disetujui')->sum('total')}} Dari 12 Hari
                 </div>
             </div>
             </div>
