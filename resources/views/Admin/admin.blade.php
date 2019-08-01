@@ -79,7 +79,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- small box -->
               <div class="small-box bg-purple">
                 <div class="inner">
-                  <h3>{{ DB::table('model_karyawans')->count()}}</h3>
+                  <h3>{{ DB::table('model_karyawans')->where('status','aktif')->count()}}</h3>
                     <p>Karyawan Aktif</p>
                 </div>
               <div class="icon">

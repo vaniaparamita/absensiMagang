@@ -67,7 +67,7 @@ class IzinHRD extends Controller
       request()->file->move(public_path('uploads/file'), $photoFileName);
 
       $data->save();
-      return redirect()->route('izinHRD.index')->with('cuti_success','Berhasil Mengajukan Cuti!');
+      return redirect()->route('izinHRD.index')->with('izin_hrd','Berhasil Mengajukan Izin!');
     }
 
     /**
@@ -115,7 +115,7 @@ class IzinHRD extends Controller
     //   $file->move('uploads/file',$file->getClientOriginalName());
     //     }
       $data->save();
-      return redirect()->route('izindiajukan3.index')->with('cuti_success','Berhasil Mengubah Pengajuan Cuti!');
+      return redirect()->route('izindiajukan3.index')->with('ubah_izin','Berhasil Mengubah Pengajuan Izin!');
         
     }
 
