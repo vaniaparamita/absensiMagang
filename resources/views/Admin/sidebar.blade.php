@@ -1,3 +1,4 @@
+
 <aside class="main-sidebar sidebar-dark-info elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
@@ -10,8 +11,8 @@
       <div class="user-panel mt-3 pb-3 mb-3">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item has-treeview {{ Request::segment(1) === 'pengajuancuti' ? 'menu-open' : null }}
-              {{ Request::segment(1) === 'pengajuanizin' ? 'menu-open' : null }}{{ Request::segment(1) === 'historycuti' ? 'menu-open' : null }}
-                  {{ Request::segment(1) === 'historyizin' ? 'menu-open' : null }}">
+              {{ Request::segment(1) === 'pengajuanizin' ? 'menu-open' : null }}{{ Request::segment(1) === 'cutihistoryHRD' ? 'menu-open' : null }}
+                  {{ Request::segment(1) === 'izinhistoryHRD' ? 'menu-open' : null }}">
                   <a href="#" class="nav-link">
                 <img src="/avatar2.png" class="img-circle elevation-2" alt="User Image" style="border:1px solid">
               <p style="margin-left:5px">
@@ -29,8 +30,8 @@
                   </a>
               </li>
               <li class="nav-item">
-                <a a href="{{route('cutihistoryHRD.index')}}" class="nav-link {{ Request::segment(1) === 'cutihistoryHRD.index' ? 'nav-link active' : null }}
-                    {{ Request::segment(1) === 'izinhistoryHRD.index' ? 'nav-link active' : null }}">
+                <a a href="{{route('cutihistoryHRD.index')}}" class="nav-link {{ Request::segment(1) === 'cutihistoryHRD' ? 'nav-link active' : null }}
+                    {{ Request::segment(1) === 'izinhistoryHRD' ? 'nav-link active' : null }}">
                  <i class=""></i>
                   <p>Riwayat Cuti - Izin</p>
                 </a>

@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading" style="text-align:center;font-size:18px"> 
                   <div class="imagecontainer">
-                     <img src="avatar.png" alt="avatar" class="avatar">
+                     <img src="welcome2.png" alt="avatar" class="avatar">
                   </div>
                   Login Karyawan
                 </div>
