@@ -24,17 +24,20 @@
 			{{ method_field('PUT') }}
 			<div class="form-group">
 				<label for="nama">Foto :</label>
-			<div> <a href="{{ asset($d->file) }}" target="_blank">
-			<img width="150px" src="{{ asset($d->file) }}">
-			</a>
+				<br>
+				<a href="{{ asset($d->file) }}" target="_blank">
+					<img id="profile-picture" width="150px" height="200px" src="{{ asset($d->file) }}">
+				</a>
+			<div> 
+			
 			<div class="middles">
 				<div class="text">
 				  <label for="change_pic">Change Photo</label>
 				  <div class="form-group">
-						<div class="alert alert-info">
-								<strong>Info!</strong> Maximum Size Upload : 2MB
-							</div>
-				  <input id="file" name ="file" type="file">
+					<input id="file" name ="file" type="file">
+					<div class="alert alert-info">
+							<strong>Info!</strong> Maximum Size Upload : 2MB
+					</div>
 				  </div>
 				</div>
 			</div>
@@ -99,20 +102,30 @@
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
-    <!-- /.content-header -->
+	
+	
+	<!-- /.content-header -->
+	<script>
+		//buat profile
+		$(function () {
+			$("#file").change(function () {
+				readURL(this);
+			});
+    	});
+
+
+    	function readURL(input) {
+			if (input.files && input.files[0]) {
+				var reader = new FileReader();
+
+				reader.onload = function (e) {
+					//alert(e.target.result);
+					$('#profile-picture').attr('src', e.target.result);
+				}
+
+				reader.readAsDataURL(input.files[0]);
+			}
+    	}
+	</script>
 @endsection
-@section('js')
-<script>
-function triggerClick(){
-        document.querySelector('#file').click();
-      }
-      function displayImage(e){
-        if(e.files[0]){
-          var reader = new FileReader();
-          reader.onload = function(e){
-            document.querySelector('#DisplayFile').setAttribute('src',e.target.result);
-          }
-          reader.readAsDataURL(e.files[0]);
-        }
-      }
-  @endsection
+

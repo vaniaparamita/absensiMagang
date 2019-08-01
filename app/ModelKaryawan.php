@@ -16,8 +16,10 @@ class ModelKaryawan extends Model
 
     public function karyawan()
     {
-    	return $this->hasOne('App\User');
+    	return $this->belongsTo('App\User', 'nik');
     }
+    
+  
     
 
   

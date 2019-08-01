@@ -35,6 +35,6 @@ class User extends Authenticatable
 
     public function data()
     {
-    	return $this->belongsTo('App\ModelKaryawan', 'id');
+    	return $this->hasOne('App\ModelKaryawan', 'nik')->belongsTo('App\Departemen');
     }
 }

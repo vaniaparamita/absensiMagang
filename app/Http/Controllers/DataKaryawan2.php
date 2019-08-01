@@ -17,8 +17,13 @@ class DataKaryawan2 extends Controller
     }
     
     public function index(){
-        $data = ModelKaryawan::all();
-        return view('AdminDepartemen/datakaryawan2', compact('data'));
+        $category = Auth::user()->id_departemen;
+        // dd($category);
+        $data = ModelKaryawan::with('karyawan')
+        ->whereHas('karyawan', function($q) use ($category)
+          {$q-> where('id_departemen', $category);}
+          )->get();        
+          return view('AdminDepartemen/datakaryawan2', compact('data'));
     }
  
   
