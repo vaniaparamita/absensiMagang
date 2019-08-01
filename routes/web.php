@@ -67,7 +67,9 @@ Route::get('/pengajuancuti2', function () {
 Route::get('/pengajuanizin2', function () {
     return view('AdminDepartemen/pengajuanizin2');
 });
-
+Route::get('/edituser', function () {
+    return view('Admin/edituser');
+});
 
 
 //KARYAWAN
@@ -134,13 +136,13 @@ Route::post('apply',[
 
 //Route::resource('file','File');
 Auth::routes();
-Route::middleware(['admin'])->group(function () {
-    Route::resource('admin', 'UserController');
-});
-Route::middleware(['admin-departemen'])->group(function () {
-    Route::resource('admin2', 'AdminDepartemenController');
-});
-
+// Route::middleware(['admin'])->group(function () {
+//     Route::resource('admin', 'UserController');
+// });
+// Route::middleware(['admin-departemen'])->group(function () {
+//     Route::resource('admin2', 'AdminDepartemenController');
+// });
+Route::resource('admin', 'UserController');
 
 Route::resource('useraccess', 'UserAccess');
 //Route::get('/useraccess', 'UserAccess@index');

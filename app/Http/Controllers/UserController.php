@@ -67,7 +67,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        
+        //
 
     }
 
@@ -77,37 +77,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        $item = User::findOrFail($id);
-
-        return view('admin.users.edit', compact('item'));
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        $this->validate($request, User::rules(true, $id));
-
-        $data = User::findOrFail($id);
-
-        $data->name = $request->name;
-        $data->username = $request->username;
-        if($request->password){
-            $data->password = bcrypt($request->password);
-        }
-        $data->role = $request->role;
-        $data->updated_at = Carbon::now();
-        $data->save();
-
-        return redirect()->route('admin.index')->with('useraccess_success','User Akses Berhasil Diperbarui!');
-    }
+    
 
     /**
      * Remove the specified resource from storage.
@@ -118,7 +88,6 @@ class UserController extends Controller
     public function destroy($id)
     {
         User::destroy($id);
-
         return redirect()->route('admin.index')->with('useraccess_success','User Akses Berhasil Dihapus!'); 
     }
 }

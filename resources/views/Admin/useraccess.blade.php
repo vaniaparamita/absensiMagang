@@ -24,6 +24,8 @@
               <thead>
               <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
                 <th>No.</th>
+                <th>NIK</th>
+                <th>ID Departemen</th>
                 <th>Nama</th>
                 <th>Email</th>
                 <th>Role</th>
@@ -35,10 +37,20 @@
                 @foreach($data as $d)
                   <tr style="text-transform: uppercase">
                       <td>{{ $no++ }}</td>
+                      <td>{{ $d->id }}</td>
+                      <td>{{ $d->id_departemen }}</td>
                       <td>{{ $d->name }}</td>
                       <td>{{ $d->email }}</td>
                       <td>{{ $d->role }}</td>
-                      <td></td>
+                      <td>
+                          <form action="{{ route('useraccess.destroy', $d->id) }}" method="post">
+                              {{ csrf_field() }}
+                              {{ method_field('DELETE') }}
+                        <a href="{{route('useraccess.edit',$d->id)}}" class="btn btn-sm btn-success">Edit</a> 
+                        <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">DELETE</button>
+                      </form>
+
+                       </td>
                 </tr>
                 @endforeach
 
