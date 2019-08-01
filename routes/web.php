@@ -55,6 +55,9 @@ Route::get('/cutidone2', function () {
 Route::get('/admin3', function () {
     return view('AdminGM/admin3');
 });
+Route::get('/admin2', function () {
+    return view('AdminDepartemen/admin2');
+});
 Route::get('/pengajuancuti', function () {
     return view('Admin/pengajuancuti');
 });
@@ -136,12 +139,12 @@ Route::post('apply',[
 
 //Route::resource('file','File');
 Auth::routes();
-// Route::middleware(['admin'])->group(function () {
-//     Route::resource('admin', 'UserController');
-// });
-// Route::middleware(['admin-departemen'])->group(function () {
-//     Route::resource('admin2', 'AdminDepartemenController');
-// });
+Route::middleware(['admin'])->group(function () {
+    Route::resource('admin', 'UserController');
+});
+Route::middleware(['admin-departemen'])->group(function () {
+    Route::resource('admin2', 'AdminDepartemenController');
+});
 Route::resource('admin', 'UserController');
 
 Route::resource('useraccess', 'UserAccess');

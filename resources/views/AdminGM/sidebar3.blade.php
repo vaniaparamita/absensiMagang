@@ -9,11 +9,7 @@
        <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
            <div class="image">
-<<<<<<< HEAD
                 <img src="{{DB::table('model_karyawans')->where('nik', '=', Auth::user()->id)->value('file')}}" class="img-circle elevation-3" alt="User Image" style="width:36px;height:36px;border: 1.5px solid">
-=======
-                <img src="/gm.jpg" class="img-circle elevation-3" alt="User Image">
->>>>>>> 57229c5d9c579948a8cee122e4861d224631bf49
            </div>
         <div class="info">
             <a href="#" class="d-block" style="font-size:14px">Departemen General Manager</a>

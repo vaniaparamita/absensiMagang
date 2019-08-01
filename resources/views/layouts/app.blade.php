@@ -31,7 +31,6 @@
     img.avatar{
         width: 25%;
         border-radius: 50%;
-        border: 2px solid;
     }
     </style>
     <!-- Scripts -->
@@ -74,8 +73,12 @@
                         @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">Login</a></li>
                         @else
-                            <li><a href="/home">Home</a></li>
-                            <li><a href="/dashboard_cuti">Dashboard</a></li>
+                            <li class="nav-tabs {{ Request::segment(1) === 'home' 
+                                ? 'nav-tabs active' : null }}">
+                                    <a href="/home">Home</a></li>
+                            <li class="nav-tabs {{ Request::segment(1) === 'dashboard_cuti' 
+                                ? 'nav-tabs active' : null }} {{ Request::segment(1) === 'dashboard_izin' ? 'nav-link active' : null }}">
+                                    <a href="/dashboard_cuti">Dashboard</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
                                     aria-expanded="false" style="text-transform: capitalize">
