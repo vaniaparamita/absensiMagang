@@ -32,4 +32,9 @@ class User extends Authenticatable
     public function user(){
     	return $this->hasMany('App\ModelCuti')->belongsTo('App\Departemen');
     }
+
+    public function data()
+    {
+    	return $this->hasOne('App\ModelKaryawan', 'nik');
+    }
 }

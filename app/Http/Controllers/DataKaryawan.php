@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Input;
 use App\ModelKaryawan;
 use DataTables;
 use Alert;
@@ -49,7 +50,7 @@ class DataKaryawan extends Controller
         $data->department = $request->department;
         $data->status = $request->status;
 
-        $photoFileName = 'cuti-'.time().'.'.request()->file->getClientOriginalExtension();
+        $photoFileName = 'avatar-'.time().'.'.request()->file->getClientOriginalExtension();
         $path = asset('uploads/file').'/'.$photoFileName;
         $data->file = $path; //uploads/file/
         request()->file->move(public_path('uploads/file'), $photoFileName);
@@ -101,7 +102,14 @@ class DataKaryawan extends Controller
         $data->jabatan = $request->jabatan;
         $data->department = $request->department;
         $data->status = $request->status;
-
+        if($request->file)
+        {
+            $file = Input::file('avatar');
+            $photoFileName = 'avatar-'.time().'.'.request()->file->getClientOriginalExtension();
+            request()->file->move(public_path('uploads/file'), $photoFileName);
+            $path = asset('uploads/file').'/'.$photoFileName;
+            $data->file = $path;
+        }
         $data->save();
         return redirect()->route('karyawan.index')->with('success','Berhasil Mengubah Data!');
     }

@@ -74,5 +74,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- SweetAlert -->
 <script src="{{ asset('/lte/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
 @yield('sweet')
+@include('sweet::alert')
 </body>
 </html>

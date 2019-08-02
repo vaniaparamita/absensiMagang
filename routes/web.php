@@ -55,6 +55,9 @@ Route::get('/cutidone2', function () {
 Route::get('/admin3', function () {
     return view('AdminGM/admin3');
 });
+Route::get('/admin2', function () {
+    return view('AdminDepartemen/admin2');
+});
 Route::get('/pengajuancuti', function () {
     return view('Admin/pengajuancuti');
 });
@@ -67,7 +70,9 @@ Route::get('/pengajuancuti2', function () {
 Route::get('/pengajuanizin2', function () {
     return view('AdminDepartemen/pengajuanizin2');
 });
-
+Route::get('/edituser', function () {
+    return view('Admin/edituser');
+});
 
 
 //KARYAWAN
@@ -119,6 +124,7 @@ Route::post('/cuti3/store', 'CutiDiajukan3@store');
  // Route::get('/cutidiajukan3', 'CutiDiajukan3@index');
   Route::get('/cutidone3', 'CutiDone3@index');
 
+
   Route::resource('home','HomeController');
   Route::get('my-notification/{type}', 'HomeController@myNotification');
 
@@ -139,7 +145,7 @@ Route::middleware(['admin'])->group(function () {
 Route::middleware(['admin-departemen'])->group(function () {
     Route::resource('admin2', 'AdminDepartemenController');
 });
-
+Route::resource('admin', 'UserController');
 
 Route::resource('useraccess', 'UserAccess');
 //Route::get('/useraccess', 'UserAccess@index');

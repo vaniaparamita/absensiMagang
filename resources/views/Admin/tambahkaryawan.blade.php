@@ -29,6 +29,7 @@
             <hr>
 			<form action="{{ route('karyawan.store') }}" method="post" enctype="multipart/form-data">
 			{{ csrf_field() }}
+		
 					<div class="form-group">
 						<label for="nama">NIK :</label>
 						<input type="text" class="form-control" id="nik" name="nik" >
