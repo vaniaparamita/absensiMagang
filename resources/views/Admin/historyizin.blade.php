@@ -7,20 +7,24 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-12" style="background:white">
-            <div class="box box-primary">
-            <div class="box-header">
-              <i class="ion ion-clipboard"></i>
-                <br />
-                <form action="#">
-                    <button class="btn btn-md btn-secondary" style="float:right"  disabled>IZIN</button>
-                </form>
-			          <form action="{{route('cutihistoryHRD.index')}}">
-                    <button class="btn btn-md btn-primary" style="float:right">CUTI</button>
-                </form>    
-              <h2 class="box-title">Riwayat Pengajuan Izin</h2>
-            </div>
-            </div>
-            <br />
+          <div class="box box-primary">
+          <div class="content-header">
+					<div class="row mb-2">
+					  <div class="col-sm-6">
+						  <p style="font-size:24px">History Pengajuan Izin<p>
+					  </div>	
+						<div class="col-sm-6">
+							<ol class="breadcrumb float-sm-right" style="font-size:14px">
+                  <li class="breadcrumb-item">
+									  <a href="/cutihistoryHRD">Cuti</a>
+								  </li>
+                  <li class="breadcrumb-item active">
+								    Izin
+								  </li>
+							</ol>
+						</div>
+					</div>
+				 </div>
             <table class="table table-bordered table-striped table-responsive-md" id="table_cuti">
               <thead>
               <tr class="table-secondary" style="text-align:center; text-transform: uppercase">

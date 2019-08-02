@@ -59,6 +59,6 @@ class UserAccess extends Controller
     {
         $data = User::where('id',$id)->first();
         $data->delete();
-        return redirect()->route('useraccess.index')->with('useraccess_success','User Akses Berhasil Dihapus!'); 
+        return redirect()->route('useraccess.index')->with('destroy','Yakin ingin menghapus data?'); 
     }
 }

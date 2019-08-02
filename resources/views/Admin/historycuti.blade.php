@@ -7,23 +7,28 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-12" style="background:white">
-            <div class="box box-primary">
-            <div class="box-header">
-              <i class="ion ion-clipboard"></i>
-                <br />
-                <form action="{{route('izinhistoryHRD.index')}}">
-                    <button class="btn btn-md btn-primary" style="float:right">IZIN</button>
-                  </form>
-			          <form action="#">
-                    <button class="btn btn-md btn-secondary" style="float:right" disabled>CUTI</button>
-                </form>    
-              <h2 class="box-title">Riwayat Pengajuan Cuti</h2>
-              <br />
+          <div class="box box-primary">
+          <div class="content-header">
+					<div class="row mb-2">
+					  <div class="col-sm-6">
+						  <p style="font-size:24px">History Pengajuan Cuti<p>
+					  </div>	
+						<div class="col-sm-6">
+							<ol class="breadcrumb float-sm-right" style="font-size:14px">
+                  <li class="breadcrumb-item active">
+								    Cuti
+								  </li>
+                  <li class="breadcrumb-item">
+									  <a href="/izinhistoryHRD">Izin</a>
+								  </li>
+							</ol>
+						</div>
+					</div>
+				 </div>
               <div class="alert alert-info">
                         <strong>Pemberitahuan!</strong> Waktu Cuti Yang Sudah Diajukan : {{DB::table('cuti_departemens')->where('id_user', '=', Auth::user()->id)
                             ->where('status','disetujui')->sum('total')}} Dari 12 Hari
                 </div>
-            </div>
             </div>
             <br />
             <table class="table table-bordered table-striped table-responsive-md" id="table_cuti">

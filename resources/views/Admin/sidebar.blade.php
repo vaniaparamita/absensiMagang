@@ -18,7 +18,7 @@
                 <img src="{{DB::table('model_karyawans')->where('nik', '=', Auth::user()->id)->value('file')}}" class="img-circle elevation-2" alt="User Image" style="width:36px;height:36px;border: 1.5px solid">
               </div>
             <p style="margin-left:5px">
-              Admin HRD
+              ADMIN HRD
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
@@ -52,7 +52,6 @@
           </li>
         </ul>
       </div>
-
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -68,9 +67,11 @@
             </a>
           </li>
           <li class="nav-item has-treeview {{ Request::segment(1) === 'cutidiajukan' ? 'menu-open' : null }}
-              {{ Request::segment(1) === 'cutidone' ? 'menu-open' : null }}">
+              {{ Request::segment(1) === 'cutidone' ? 'menu-open' : null }}
+                  {{ Request::segment(1) === 'detailcuti_hrd' ? 'menu-open' : null }}">
             <a href="#" class="nav-link {{ Request::segment(1) === 'cutidiajukan' ? 'nav-link active' : null }}
-              {{ Request::segment(1) === 'cutidone' ? 'nav-link active' : null }}">
+              {{ Request::segment(1) === 'cutidone' ? 'nav-link active' : null }}
+                  {{ Request::segment(1) === 'detailcuti_hrd' ? 'nav-link active' : null }}">
               <i class="nav-icon fas fa-folder"></i>
               <p>
                 Cuti
@@ -79,13 +80,15 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/cutidiajukan" class="nav-link {{ Request::segment(1) === 'cutidiajukan' ? 'nav-link active' : null }}">
+                <a href="/cutidiajukan" class="nav-link {{ Request::segment(1) === 'cutidiajukan' ? 'nav-link active' : null }}
+                  {{ Request::segment(1) === 'cutidiajukan' ? 'nav-link active' : null }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Cuti Diajukan</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/cutidone" class="nav-link {{ Request::segment(1) === 'cutidone' ? 'nav-link active' : null }}">
+                <a href="/cutidone" class="nav-link {{ Request::segment(1) === 'cutidone' ? 'nav-link active' : null }}
+                {{ Request::segment(1) === 'cuti' ? 'nav-link active' : null }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Cuti Sudah Diproses</p>
                 </a>
@@ -93,9 +96,11 @@
             </ul>
           </li>
           <li class="nav-item has-treeview {{ Request::segment(1) === 'izindiajukan' ? 'menu-open' : null }}
-              {{ Request::segment(1) === 'izindone' ? 'menu-open' : null }}">
+              {{ Request::segment(1) === 'izindone' ? 'menu-open' : null }}
+                  {{ Request::segment(1) === 'detailizin_hrd' ? 'menu-open' : null }}">
             <a href="#" class="nav-link {{ Request::segment(1) === 'izindiajukan' ? 'nav-link active' : null }}
-              {{ Request::segment(1) === 'izindone' ? 'nav-link active' : null }}">
+              {{ Request::segment(1) === 'izindone' ? 'nav-link active' : null }}
+              {{ Request::segment(1) === 'detailizin_hrd' ? 'nav-link active' : null }}">
               <i class="nav-icon fas fa-folder"></i>
               <p>
                 Izin
@@ -131,15 +136,10 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/datakaryawan" class="nav-link {{ Request::segment(1) === 'datakaryawan' ? 'nav-link active' : null }}">
+                <a href="/datakaryawan" class="nav-link {{ Request::segment(1) === 'datakaryawan' ? 'nav-link active' : null }}
+                  {{ Request::segment(1) === 'karyawan' ? 'nav-link active' : null }}">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Data Karyawan</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('karyawan.create') }}" class="nav-link {{ Request::segment(1) === 'karyawan' ? 'nav-link active' : null }}">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Tambah Karyawan</p>
+                  <p>Daftar Karyawan</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -156,7 +156,7 @@
           </ul>
       </nav>
       <!-- /.sidebar-menu -->
-  </div>
+  </div>  
       <!-- /.sidebar -->
        <script src="/lte/plugins/jquery/jquery.min.js"></script>
           <script>

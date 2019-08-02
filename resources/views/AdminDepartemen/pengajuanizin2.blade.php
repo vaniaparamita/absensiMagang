@@ -7,14 +7,25 @@
       <div class="container-fluid">
         <div class="row mb-2" style="background:white">
         <div class="col-md-8 col-md-offset-6">
-			<br />
-            <form action="#">
-                    <button class="btn btn-md btn-secondary" style="float:right" disabled>IZIN</button>
-                </form>    
-			<form action="/pengajuancuti2">
-                    <button class="btn btn-md btn-primary" style="float:right">CUTI</button>
-                </form>
-            <h1 class="m-0 text-dark">Pengajuan Izin</h1>
+		<div class="box box-primary">
+		<div class="content-header">
+					<div class="row mb-2">
+					  <div class="col-sm-6">
+						  <p style="font-size:24px">Pengajuan Izin<p>
+					  </div>	
+						<div class="col-sm-6">
+							<ol class="breadcrumb float-sm-right" style="font-size:14px">
+								<li class="breadcrumb-item">
+									<a href="/pengajuancuti2">Cuti</a>
+								</li>
+								<li class="breadcrumb-item active">
+								Izin
+								</li>
+							</ol>
+						</div>
+					</div>
+				 </div>
+            </div>
 			<hr>
 			<form action="{{ route('izin3.store') }}" method="post" enctype="multipart/form-data">
 			{{ csrf_field() }}

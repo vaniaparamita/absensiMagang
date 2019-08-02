@@ -20,7 +20,7 @@
              </div>
             </div>
             <br />
-            <table class="table table-bordered table-striped table-responsive-sm" id="datauser">
+            <table class="table table-bordered table-striped table-responsive-xl" id="datauser">
               <thead>
               <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
                 <th>No.</th>
@@ -43,11 +43,11 @@
                       <td>{{ $d->email }}</td>
                       <td>{{ $d->role }}</td>
                       <td>
-                          <form action="{{ route('useraccess.destroy', $d->id) }}" method="post">
+                          <form action="{{ route('useraccess.destroy', $d->id) }}" method="post" class="destroy">
                               {{ csrf_field() }}
                               {{ method_field('DELETE') }}
                         <a href="{{route('useraccess.edit',$d->id)}}" class="btn btn-sm btn-success">Edit</a> 
-                        <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">DELETE</button>
+                        <button class="btn btn-sm btn-danger" type="submit">DELETE</button>
                       </form>
 
                        </td>
@@ -86,5 +86,31 @@
         )
       }
 </script>
-
+<script>
+        $('.destroy').submit(function(e){
+          e.preventDefault();
+          Swal.fire({
+            title: 'Apakah anda yakin untuk menghapus akses user?',
+            text : "Data akan hilang secara permanent!",
+            type : 'warning',
+            showCancelButton : true,
+            confirmButtonColor : '#3085d6',
+            cancelButtonColor : '#d33',
+            cancelButtonText : 'Batalkan',
+            confirmButtonText: 'Ya, Hapus Data!'
+          }).then((result)=> {
+              if (result.value){
+                Swal.fire( 
+                  'Deleted!',
+                  "Your file has been deleted.",
+                  'success'
+                )
+                this.submit();
+              }
+              else {
+                Swal.fire("Di Batalkan", "Data anda masih tersimpan", "error");
+            }
+          })
+        });
+</script>
 @endsection

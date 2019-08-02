@@ -8,9 +8,25 @@
       <div class="container-fluid">
         <div class="row mb-2" style="background:white">
         <div class="col-md-8 col-md-offset-6">
+		<div class="box box-primary">
 			<br />
-            <h1 class="m-0 text-dark">Tambah Karyawan</h1>
-			<hr>
+            <div class="row mb-2">
+					  <div class="col-sm-6">
+						  <p style="font-size:24px">Tambah Karyawan<p>
+					  </div>
+						<div class="col-sm-6">
+							<ol class="breadcrumb float-sm-right" style="font-size:14px">
+								<li class="breadcrumb-item">
+									<a href="/datakaryawan">Daftar Karyawan</a>
+								</li>
+								<li class="breadcrumb-item active">
+								Tambah Karyawan
+								</li>
+							</ol>
+						</div>
+             		</div>
+            	</div>
+            <hr>
 			<form action="{{ route('karyawan.store') }}" method="post" enctype="multipart/form-data">
 			{{ csrf_field() }}
 		

@@ -26,7 +26,8 @@
 				<label for="nama">Foto :</label>
 				<br>
 				<a href="{{ asset($d->file) }}" target="_blank">
-					<img id="profile-picture" width="150px" height="200px" src="{{ asset($d->file) }}">
+					<img id="profile-picture" width="150px" height="200px" src="{{ asset($d->file) }}" 
+							style="display:block;margin-left:auto;margin-right:auto">
 				</a>
 			<div> 
 			
@@ -34,14 +35,14 @@
 				<div class="text">
 				  <label for="change_pic">Change Photo</label>
 				  <div class="form-group">
-					<input id="file" name ="file" type="file">
-					<div class="alert alert-info">
+				  <div class="alert alert-info">
 							<strong>Info!</strong> Maximum Size Upload : 2MB
 					</div>
+					<input id="file" class="form-control" name ="file" type="file">
 				  </div>
 				</div>
+			  </div>
 			</div>
-		</div>
 			
 					<div class="form-group">
 						<label for="nama">NIK :</label>

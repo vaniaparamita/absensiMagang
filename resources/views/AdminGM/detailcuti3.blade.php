@@ -5,15 +5,27 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-12" style="background:white">
+	  <div class="row mb-2" style="background:white">
+          <div class="col-md-8 col-md-offset-6" >
             <div class="box box-primary">
-            <div class="content-header" style="background:#1675d1">
-              <div class="card-title" style="font-size:18px;color:white">Detail Pengajuan Cuti</div>
-      
-             </div>
+			<br />
+            <div class="row mb-2">
+					  <div class="col-sm-6">
+						  <p style="font-size:24px">Detail Pengajuan Cuti<p>
+					  </div>
+						<div class="col-sm-6">
+							<ol class="breadcrumb float-sm-right" style="font-size:14px">
+								<li class="breadcrumb-item">
+									<a href="/cutidiajukan3">Cuti Diajukan</a>
+								</li>
+								<li class="breadcrumb-item active">
+								Detail Pengajuan Cuti
+								</li>
+							</ol>
+					</div>
+             	</div>
             </div>
-            <br />
+            <hr>
             <!-- @foreach($data as $d) -->
             <form action="{{ route('detailcuti_gm.update', $d->id) }}" method="post" enctype="multipart/form-data">
 			{{ csrf_field() }}
