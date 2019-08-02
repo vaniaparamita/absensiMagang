@@ -12,7 +12,7 @@
                 <img src="/gm.jpg" class="img-circle elevation-3" alt="User Image">
            </div>
         <div class="info">
-            <a href="#" class="d-block" style="font-size:14px">Departemen General Manager</a>
+            <a href="#" class="d-block" style="font-size:14px">General Manager</a>
         </div>
      </div>
 
@@ -30,9 +30,11 @@
             </a>
           </li>
           <li class="nav-item has-treeview {{ Request::segment(1) === 'cutidiajukan3' ? 'menu-open' : null }}
-                  {{ Request::segment(1) === 'cutidone3' ? 'menu-open' : null }}">
+                  {{ Request::segment(1) === 'cutidone3' ? 'menu-open' : null }}
+                    {{ Request::segment(1) === 'detailcuti_gm' ? 'menu-open' : null }}">
             <a href="#" class="nav-link {{ Request::segment(1) === 'cutidiajukan3' ? 'nav-link active' : null }}
-                    {{ Request::segment(1) === 'cutidone3' ? 'nav-link active' : null }}">
+                    {{ Request::segment(1) === 'cutidone3' ? 'nav-link active' : null }}
+                      {{ Request::segment(1) === 'detailcuti_gm' ? 'nav-link active' : null }}">
                   <i class="nav-icon fas fa-folder"></i>
               <p>
                 Cuti
@@ -55,9 +57,11 @@
          </ul>
       </li>
          <li class="nav-item has-treeview {{ Request::segment(1) === 'izindiajukan3' ? 'menu-open' : null }}
-                {{ Request::segment(1) === 'izindone3' ? 'menu-open' : null }}">
+                {{ Request::segment(1) === 'izindone3' ? 'menu-open' : null }}
+                    {{ Request::segment(1) === 'detailizin_gm' ? 'menu-open' : null }}">
             <a href="#" class="nav-link {{ Request::segment(1) === 'izindiajukan3' ? 'nav-link active' : null }}
-                  {{ Request::segment(1) === 'izindone3' ? 'nav-link active' : null }}">
+                  {{ Request::segment(1) === 'izindone3' ? 'nav-link active' : null }}
+                    {{ Request::segment(1) === 'detailizin_gm' ? 'nav-link active' : null }}">
                 <i class="nav-icon fas fa-folder"></i>
                <p>
                 Izin

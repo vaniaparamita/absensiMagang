@@ -10,8 +10,8 @@
         <div class="user-panel mt-3 pb-3 mb-3">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-item has-treeview {{ Request::segment(1) === 'pengajuancuti2' ? 'menu-open' : null }}
-              {{ Request::segment(1) === 'pengajuanizin2' ? 'menu-open' : null }}{{ Request::segment(1) === 'historycuti2' ? 'menu-open' : null }}
-                  {{ Request::segment(1) === 'historyizin2' ? 'menu-open' : null }}">
+              {{ Request::segment(1) === 'pengajuanizin2' ? 'menu-open' : null }}{{ Request::segment(1) === 'cutihistoryD' ? 'menu-open' : null }}
+                  {{ Request::segment(1) === 'izinhistoryD' ? 'menu-open' : null }}">
                     <a href="#" class="nav-link">
                 <img src="/dept.jpg" class="img-circle elevation-2" alt="User Image">
             <p style="margin-left:5px">
@@ -29,8 +29,8 @@
                   </a>
               </li>
               <li class="nav-item">
-                <a a href="{{route('cutihistoryD.index')}}" class="nav-link {{ Request::segment(1) === 'cutihistoryD.index' ? 'nav-link active' : null }}
-                    {{ Request::segment(1) === 'izinhistoryD.index' ? 'nav-link active' : null }}">
+                <a a href="{{route('cutihistoryD.index')}}" class="nav-link {{ Request::segment(1) === 'cutihistoryD' ? 'nav-link active' : null }}
+                    {{ Request::segment(1) === 'izinhistoryD' ? 'nav-link active' : null }}">
                  <i class=""></i>
                   <p>Riwayat Cuti - Izin</p>
                 </a>
@@ -64,9 +64,11 @@
             </a>
           </li>
           <li class="nav-item has-treeview {{ Request::segment(1) === 'cutidiajukan2' ? 'menu-open' : null }}
-                  {{ Request::segment(1) === 'cutidone2' ? 'menu-open' : null }}">
+                  {{ Request::segment(1) === 'cutidone2' ? 'menu-open' : null }}
+                      {{ Request::segment(1) === 'detailcuti' ? 'menu-open' : null }}">
               <a href="#" class="nav-link {{ Request::segment(1) === 'cutidiajukan2' ? 'nav-link active' : null }}
-                      {{ Request::segment(1) === 'cutidone2' ? 'nav-link active' : null }}">
+                  {{ Request::segment(1) === 'cutidone2' ? 'nav-link active' : null }}
+                      {{ Request::segment(1) === 'detailcuti' ? 'nav-link active' : null }}">
                   <i class="nav-icon fas fa-folder"></i>
               <p>
                   Cuti
@@ -89,9 +91,11 @@
          </ul>
       </li>
          <li class="nav-item has-treeview {{ Request::segment(1) === 'izindiajukan2' ? 'menu-open' : null }}
-                {{ Request::segment(1) === 'izindone2' ? 'menu-open' : null }}">
+                {{ Request::segment(1) === 'izindone2' ? 'menu-open' : null }}
+                  {{ Request::segment(1) === 'detailizin' ? 'menu-open' : null }}">
             <a href="#" class="nav-link {{ Request::segment(1) === 'izindiajukan2' ? 'nav-link active' : null }}
-                  {{ Request::segment(1) === 'izindone2' ? 'nav-link active' : null }}">
+                {{ Request::segment(1) === 'izindone2' ? 'nav-link active' : null }}
+                  {{ Request::segment(1) === 'detailizin' ? 'nav-link active' : null }}">
                 <i class="nav-icon fas fa-folder"></i>
                <p>
                 Izin

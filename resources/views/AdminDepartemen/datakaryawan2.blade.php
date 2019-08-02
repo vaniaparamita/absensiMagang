@@ -17,7 +17,7 @@
              </div>
             </div>
             <br />
-            <table class="table table-bordered table-responsive-sm" id="table_karyawans">
+            <table class="table table-bordered table-responsive-xl" id="table_karyawans">
               <thead>
               <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
                 <th>No.</th>
