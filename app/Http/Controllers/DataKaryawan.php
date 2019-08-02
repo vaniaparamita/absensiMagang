@@ -56,7 +56,7 @@ class DataKaryawan extends Controller
         request()->file->move(public_path('uploads/file'), $photoFileName);
 
         $data->save();
-        return redirect()->route('karyawan.index')->with('success', 'Data Berhasil di Tambahkan!');
+        return redirect()->route('karyawan.index')->with('success', 'Data Karyawan Berhasil di Tambahkan!');
     }
 
     /**

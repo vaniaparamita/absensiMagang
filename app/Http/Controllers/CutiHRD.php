@@ -50,7 +50,7 @@ class CutiHRD extends Controller
       request()->file->move(public_path('uploads/file'), $photoFileName);
 
       $data->save();
-      return redirect()->route('cutiHRD.index')->with('cuti_success','Berhasil Mengajukan Cuti!');
+      return redirect()->route('cutiHRD.index')->with('cuti_hrd','Berhasil Mengajukan Cuti!');
     }
    
 }

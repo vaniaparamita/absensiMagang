@@ -8,11 +8,26 @@
         <div class="row mb-2">
           <div class="col-sm-12" style="background:white">
             <div class="box box-primary">
-            <div class="content-header" style="background:#1675d1">
-              <div class="card-title" style="font-size:18px;color:white">Detail Karyawan</div>
+              <div class="content-header">
+                <div class="container-fluid">
+				  <div class="row mb-2">
+					  <div class="col-sm-6">
+						  <h1>Detail Karyawan</h1>
+					  </div>
+					<div class="col-sm-6">
+						<ol class="breadcrumb float-sm-right">
+							<li class="breadcrumb-item">
+								<a href="/datakaryawan">Data Karyawan</a>
+							</li>
+							<li class="breadcrumb-item active">
+								Detail Karyawan
+							</li>
+						</ol>
+					</div>			
+			  	</div>
              </div>
-            </div>
-            <br />
+        </div>
+			<hr>
             @foreach($data as $d)
             <form action="{{ route('karyawan.show', $d->nik) }}" method="post" enctype="multipart/form-data">
 			<td>

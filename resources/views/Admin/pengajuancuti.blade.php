@@ -74,3 +74,16 @@
     </div>
     <!-- /.content-header -->
 @endsection
+@section('sweet')
+<script>
+      var isiPesan = '{{Session::get('cuti_hrd') }}';
+      var exist = '{{Session::has('cuti_hrd') }}';
+      if(exist){
+        Swal.fire(
+          'Selamat!',
+          isiPesan,
+          'success'
+        )
+      }
+</script>
+@endsection
