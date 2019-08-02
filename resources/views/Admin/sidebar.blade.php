@@ -15,7 +15,7 @@
                   {{ Request::segment(1) === 'historyizin' ? 'menu-open' : null }}">
                     <a href="#" class="nav-link">
                   <div class="image">
-                <img src="{{DB::table('model_karyawans')->where('nik', '=', Auth::user()->id)->value('file')}}" class="img-circle elevation-2" alt="User Image" style="border:1px solid">
+                <img src="{{DB::table('model_karyawans')->where('nik', '=', Auth::user()->id)->value('file')}}" class="img-circle elevation-2" alt="User Image" style="width:36px;height:36px;border: 1.5px solid">
               </div>
             <p style="margin-left:5px">
               Admin HRD
