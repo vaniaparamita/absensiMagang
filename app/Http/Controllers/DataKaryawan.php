@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Input;
+use App\Image_uploaded;
 use App\ModelKaryawan;
 use DataTables;
+use Image;
 use Alert;
 use Auth;
 
@@ -50,13 +52,28 @@ class DataKaryawan extends Controller
         $data->department = $request->department;
         $data->status = $request->status;
 
-        $photoFileName = 'avatar-'.time().'.'.request()->file->getClientOriginalExtension();
+        /*$photoFileName = 'avatar-'.time().'.'.request()->file->getClientOriginalExtension();
         $path = asset('uploads/file').'/'.$photoFileName;
         $data->file = $path; //uploads/file/
-        request()->file->move(public_path('uploads/file'), $photoFileName);
+        request()->file->move(public_path('uploads/file'), $photoFileName); */
+        $photoFileName = 'avatar-'.time().'.'.request()->file->getClientOriginalExtension();
+        $path = 'uploads/file/'.$photoFileName;
+        $db_save = asset('uploads/file').'/'.$photoFileName;
+        $data->file = $db_save;
+        $dir = 'uploads/file';
+
+        $file = $request->file('uploads/file');
 
         $data->save();
         return redirect()->route('karyawan.index')->with('success', 'Data Karyawan Berhasil di Tambahkan!');
+
+        if(!file_exists($dir)){
+            mkdir($dir, 666, true);
+        }
+        $img = Image::make($file);
+
+        $img->resize(320, 320);
+        $img->save($path);
     }
 
     /**
@@ -104,14 +121,25 @@ class DataKaryawan extends Controller
         $data->status = $request->status;
         if($request->file)
         {
-            $file = Input::file('avatar');
+            $file = Input::file('file');
             $photoFileName = 'avatar-'.time().'.'.request()->file->getClientOriginalExtension();
-            request()->file->move(public_path('uploads/file'), $photoFileName);
-            $path = asset('uploads/file').'/'.$photoFileName;
-            $data->file = $path;
+            $path = 'uploads/file/'.$photoFileName;
+            $db_save = asset('uploads/file').'/'.$photoFileName;
+            $data->file = $db_save;
+            $dir = 'uploads/file';
+    
+            if(!file_exists($dir)){
+                mkdir($dir, 666, true);
+            }
+            $img = Image::make($file);
+    
+            $img->resize(320, 320);
+            $img->save($path);
+
         }
         $data->save();
         return redirect()->route('karyawan.index')->with('success','Berhasil Mengubah Data!');
+
     }
 
     /**

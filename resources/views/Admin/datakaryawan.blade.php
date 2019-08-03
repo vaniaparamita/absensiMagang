@@ -84,7 +84,7 @@
                 this.submit();
               }
               else {
-                Swal.fire("Di Batalkan", "Data anda masih tersimpan", "error");
+                Swal.fire("Dibatalkan", "Data anda masih tersimpan", "error");
             }
           })
         });
