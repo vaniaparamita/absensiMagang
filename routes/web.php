@@ -128,14 +128,7 @@ Route::post('/cuti3/store', 'CutiDiajukan3@store');
   Route::resource('home','HomeController');
   Route::get('my-notification/{type}', 'HomeController@myNotification');
 
-Route::get('newsletter',[
-    'uses'=>'NewsLetterController@create',
-    'as'=>'newsletter'
-]);
-Route::post('apply',[
-    'uses'=>'NewsLetterController@store',
-    'as'=>'apply'
-]);
+
 
 //Route::resource('file','File');
 Auth::routes();
