@@ -37,8 +37,8 @@
 			{{ method_field('PUT') }}
 					<div class="form-group">
 							<label for="nama">Foto :</label>
-						<div> <a href="{{ asset($d->file) }}" target="_blank">
-						<img width="150px" height="200px" src="{{ asset($d->file) }}" style="display:block;margin-left:auto;margin-right:auto">
+						<div> <a href="{{asset($d->file)}}" target="_blank">
+						<img width="150px" height="200px" src="{{asset($d->file)}}" style="display:block;margin-left:auto;margin-right:auto">
 						</a>
 					</div>
 

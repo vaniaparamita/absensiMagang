@@ -52,7 +52,11 @@
                         <input id="keterangan" type="text" class="form-control" name="keterangan" autocomplete="off" required autofocus>
                       </div>
                          </div>
-                <div class="panel-body">Surat Keterangan
+                <div class="panel-body">
+                <div class="alert alert-info">
+                        <strong>Info!</strong> Maximum Size Upload : 2MB
+                    </div>
+                Surat Keterangan
                     <div class="form-group">       
                         <input type="file" class="form-control" id="file" name="file">
                     </div>

@@ -9,23 +9,21 @@
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-item has-treeview {{ Request::segment(1) === 'pengajuancuti' ? 'menu-open' : null }}
-              {{ Request::segment(1) === 'pengajuanizin' ? 'menu-open' : null }}{{ Request::segment(1) === 'historycuti' ? 'menu-open' : null }}
-                  {{ Request::segment(1) === 'historyizin' ? 'menu-open' : null }}">
-                    <a href="#" class="nav-link">
-                  <div class="image">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+              <li class="nav-item has-treeview {{ Request::segment(1) === 'pengajuancuti' ? 'menu-open' : null }}
+                  {{ Request::segment(1) === 'pengajuanizin' ? 'menu-open' : null }}{{ Request::segment(1) === 'cutihistoryHRD' ? 'menu-open' : null }}
+                      {{ Request::segment(1) === 'izinhistoryHRD' ? 'menu-open' : null }}">
+                      <a href="#" class="nav-link">
                 <img src="{{DB::table('model_karyawans')->where('nik', '=', Auth::user()->id)->value('file')}}" class="img-circle elevation-2" alt="User Image" style="border: 1.5px solid">
-              </div>
-            <p style="margin-left:5px">
-              ADMIN HRD
-              <i class="right fas fa-angle-left"></i>
-           </p>
+              <p style="margin-left:5px">
+                ADMIN HRD
+                <i class="right fas fa-angle-left"></i>
+              </p>
           </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="/pengajuancuti" class="nav-link {{ Request::segment(1) === 'pengajuancuti' ? 'nav-link active' : null }}
-                  {{ Request::segment(1) === 'pengajuanizin' ? 'nav-link active' : null }}">
+                    {{ Request::segment(1) === 'pengajuanizin' ? 'nav-link active' : null }}">
                       <p>
                         Pengajuan Cuti - Izin
                       </p>
@@ -99,8 +97,8 @@
               {{ Request::segment(1) === 'izindone' ? 'menu-open' : null }}
                   {{ Request::segment(1) === 'detailizin_hrd' ? 'menu-open' : null }}">
             <a href="#" class="nav-link {{ Request::segment(1) === 'izindiajukan' ? 'nav-link active' : null }}
-              {{ Request::segment(1) === 'izindone' ? 'nav-link active' : null }}
-              {{ Request::segment(1) === 'detailizin_hrd' ? 'nav-link active' : null }}">
+                {{ Request::segment(1) === 'izindone' ? 'nav-link active' : null }}
+                  {{ Request::segment(1) === 'detailizin_hrd' ? 'nav-link active' : null }}">
               <i class="nav-icon fas fa-folder"></i>
               <p>
                 Izin
@@ -138,14 +136,14 @@
               <li class="nav-item">
                 <a href="/datakaryawan" class="nav-link {{ Request::segment(1) === 'datakaryawan' ? 'nav-link active' : null }}
                   {{ Request::segment(1) === 'karyawan' ? 'nav-link active' : null }}">
-                  <i class="far fa-circle nav-icon"></i>
+                    <i class="far fa-circle nav-icon"></i>
                   <p>Daftar Karyawan</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="/useraccess" class="nav-link {{ Request::segment(1) === 'useraccess' ? 'nav-link active' : null }}
-                {{ Request::segment(1) === 'tambahuser' ? 'nav-link active' : null }}">
-                  <i class="far fa-circle nav-icon"></i>
+                  {{ Request::segment(1) === 'tambahuser' ? 'nav-link active' : null }}">
+                    <i class="far fa-circle nav-icon"></i>
                   <p>Akses Karyawan</p>
                 </a>
               </li>

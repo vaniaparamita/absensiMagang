@@ -27,6 +27,7 @@
 						</div>
 					</div>
 				 </div>
+         </div>
             <table class="table table-bordered table-responsive-xl" id="table_cuti">
               <thead>
               <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
@@ -38,7 +39,6 @@
                 <th>Status</th>
                 <th>Surat Cuti</th>
               </tr>
-              </thead> 
               <tbody>
                 @php $no = 1; @endphp
                 @foreach($data as $d)
@@ -56,7 +56,8 @@
                       </td>
                     </tr>
                     @endforeach
-                </tbody>             
+                </tbody>
+                </thead>             
             </table>
             <br />
           </div><!-- /.col -->
