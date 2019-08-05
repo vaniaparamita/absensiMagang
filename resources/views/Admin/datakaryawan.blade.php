@@ -65,7 +65,7 @@
            $('#datakaryawan').DataTable();
            });
       </script>
-    <script>
+      <script>
         $('.form-delete').submit(function(e){
           e.preventDefault();
           Swal.fire({

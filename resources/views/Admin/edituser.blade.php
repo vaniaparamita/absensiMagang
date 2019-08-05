@@ -16,7 +16,26 @@
       <div class="container-fluid">
         <div class="row mb-2">
         <div class="col-md-8 col-md-offset-6">
-			<h1 class="m-0 text-dark">Edit User Access</h1>
+		<div class="box box-primary">
+              <div class="content-header">
+                <div class="container-fluid">
+				  <div class="row mb-2">
+					  <div class="col-sm-6">
+						  <p style="font-size:24px">Edit User Akses</p>
+					  </div>
+					<div class="col-sm-6">
+						<ol class="breadcrumb float-sm-right" style="font-size:14px">
+							<li class="breadcrumb-item">
+								<a href="/useraccess">Akses Karyawan</a>
+							</li>
+							<li class="breadcrumb-item active">
+								Edit User Akses
+							</li>
+						</ol>
+					</div>			
+			  	</div>
+             </div>
+        </div>
 			<hr>
 			@foreach($data as $d)
             <form action="{{ route('useraccess.update', $d->id) }}" method="post" enctype="multipart/form-data">
