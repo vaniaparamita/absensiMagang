@@ -68,8 +68,8 @@
 				    <div class="form-group">
 					<label for="status">Pilih Aksi :</label>
 					<select  class="form-control" name="status">
-						<option value="Disetujui Departemen">Diterima</option>
-						<option value="Ditolak Departemen">Ditolak</option>
+						<option value="Disetujui  Manager/Supervisor">Diterima</option>
+						<option value="Ditolak  Manager/Supervisor">Ditolak</option>
 					</select>  	
 					</div>
 

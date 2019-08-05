@@ -12,7 +12,7 @@ class CutiDone2 extends Controller
 {
     //
     public function index(){
-        $data = ModelCuti::where('status', 'Disetujui Departemen')->orwhere('status', 'Ditolak Departemen')->orwhere('status', 'Disetujui')->orwhere('status', 'Ditolak')->get();
+        $data = ModelCuti::where('status', 'Disetujui Manager/Supervisor')->orwhere('status', 'Ditolak Manager/Supervisor')->orwhere('status', 'Disetujui')->orwhere('status', 'Ditolak')->get();
         return view('AdminDepartemen/cutidone2', compact('data'));
     }
     public function __construct()
