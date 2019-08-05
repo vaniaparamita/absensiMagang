@@ -14,13 +14,9 @@
               {{ Request::segment(1) === 'pengajuanizin' ? 'menu-open' : null }}{{ Request::segment(1) === 'historycuti' ? 'menu-open' : null }}
                   {{ Request::segment(1) === 'historyizin' ? 'menu-open' : null }}">
                     <a href="#" class="nav-link">
-<<<<<<< HEAD
-                <img src="{{DB::table('model_karyawans')->where('nik', '=', Auth::user()->id)->value('file')}}" class="img-circle elevation-2" alt="User Image" style="border:1px solid">
-=======
                   <div class="image">
                 <img src="{{DB::table('model_karyawans')->where('nik', '=', Auth::user()->id)->value('file')}}" class="img-circle elevation-2" alt="User Image" style="width:36px;height:36px;border: 1.5px solid">
               </div>
->>>>>>> 542005043b155fb87540d148bee1e0353d819103
             <p style="margin-left:5px">
               ADMIN HRD
               <i class="right fas fa-angle-left"></i>

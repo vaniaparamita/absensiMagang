@@ -10,7 +10,7 @@ class DetailIzinHRD extends Controller
 {
     //
     public function index(){
-      $data = ModelIzin::where('status', 'Disetujui Departemen')->get();
+      $data = ModelIzin::where('status', 'Disetujui  Manager/Supervisor')->get();
       return view('Admin.detailizin_hrd', compact('data'));
     }
     public function __construct()

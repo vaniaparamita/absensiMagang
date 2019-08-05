@@ -11,7 +11,7 @@ class CutiDiajukan extends Controller
 {
     //
     public function index(){
-        $data = ModelCuti::where('status', 'Disetujui Departemen')->get();
+        $data = ModelCuti::where('status', 'Disetujui Manager/Supervisor')->get();
         return view('Admin/cutidiajukan', compact('data'));
     }
     public function __construct()
