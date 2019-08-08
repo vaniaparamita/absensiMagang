@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-info elevation-4">
   <!-- Brand Logo -->
-  <a href="index3.html" class="brand-link">
+  <a href="/admin2" class="brand-link">
       <span class="brand-text font-weight" style="margin-left:15px">HRIS Jogja City Mall</span>
   </a>
 

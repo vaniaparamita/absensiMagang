@@ -107,7 +107,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                  <div class="small-box bg-pink">
                     <div class="inner">
                        <h3>{{ DB::table('users')->where('role', 'admin-departemen')->count()}}</h3>
-                         <p>Admin Departement</p>
+                         <p>Admin Departemen</p>
                   </div>
                <div class="icon">
             <i class="ion icon ion-person-stalker"></i>
