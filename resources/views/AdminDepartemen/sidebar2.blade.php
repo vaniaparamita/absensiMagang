@@ -13,8 +13,8 @@
               {{ Request::segment(1) === 'pengajuanizin2' ? 'menu-open' : null }}{{ Request::segment(1) === 'cutihistoryD' ? 'menu-open' : null }}
                   {{ Request::segment(1) === 'izinhistoryD' ? 'menu-open' : null }}">
                     <a href="#" class="nav-link">
-                    <img src="{{DB::table('model_karyawans')->where('nik', '=', Auth::user()->id)->value('file')}}" class="img-circle elevation-2" alt="User Image">
-            <p>
+                    <img src="{{DB::table('model_karyawans')->where('nik', '=', Auth::user()->id)->value('file')}}" class="img-circle elevation-2" alt="User Image" style="width:30px;height:30px;border: 1.5px solid">
+              <p>
                 DEPARTEMEN {{DB::table('departemens')->where('id', '=', Auth::user()->id_departemen)->value('name')}}
               <i class="right fas fa-angle-left"></i>
             </p>

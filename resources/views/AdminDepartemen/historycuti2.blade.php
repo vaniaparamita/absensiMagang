@@ -31,8 +31,8 @@
                     ->where('status','disetujui')->sum('total')}} Dari 12 Hari
                 </div>
             </div>
-            </div>
-            <br />
+          </div>
+          <br />
             <table class="table table-bordered table-responsive-xl" id="table_cuti">
               <thead>
               <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
@@ -62,7 +62,7 @@
                     </tr>
                     @endforeach
                 </tbody>
-              </thead>              
+                </thead>              
             </table>
             <br />
           </div><!-- /.col -->
