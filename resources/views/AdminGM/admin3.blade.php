@@ -50,14 +50,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- small box -->
             <div class="small-box bg-red">
               <div class="inner">
-                <h3>0</h3>
+                <h3>{{ DB::table('izin_departemens')->where('status', )->count()}}</h3>
 
                 <p>Permohonan Izin</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
               </div>
-              <a href="/izindone3" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+              <a href="/izindiajukan3" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -65,14 +65,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- small box -->
             <div class="small-box bg-blue">
               <div class="inner">
-                <h3>0</h3>
+                <h3>{{ DB::table('cuti_departemens')->where('status', )->count()}}</h3>
 
                 <p>Permohonan Cuti</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
               </div>
-              <a href="/cutidone3" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+              <a href="/cutidiajukan3" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -81,7 +81,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="small-box bg-cyan">
               <div class="inner">
               <!-- TABLE BUKAN SETELAH KARYAWAN PER-DEPARTEMEN -->
-                <h3>0</h3>
+                <h3>{{ DB::table('model_karyawans')->where('status','aktif')->count()}}</h3>
 
                 <p>Data Karyawan</p>
               </div>

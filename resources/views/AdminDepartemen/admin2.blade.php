@@ -82,8 +82,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="small-box bg-cyan">
               <div class="inner">
               <!-- TABLE BUKAN SETELAH KARYAWAN PER-DEPARTEMEN -->
-                <h3>{{ DB::table('model_karyawans')->where('department', '=', Auth::user()->id_departemen)->count()}}</h3>
-                <p>Karyawan Aktif</p>
+                <h3>{{ DB::table('model_karyawans')->where('nik', '=', Auth::user()->id)->count()}}</h3>
+                <p>Admin{{DB::table('departemens')->where('id', '=', Auth::user()->id_departemen)->value('name')}}</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
