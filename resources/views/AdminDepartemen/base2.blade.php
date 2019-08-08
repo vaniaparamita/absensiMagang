@@ -11,6 +11,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <title>{{DB::table('departemens')->where('id', '=', Auth::user()->id_departemen)->value('name')}} | HRIS JCM</title>
 
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="{{ asset('/lte/plugins/sweetalert2/sweetalert2.min.css') }}">
   <!-- DataTable -->  
   <link rel="stylesheet" href="{{ asset('/lte/plugins/datatables/dataTables.bootstrap4.css') }}">
   <!-- Font Awesome Icons -->
@@ -73,5 +75,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- DataTables -->
 <script src="{{ asset('/lte/plugins/datatables/jquery.dataTables.js') }}"></script>
 <script src="{{ asset('/lte/plugins/datatables/dataTables.bootstrap4.js') }}"></script>
+<!-- SweetAlert -->
+<script src="{{ asset('/lte/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+@yield('sweet')
+@include('sweet::alert')
 </body>
 </html>

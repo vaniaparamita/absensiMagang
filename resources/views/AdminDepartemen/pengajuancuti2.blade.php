@@ -89,7 +89,7 @@
 @section('sweet')
 <script>
       var isiPesan = '{{Session::get('cuti_success') }}';
-      var exist = '{{Session::has('cuti_successss') }}';
+      var exist = '{{Session::has('cuti_success') }}';
       if(exist){
         Swal.fire(
           'Selamat!',

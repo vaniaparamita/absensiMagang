@@ -67,7 +67,7 @@ class IzinD extends Controller
       request()->file->move(public_path('uploads/file'), $photoFileName);
 
       $data->save();
-      return redirect()->route('izin3.index')->with('cuti_success','Berhasil Mengajukan Cuti!');
+      return redirect()->route('izin3.index')->with('izin_success','Berhasil Mengajukan Izin!');
     }
 
     /**
