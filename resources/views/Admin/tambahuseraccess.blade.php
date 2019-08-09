@@ -43,8 +43,21 @@
                             </div>
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">ID Departemen :</label>
-                                <input id="id_departemen" type="text" class="form-control" name="id_departemen" value="{{ old('id_departemen') }}" required autofocus>
-
+                            <br/>
+					            <select  class="form-control" name="id_departemen">
+						                <option value="000001">000001 - MARKETING</option>
+						                <option value="000002">000002 - LEASING</option>
+                                        <option value="000003">000003 - HR GA</option>
+                                        <option value="000004">000004 - ENGINEERING</option>
+                                        <option value="000005">000005 - FINANCE</option>
+                                        <option value="000006">000006 - MARKETING COMMUNICATION</option>
+                                        <option value="000007">000007 - OPERATION</option>
+                                        <option value="000008">000008 - BUILDING SERVICE</option>
+                                        <option value="000009">000009 - EVENT PROMOTION</option>
+                                        <option value="000010">000010 - LEGAL</option>
+                                        <option value="000011">000011 - IT</option>
+                                        <option value="000012">000012 - GENERAL MANAGER</option>
+					            </select>
                                 @if ($errors->has('id_departemen'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('id_departemen') }}</strong>
