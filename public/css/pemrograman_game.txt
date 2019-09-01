@@ -1,0 +1,70 @@
+Note : 23 Agustus 2019
+PG - 1 
+Modeling Asset
+
+jika ketika play mengalami error -> pilih file -> build setting ->  -> cofiguration -> script runtime ke NET.5 
+
+klik kanan -> create -> ke folder asset
+package -> ada grandle -> kemudian ada dependencies dimana kebutuhan kita
+
+langkah yang dibutuhkan untuk mengebangkan game :
+	- memasukan asset (jika ada asset)
+	- kebutuhan struktur game yang akan dibuat -> menyiapkan folder (scenes) 
+	- menata folder secara rapi 
+		- struktur folder : preferbs, scenes, script, sounds, and textures
+			a. preferbs : reusable game objek (bullets, enemies, bonuses)
+			b. scenes : a scene is basically a level or menu
+			c. sounds : using for soundtrack or efect
+			d. scripts : all the code goes here. We use this folder as the equivalent of a root folder in a c# project
+			e. Textures : spirtes and images of your game. In a 2d project, you could rename this folder "Spirtes"
+		- Membuat folder : 
+			1. klik folder menggunakan preferbs
+			2. memasukan asset 
+			3. tinggal drag and drop
+		
+		- aturan memasukan asset :
+			1. terdapat panel hirarki :
+				- terdapat user interface (aod) : contoh button, menu, dsb -> tidak memiliki hub dengan asset 
+					a. GUI
+					b. Level : background, middleground, foreground
+					c. render : main camera
+					d. scripts
+					
+		- Membuat game object :
+			- menata hirarki game object dengan membuat objek kosong yang digunakan 
+			  cara membuat objek : klik create pada hirarki -> create empty (bisa di drag and drop agar menjadi 1 folder
+			  pastikan semua dalam titik 0,0 (x dan y)
+		
+		- Cara memasukan asset :
+			- menggunakan gameObject : 2D -> Ex : player terdapat pada foreground
+			- Klik GameObject -> 2D Object -> Sprite 
+			- nanti terdapat komponen sprite renderer -> di klik point maka akan muncul untuk memilih spirtes-nya
+			  value akan berubah tergantung assetnya-> rename 
+			- klik player pada hirarki -> memunculkan sprite, untuk mengedit, sorting layer = default, sprite sort point = center.
+			- menambahkan background -> drag and drop ke layer atau ke folder dalam hirarki
+			cara mengubah posisi :
+				- order in layer diubah menjadi : -1 (di belakang background), 1 (di depan background)
+				- sorting layer : menyeting posisi object 
+				- menggunakan middle index : foreground di pindah ke posisi depan -> mengubah z 
+			- cara mengubah ukuran back
+			ground di scene game -> standalone : sesuaikan dengan  ukuran yang diinginkan 
+				- susunan asset harus dalam kotakan (kamera) dengan mengubah ke 3D terlebih dahulu. 
+			- biar bisa 2 windows tinggal drag and drop ke posisi yang disuka.
+			- untuk merapikan asset menggunakan scale dengan cara shift + ctrl atau menggunakan kotak di pojok kanan atas pada  urutan kelima.
+				aturan background layers :
+				a. 0 - background : z - position 10 
+				b. 1 - Middleground : z - position 5
+				c. 2 - Foreground : z - position 0
+			- jika platform -5, middleground 5 maka yang akan terjadi values 0, bisa depan player -> tidak mengikutui middleground, kondisi 0 berarti sama dengan player. 
+		- Texture Type : Sprite (2D and UI), mode spirte bsia diubah, pixel per unit : mengubah ukuran pixel asset yang kita input
+			- ubah sprite mode ke multiple -> muncul popup, lalu klik apply
+			- kita masuk ke sprite editor -> memcahkan menjadi 2 bagian
+				a. manual : di select 
+				b. menggunakan tool yang telah di sediakan 
+			- klik slice dengan tipe otomatis, grid untuk bagian tertentu, grid by cells untuk memotong dengan mendeteksi pikselnya.
+			- apply.
+		- membuat agar asset 1 ukuran :
+			- drag and drop di hirarki
+			- masukan ke folder prefabs -> warna pada hirarki menjadi biru
+			- ketika menambahan objek di preferbs maka sudah memiliki aturan sendiri, tanpa harus mengubah.
+			

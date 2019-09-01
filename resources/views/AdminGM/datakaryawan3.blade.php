@@ -18,19 +18,26 @@
             </div>
             <br />
             <table class="table table-bordered table-responsive-xl" id="table_karyawans">
-              <thead>
-              <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
-                <th>No.</th>
-                <th>NIK</th>
-                <th>Nama</th>
-                <th>JK</th>
-                <th>Tanggal Lahir</th>
-                <th>Tempat Lahir</th>
-                <th>Telepon</th>
-                <th>Jabatan</th>
-                <th>Department</th>
-              </tr>
+            <thead>
+                <tr class="table-secondary" style="text-align:center; text-transform: uppercase">
+                  <th>No.</th>
+                  <th>NIK</th>
+                  <th>Nama</th>
+                  <th>Jabatan</th>
+                  <th>Departemen</th>
+               </tr>
               </thead>
+          <body>
+              @php $no = 1; @endphp
+                @foreach($data as $d)
+                  <tr style="text-transform: uppercase">
+                      <td>{{ $no++ }}</td>
+                      <td>{{ $d->nik }}</td>
+                      <td>{{ $d->nama }}</td>
+                      <td>{{ $d->jabatan }}</td>
+                      <td>{{ $d->department }}</td>
+                @endforeach
+             </body>
             </table>
 
           </div><!-- /.col -->  

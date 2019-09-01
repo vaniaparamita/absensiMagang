@@ -1,0 +1,33 @@
+Note : 30 Agustus 2019
+PG - 2
+Memulai Scripting di Unity 
+
+1. Pemain -> memberikan logic, ex : pergerakan (kanan-kiri/atas-bawah-> using keyboard).
+   antara parent dan child yang membedakan adalah inspector (berupa kumpulan komponen).
+   cara membuat scripting -> membuat komponen baru. *secara default harus dibuat sendiri.
+   Memiliki banyak cara :
+   Cara 1 :
+	1. ketik player.
+	2. add component.
+	3. cari new script pada component.
+	4. klik new dan add, kemudian akan muncul script baru.
+	5. klik script baru maka akan tampil di asset Script baru-nya.
+   Cara 2 :
+	1. masuk ke folder yang diinginkan
+	2. klik kanan lalu create
+	3. lalu c# script.
+Note : di C# -> ketika membuat script baru di unity akan berupa ekstennd, dengan kumpulan komponen" pada behaviour 
+Fungsi bawaan :
+	1. Start() -> proses pada frame 1 saat objek pertama kali muncul.
+	2. Update() -> untuk setiap frame di main game loop (ada proses yang berjalan terus menerus)
+	3. Awake() -> saat objek dibuat (constructor) -> fungsi pertama yang akan dijalankan
+	4. FIxedUpdate()-> setiap fixed framerate frame, metode ini digunakan diatas Update() ketika dealing dengan physics.
+	5. Destroy()-> object hancur. 
+Mengecek debug.Log di console untuk tracking. 
+Perbedaan :
+	public float speed; -> bisa diakses kelas manapun 
+    private float speedPriv; -> hanya bisa diakses kelas itu sendiri
+    float speedBare; -> bisa public/private
+HideInInspector -> menghilangkna komponen pada script
+Satuan speed pada translate : hitungan per-frame
+satuan speed pada velocity : hitungan per-detik 

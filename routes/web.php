@@ -77,6 +77,7 @@ Route::get('/edituser', function () {
 
 //KARYAWAN
 Route::resource('/datakaryawan', 'DataKaryawan');
+Route::resource('/datakaryawan3', 'DataKaryawan3');
 Route::resource('karyawan', 'DataKaryawan');
 Route::post('/tambahkaryawan/store', 'DataKaryawan@store');
 Route::post('/datakaryawan/destroy', 'DataKaryawan@destroy');
